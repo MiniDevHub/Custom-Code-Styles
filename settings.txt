@@ -1,0 +1,590 @@
+{
+  // INFO: Title Bar and Status Bar Specifications
+  "window.customTitleBarVisibility": "windowed",
+  "window.title": "MrDib ${activeEditorMedium} ${rootPath}",
+  "breadcrumbs.enabled": false,
+
+  // INFO: Activity Bar and Window Specifications
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "default",
+  "workbench.tree.indent": 10,
+  "workbench.editor.enablePreview": false,
+  "window.newWindowDimensions": "inherit",
+  "window.nativeFullScreen": true,
+  "files.insertFinalNewline": true,
+  "scm.diffDecorations": "none",
+  "workbench.tips.enabled": true,
+  "workbench.startupEditor": "none",
+  "editor.lightbulb.enabled": "off",
+  "explorer.confirmDragAndDrop": false,
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.suggestLineHeight": 30,
+  "editor.colorDecorators": false,
+  "window.zoomLevel": 0.5,
+  "editor.suggestFontSize": 20,
+  "editor.hideCursorInOverviewRuler": true,
+  "apc.stylesheet": {
+    ".monaco-editor .cursor": "background: #ffffff !important; box-shadow: 0 0 70px 5px #ffffff, #ffffff 0px 0px 34px 1px; color: [#161616](https://github.com/AlexOwl/vscode-transparent-color-theme/issues/161616) !important"
+  },
+  "workbench.statusBar.visible": false,
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "apc.electron": {
+    "opacity": 0.95,
+    "transparent": true,
+    "backgroundColor": "#00000000",
+    "vibrancy": "ultra-dark"
+  },
+  "animations.Enabled": true,
+  "animations.CursorAnimation": true,
+  "animations.Command-Palette": "Fade",
+  "animations.CursorAnimationOptions": {
+    "TrailLength": 20
+  },
+  "animations.Active": "Indent",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Transparent Color Theme",
+  "animations.Install-Method": "Apc Customize UI++",
+  "apc.imports": [
+    "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+  ],
+
+  // INFO: Font Ligatures
+  "editor.fontLigatures": true,
+
+  // INFO: VS Code Support
+  "editor.accessibilitySupport": "off",
+
+  // INFO: Highlight Style Definitions
+  "editor.selectionHighlight": true,
+  "editor.occurrencesHighlight": "singleFile",
+
+  // INFO: Zoom Controls
+  "editor.mouseWheelZoom": true,
+
+  // INFO: Code Formatter Specifications
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "notebook.defaultFormatter": "xaver.clang-format",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 10
+  },
+  "shellformat.effectLanguages": [
+    "shellscript",
+    "dockerfile",
+    "dotenv",
+    "hosts",
+    "jvmoptions",
+    "ignore",
+    "gitignore",
+    "properties",
+    "spring-boot-properties",
+    "azcli",
+    "bats"
+  ],
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+
+  // INFO: Terminal Specifications
+  "terminal.integrated.fontFamily": "Cascadia Code",
+  "terminal.integrated.tabs.title": "${process} ~ MrDib",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "python.terminal.focusAfterLaunch": true,
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.lineHeight": 1.5,
+  "terminal.integrated.fontSize": 9,
+  "debug.terminal.clearBeforeReusing": true,
+
+  // INFO: Code Runner Specifications
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.showExecutionMessage": false,
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "clear && cd $dir && gcc $fileName -o $fileNameWithoutExt && ./$(basename $fileNameWithoutExt)",
+    "zig": "zig run",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "clear && python3 -u",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "scriptcs",
+    "vbscript": "cscript //Nologo",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runghc",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "sml": "cd $dir && sml $fileName",
+    "mojo": "mojo run",
+    "erlang": "escript",
+    "spwn": "spwn build",
+    "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
+    "gleam": "gleam run -m $fileNameWithoutExt"
+  },
+
+  // INFO: Auto Save and ( Format / Indentation ) Specifications
+  "files.autoSave": "onFocusChange",
+  "explorer.confirmDelete": false,
+  "editor.formatOnSave": true,
+  "notebook.formatOnSave.enabled": true,
+  "notebook.formatOnCellExecution": true,
+  "editor.detectIndentation": false,
+  "editor.guides.indentation": true,
+  "editor.guides.highlightActiveIndentation": false,
+  "editor.overviewRulerBorder": false,
+  "editor.renderLineHighlight": "none",
+  "workbench.colorCustomizations": {
+    "editorIndentGuide.background1": "#1E1E1E",
+    "terminal.background": "#00000000"
+  },
+  "python.createEnvironment.trigger": "off",
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.stickyScroll.enabled": false,
+  "editor.tabSize": 10,
+  "editor.insertSpaces": true,
+
+  // INFO: WhiteSpace, WhiteLines and Problems Specifications
+  "diffEditor.ignoreTrimWhitespace": false,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "problems.decorations.enabled": false,
+  "editor.renderControlCharacters": false,
+
+  // INFO: MiniMap Specifications
+  "editor.minimap.enabled": false,
+
+  // INFO: CodeComparison Specifications
+  "diffEditor.renderSideBySide": false,
+
+  // INFO: Snippet Specifications
+  "editor.snippetSuggestions": "top",
+
+  // INFO: Goto Preferences
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+
+  // INFO: Quick Open Settings
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+
+  // INFO: Brackets Specifications
+  "editor.matchBrackets": "never",
+
+  // INFO: Hover Specifications
+  "editor.hover.delay": 1500,
+  "editor.hover.enabled": true,
+
+  // INFO: Include " - " in word Selection
+  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+
+  // INFO: Ignore File Specification
+  "search.useIgnoreFiles": false,
+
+  // INFO: Emmet Language Specifications
+  "emmet.includeLanguages": {
+    "html": "html",
+    "django-html": "html",
+    "blade": "html",
+    "vue-html": "html",
+    "vue": "html",
+    "react": "html",
+    "javascript": "html"
+  },
+  "files.associations": {
+    "*.html": "html",
+    ".php_cs": "php",
+    ".php_cs.dist": "php"
+  },
+
+  // INFO: Live Server / Preview Specifications
+  "livePreview.customExternalBrowser": "Chrome",
+
+  // INFO: Tab Bar Specifications
+  "workbench.editor.labelFormat": "default",
+  "workbench.editor.openPositioning": "last",
+  "workbench.editor.closeEmptyGroups": true,
+  "workbench.editor.showIcons": false,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.wrapTabs": false,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.tabActionCloseVisibility": false,
+
+  // INFO: Better Comment Specifications
+  "better-comments.highlightPlainText": true,
+  "better-comments.multilineComments": true,
+  "better-comments.tags": [
+    {
+      "tag": "*",
+      "color": "#7CFC00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": true
+    },
+    {
+      "tag": "!",
+      "color": "#FF00FF",
+      "strikethrough": false,
+      "underline": true,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "TODO:",
+      "color": "#EA580C",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": true
+    },
+    {
+      "tag": "FIXME:",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": true
+    },
+    {
+      "tag": "BUG:",
+      "color": "#9333EA",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": true
+    },
+    {
+      "tag": "HACK:",
+      "color": "#C026D3",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": false
+    },
+    {
+      "tag": "NOTE:",
+      "color": "#2563EB",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": true
+    },
+    {
+      "tag": "INFO:",
+      "color": "cyan",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": true
+    },
+    {
+      "tag": "IDEA:",
+      "color": "#FFF",
+      "strikethrough": false,
+      "backgroundColor": "#EAB308",
+      "bold": true
+    }
+  ],
+
+  // INFO: Custom Styles and Scripts Specifications
+  "vscode_custom_css.imports": [
+    "file:///Users/dibakar/Documents/Code/CustomCode/CustomCSS.css",
+    "file:///Users/dibakar/Documents/Code/CustomCode/CustomJavascript.js",
+    "file:///Users/dibakar/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+  ],
+
+  // INFO: Git / Github Specifications
+  "git.autofetch": true,
+  "git.enableCommitSigning": true,
+  "git.confirmSync": false,
+  "git.confirmForcePush": false,
+  "git.scanRepositories": [],
+  "git.decorations.enabled": true,
+  "git.inputValidation": true,
+  "git.inputValidationLength": 50,
+  "git.defaultCloneDirectory": "~/Projects",
+  "gitlens.currentLine.enabled": true,
+  "git.mergeEditor": true,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": true
+  },
+  "gitlens.codeLens.enabled": true,
+  "gitlens.hovers.enabled": true,
+  "gitlens.statusBar.enabled": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true
+  },
+  "git.path": "/usr/bin/git",
+  "git.ignoredRepositories": ["~/Projects/legacy-repo"],
+  "git.useEditorAsCommitInput": true,
+  "git.showInlineOpenFileAction": true,
+  "git.detectSubmodules": true,
+
+  // INFO: Profile Settings
+  "workbench.settings.applyToAllProfiles": [
+    "workbench.colorCustomizations",
+    "editor.fontFamily",
+    "editor.fontSize",
+    "editor.lineHeight",
+    "terminal.integrated.fontFamily",
+    "terminal.integrated.fontSize",
+    "files.exclude",
+    "search.exclude",
+    "emmet.includeLanguages",
+    "editor.minimap.enabled",
+    "editor.minimap.scale",
+    "workbench.editor.showTabs",
+    "explorer.autoReveal",
+    "git.autofetch",
+    "window.zoomLevel"
+  ],
+
+  // INFO: Error Lens Settings
+  "errorLens.messageBackgroundMode": "none",
+  "errorLens.fontWeight": "800",
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.severityText": ["☠️", "☠️", "☠️", "☠️"],
+
+  // INFO: Unknown Words
+  "cSpell.userWords": [
+    "Aakash",
+    "applescript",
+    "asdfghjkl",
+    "asgi",
+    "atmelavr",
+    "autofetch",
+    "autohotkey",
+    "autoit",
+    "Automorphic",
+    "autopep",
+    "auxiliarybar",
+    "basepanel",
+    "bhai",
+    "billi",
+    "blit",
+    "blocklist",
+    "blueutil",
+    "bmewburn",
+    "Botpress",
+    "Cascadia",
+    "Chausa",
+    "codesnap",
+    "codicon",
+    "codingbat",
+    "Consolas",
+    "consoleloggerparameters",
+    "cscript",
+    "dibakar",
+    "Dipika",
+    "Divya",
+    "dotenv",
+    "dunder",
+    "Duniya",
+    "endcomment",
+    "endfor",
+    "esbenp",
+    "escript",
+    "figsize",
+    "Fira",
+    "flaskenv",
+    "fontsize",
+    "gfortran",
+    "gintonyc",
+    "Gunicorn",
+    "gussed",
+    "haxe",
+    "Himsagar",
+    "Huskie",
+    "ifsc",
+    "ilike",
+    "Indrajit",
+    "Infotech",
+    "inputbox",
+    "intelephense",
+    "Japani",
+    "jash",
+    "javac",
+    "Joota",
+    "jsonify",
+    "Kaise",
+    "kitc",
+    "Knupp",
+    "Kolkata",
+    "kursi",
+    "Langra",
+    "laravel",
+    "LEGB",
+    "lein",
+    "lessc",
+    "lightgray",
+    "linestyle",
+    "livewire",
+    "madad",
+    "Malik",
+    "markerfacecolor",
+    "markersize",
+    "meer",
+    "Menlo",
+    "Mera",
+    "millis",
+    "minipip",
+    "mispredictions",
+    "Mohishila",
+    "Monaspace",
+    "MOVEQ",
+    "MOVNE",
+    "mplot",
+    "MQTT",
+    "msbuild",
+    "myfamily",
+    "myset",
+    "mystrcpy",
+    "mystrlen",
+    "nameshort",
+    "neeche",
+    "Nologo",
+    "octicon",
+    "openai",
+    "osascript",
+    "passlib",
+    "phpunit",
+    "popitem",
+    "Pornhub",
+    "Portilla",
+    "println",
+    "PULLUP",
+    "pycodestyle",
+    "pyjokes",
+    "Pylint",
+    "pylintrc",
+    "pyttsx",
+    "qwertyuiop",
+    "Rahul",
+    "Rampur",
+    "Renuka",
+    "rgba",
+    "Rohan",
+    "Roro",
+    "Rscript",
+    "runghc",
+    "rustc",
+    "saara",
+    "Sachin",
+    "sameer",
+    "sbcl",
+    "scriptcs",
+    "Sharma",
+    "Shitz",
+    "Shivam",
+    "showlegend",
+    "Shubham",
+    "Shubhi",
+    "Sinha",
+    "skyfall",
+    "smorest",
+    "Soham",
+    "Sonodyne",
+    "spwn",
+    "staticfiles",
+    "stdlib",
+    "stylesheet",
+    "Suor",
+    "tabnine",
+    "tailwindcss",
+    "takiye",
+    "textposition",
+    "thik",
+    "thisdict",
+    "toolkits",
+    "trav'ller",
+    "twistie",
+    "useremail",
+    "vbscript",
+    "vetur",
+    "vite",
+    "Woah",
+    "wsgi",
+    "xaver",
+    "xaxis",
+    "xlabel",
+    "xlim",
+    "yabai",
+    "yaxis",
+    "ylabel",
+    "ylim",
+    "youstr",
+    "zaxis",
+    "Zhang",
+    "zlabel",
+    "zlim",
+    "zxcvbnm"
+  ]
+}

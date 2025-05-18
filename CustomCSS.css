@@ -1,0 +1,473 @@
+/* Custom Keyframes */
+@keyframes glowCycle {
+  0% {
+    text-shadow: #00ff00 1px 1px 8px;
+  }
+  50% {
+    text-shadow: #a200ff 1px 1px 8px;
+  }
+  100% {
+    text-shadow: #ff009d 1px 1px 8px;
+  }
+}
+@keyframes tabSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes tabSlideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-30rem);
+  }
+}
+
+/* Font Family */
+* {
+  font-family: "Cascadia Code", "FiraCode Nerd Font", "FiraCode",
+    "Menlo, Geist Mono", "JetBrains Mono", "Consolas", "Courier New",
+    "monospace" !important;
+}
+.codicon,
+.octicon {
+  font-family: "Codicon" !important;
+}
+.monaco-workbench
+  .pane-composite-part
+  > .header-or-footer
+  > .composite-bar-container
+  > .composite-bar
+  > .monaco-action-bar
+  .action-item.checked
+  .action-label,
+.monaco-workbench
+  .pane-composite-part
+  > .header-or-footer
+  > .composite-bar-container
+  > .composite-bar
+  > .monaco-action-bar
+  .action-item:hover:active
+  .action-label,
+.monaco-workbench
+  .pane-composite-part
+  > .title
+  > .composite-bar-container
+  > .composite-bar
+  > .monaco-action-bar
+  .action-item.checked
+  .action-label,
+.monaco-workbench
+  .pane-composite-part
+  > .title
+  > .composite-bar-container
+  > .composite-bar
+  > .monaco-action-bar
+  .action-item
+  .action-label {
+  font-family: "Algerian", "Cascadia Code" !important;
+  border: none !important;
+}
+
+/* Comment and Text Style */
+.mtk1 {
+  color: whitesmoke !important;
+}
+.mtk3 {
+  color: gold !important;
+}
+.mtk4 {
+  color: darkorange !important;
+}
+
+/* Line Number Style */
+.line-numbers {
+  position: relative !important;
+  left: 0 px;
+  width: 35px !important;
+  font-size: relative;
+  font-family: "Cascadia Code" !important;
+  opacity: 0.7;
+}
+
+/* Panel Specifications */
+.monaco-workbench .part > .header-or-footer,
+.monaco-workbench .part > .title {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-items: center !important;
+}
+
+/* Tab Bar Tools */
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .editor-actions {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-items: center !important;
+}
+.monaco-workbench
+  .tabs-container
+  .tab
+  .tab-actions
+  .action-label.codicon-close {
+  display: none !important;
+}
+
+/* Remove Letterpress Completely */
+.letterpress {
+  background: none !important;
+  background-image: none !important;
+  display: none !important;
+}
+.monaco-editor,
+.monaco-workbench,
+.editor-instance,
+.editor-group-container {
+  background: transparent !important;
+  background-image: none !important;
+}
+html,
+body,
+.monaco-editor-background,
+.editor-background,
+.letterpress {
+  background: none !important;
+  background-image: none !important;
+}
+
+/* Side bar */
+.part.sidebar {
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Editor Background */
+.monaco-editor,
+.monaco-workbench,
+.editor-instance,
+.editor-group-container {
+  background: transparent !important;
+}
+.editor-group-watermark {
+  max-width: none !important;
+}
+.command-center-center {
+  width: auto !important;
+}
+.monaco-workbench {
+  position: relative;
+}
+.monaco-workbench::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/Users/dibakar/Documents/Code/CustomCode/CustomWallpaper.jpg") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  opacity: 0.2 !important;
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* Custom Activity Icons  */
+.codicon-accounts-view-bar-icon:before {
+  content: "";
+  width: 60%;
+  height: 60%;
+  position: absolute !important;
+  background-image: url("/Users/dibakar/Documents/Code/CustomCode/CustomProfile.jpg") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  opacity: 0.5 !important;
+  border-radius: 50% !important;
+  object-fit: cover;
+}
+.codicon-settings-view-bar-icon:before {
+  content: "";
+  width: 60%;
+  height: 60%;
+  position: absolute !important;
+  background-image: url("/Users/dibakar/Documents/Code/CustomCode/CustomSettings.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  opacity: 0.5 !important;
+  border-radius: 50% !important;
+  object-fit: cover;
+}
+
+/* File Explorer */
+.monaco-list.list_id_1 .monaco-list-row {
+  color: white !important;
+}
+.monaco-list.list_id_1 .monaco-list-row.selected {
+  background-color: transparent !important;
+  opacity: 1 !important;
+}
+.monaco-list.list_id_1 .monaco-list-row.selected .label-name {
+  color: #00ff00 !important;
+}
+.monaco-tree .monaco-tree-row .label-name,
+.monaco-list .monaco-list-row .monaco-icon-label .label-name {
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  color: white !important;
+  animation: glowCycle 10s infinite alternate ease-in-out;
+}
+.monaco-workbench .part.sidebar .title-actions .actions-container {
+  display: none !important;
+}
+.monaco-list-rows {
+  background: transparent !important;
+}
+.monaco-list-row {
+  transition: 0.5s ease-in-out !important;
+}
+.monaco-list-row:hover {
+  background-color: transparent !important;
+  transform: scale(1.1) !important;
+  transition: transform 0.5s ease-in-out !important;
+}
+.notifications-toasts .monaco-list-row:hover {
+  background: transparent !important;
+}
+
+/* Hover Effect on Activity Bar Icons */
+.monaco-workbench
+  .activitybar
+  > .content
+  :not(.monaco-menu)
+  > .monaco-action-bar
+  .action-label.codicon {
+  transition: transform 0.5s ease-in-out !important;
+}
+.monaco-workbench
+  .activitybar
+  > .content
+  :not(.monaco-menu)
+  > .monaco-action-bar
+  .action-label.codicon:hover {
+  transform: scale(1.2) !important;
+  transition: transform 0.5s ease-in-out !important;
+  color: #00ff00 !important;
+}
+
+/* Sidebar Title */
+.monaco-workbench .part.sidebar > .title > .title-label h2 {
+  font-family: "Algerian", "Cascadia Code" !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-items: center !important;
+  font-size: 17px !important;
+  text-transform: uppercase;
+  color: white !important;
+  text-shadow: gold 0px 0 5px;
+}
+
+/* Sidebar Top Shadow */
+.monaco-scrollable-element > .shadow.top {
+  box-shadow: 0px 0px 100px rgba(255, 0, 0, 0.75) !important;
+}
+
+/* Sidebar Scroll */
+.slider {
+  position: absolute !important;
+  right: 1px !important;
+  width: 1px !important;
+  background: #bc9abc !important;
+  left: auto !important;
+}
+.codicon-toolbar-more,
+.codicon-word-wrap {
+  display: block !important;
+}
+
+/* ToolTip Box Style ( Hover Over Something To Open Tool Tip ) */
+.monaco-editor-hover,
+.monaco-hover {
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.45) !important;
+  background-image: linear-gradient(#3c3c50 0%, #2a2b38 100%) !important;
+  backdrop-filter: blur(3px) !important;
+  border-radius: 12px !important;
+  border: none !important;
+  min-width: 220px !important;
+}
+
+/* Chat Window Fixes */
+.chat-container .message {
+  padding: 14px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+}
+.chat-container .icon-container {
+  margin-right: 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 24px !important;
+}
+.chat-container .monaco-icon-label {
+  display: flex !important;
+  align-items: center !important;
+}
+.chat-container .monaco-icon-label-container {
+  margin-left: 8px !important;
+  padding-right: 8px !important;
+}
+.chat-container .monaco-list-row {
+  display: flex !important;
+  align-items: flex-start !important;
+  padding: 6px 0 !important;
+}
+.chat-container .label-name {
+  padding-left: 6px !important;
+}
+
+/* Command Palette */
+.quick-input-widget {
+  transform: translateY(-50%) !important;
+  top: 50% !important;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.45) !important;
+  padding: 10px 10px 18px 10px !important;
+  background-image: linear-gradient(#3c3c50 0%, #2a2b38 100%) !important;
+  backdrop-filter: blur(3px) !important;
+  border-radius: 25px !important;
+}
+.monaco-inputbox input::placeholder {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+.quick-input-filter .monaco-inputbox {
+  border-radius: 12px !important;
+  padding: 8px !important;
+  border: none !important;
+  background-color: rgba(34, 34, 34, 0.4) !important;
+  font-family: "Geist Mono" !important;
+  font-size: 14px !important;
+  margin-bottom: 16px !important;
+}
+#command-blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.15);
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(8px);
+}
+
+/* Tab Switching and Tab Container */
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .tabs-container
+  > .tab.sizing-fixed.close-action-off:not(.sticky-compact),
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .tabs-container
+  > .tab.sizing-shrink.close-action-off:not(.sticky-compact) {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container.active
+  > .title
+  .tabs-container
+  > .tab {
+  color: white !important;
+  transition: 0.5s ease-in-out !important;
+}
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container.active
+  > .title
+  .tabs-container
+  > .tab.active {
+  color: #00ff00 !important;
+  transition: 0.5s ease-in-out !important;
+}
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container.active
+  > .title
+  .tabs-container
+  > .tab:hover {
+  transform: scale(1.2) !important;
+  transition: transform 0.5s ease-in-out !important;
+}
+.monaco-workbench
+  .part.editor
+  > .content:not(.dragged-over)
+  .editor-group-container.active
+  > .title
+  .tabs-container
+  > .tab.sizing-shrink.active:not(.dragged):not(.sticky-compact)
+  > .tab-label
+  > .monaco-icon-label-container::after,
+.monaco-workbench
+  .part.editor
+  > .content:not(.dragged-over)
+  .editor-group-container.active
+  > .title
+  .tabs-container
+  > .tab.sizing-fixed.active:not(.dragged):not(.sticky-compact)
+  > .tab-label
+  > .monaco-icon-label-container::after {
+  background: none !important;
+  background-color: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.monaco-workbench
+  .part.editor
+  > .content:not(.dragged-over)
+  .editor-group-container.active
+  > .title
+  .tabs-container
+  > .tab.sizing-shrink:not(.dragged):not(.sticky-compact)
+  > .tab-label
+  > .monaco-icon-label-container::after,
+.monaco-workbench
+  .part.editor
+  > .content:not(.dragged-over)
+  .editor-group-container.active
+  > .title
+  .tabs-container
+  > .tab.sizing-fixed:not(.dragged):not(.sticky-compact)
+  > .tab-label
+  > .monaco-icon-label-container::after {
+  background: none !important;
+  background-color: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.monaco-workbench .tabs-container {
+  animation: tabSlideIn 3s !important;
+}
+.monaco-workbench .part.editor .editor-group-container .title.tabs .tab {
+  animation: tabSlideIn 3s !important;
+}
