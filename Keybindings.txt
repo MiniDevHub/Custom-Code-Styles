@@ -3,5 +3,13 @@
   {
     "key": "shift+alt+cmd+b",
     "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "key": "shift+alt+cmd+e",
+    "command": "extension.installCustomCSS"
+  },
+  {
+    "key": "shift+alt+cmd+d",
+    "command": "extension.uninstallCustomCSS"
   }
 ]

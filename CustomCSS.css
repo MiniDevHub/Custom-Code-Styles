@@ -1,13 +1,13 @@
-/* Custom Keyframes */
+/* INFO: Custom Keyframes */
 @keyframes glowCycle {
   0% {
-    text-shadow: #00ff00 1px 1px 8px;
+    text-shadow: #00ff00 0 0 4px;
   }
   50% {
-    text-shadow: #a200ff 1px 1px 8px;
+    text-shadow: #a200ff 0 0 4px;
   }
   100% {
-    text-shadow: #ff009d 1px 1px 8px;
+    text-shadow: #ff009d 0 0 4px;
   }
 }
 @keyframes tabSlideIn {
@@ -31,7 +31,7 @@
   }
 }
 
-/* Font Family */
+/* INFO: Font Family */
 * {
   font-family: "Cascadia Code", "FiraCode Nerd Font", "FiraCode",
     "Menlo, Geist Mono", "JetBrains Mono", "Consolas", "Courier New",
@@ -41,6 +41,8 @@
 .octicon {
   font-family: "Codicon" !important;
 }
+
+/* INFO: Terminal Specifics */
 .monaco-workbench
   .pane-composite-part
   > .header-or-footer
@@ -77,28 +79,36 @@
   border: none !important;
 }
 
-/* Comment and Text Style */
+/* INFO: Comment and Text Style */
 .mtk1 {
-  color: whitesmoke !important;
+  color: #fdfeff !important;
+  font-weight: 700 !important;
 }
 .mtk3 {
-  color: gold !important;
+  color: #ffff00 !important;
+  font-weight: 900 !important;
 }
 .mtk4 {
   color: darkorange !important;
 }
+.mtk10 {
+  font-weight: 900 !important;
+}
 
-/* Line Number Style */
+/* INFO: Line Number Style */
 .line-numbers {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
   position: relative !important;
   left: 0 px;
   width: 35px !important;
   font-size: relative;
-  font-family: "Cascadia Code" !important;
+  font-family: "Algerian" !important;
   opacity: 0.7;
 }
 
-/* Panel Specifications */
+/* INFO: Panel Specifications */
 .monaco-workbench .part > .header-or-footer,
 .monaco-workbench .part > .title {
   display: flex !important;
@@ -107,7 +117,7 @@
   justify-items: center !important;
 }
 
-/* Tab Bar Tools */
+/* INFO: Tab Bar Tools */
 .monaco-workbench
   .part.editor
   > .content
@@ -127,7 +137,7 @@
   display: none !important;
 }
 
-/* Remove Letterpress Completely */
+/* INFO: Editor Background */
 .letterpress {
   background: none !important;
   background-image: none !important;
@@ -148,13 +158,6 @@ body,
   background: none !important;
   background-image: none !important;
 }
-
-/* Side bar */
-.part.sidebar {
-  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
-}
-
-/* Editor Background */
 .monaco-editor,
 .monaco-workbench,
 .editor-instance,
@@ -180,112 +183,182 @@ body,
   background-image: url("/Users/dibakar/Documents/Code/CustomCode/CustomWallpaper.jpg") !important;
   background-size: cover !important;
   background-position: center center !important;
-  opacity: 0.2 !important;
+  opacity: 0.3 !important;
   pointer-events: none;
   z-index: -2;
 }
 
-/* Custom Activity Icons  */
-.codicon-accounts-view-bar-icon:before {
-  content: "";
-  width: 60%;
-  height: 60%;
-  position: absolute !important;
-  background-image: url("/Users/dibakar/Documents/Code/CustomCode/CustomProfile.jpg") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  opacity: 0.5 !important;
-  border-radius: 50% !important;
-  object-fit: cover;
-}
-.codicon-settings-view-bar-icon:before {
-  content: "";
-  width: 60%;
-  height: 60%;
-  position: absolute !important;
-  background-image: url("/Users/dibakar/Documents/Code/CustomCode/CustomSettings.png") !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  opacity: 0.5 !important;
-  border-radius: 50% !important;
-  object-fit: cover;
+/* INFO: Side bar */
+.part.sidebar {
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
 }
 
-/* File Explorer */
-.monaco-list.list_id_1 .monaco-list-row {
+/* INFO: Primary Side-bar Title */
+.part.sidebar > .title > .title-label h2 {
+  font-family: "Algerian", "Cascadia Code", "Codicon" !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-items: center !important;
+  font-size: 18px !important;
+  color: ivory !important;
+  text-shadow: gold 4px 4px 3px;
+}
+
+/* INFO: File Explorer */
+.monaco-workbench .part.sidebar .title-actions .actions-container {
+  display: none !important;
+}
+.monaco-list.list_id_2 > .monaco-scrollable-element > .monaco-list-rows {
+  padding-top: 10px !important;
+}
+.monaco-list.list_id_2
+  > .monaco-scrollable-element
+  > .monaco-list-rows
+  .monaco-list-row {
+  background: transparent !important;
+  transition: 0.5s ease-in-out !important;
+  margin-top: 5px !important;
   color: white !important;
+  width: 98.5% !important;
 }
-.monaco-list.list_id_1 .monaco-list-row.selected {
-  background-color: transparent !important;
-  opacity: 1 !important;
+.monaco-list.list_id_2
+  > .monaco-scrollable-element
+  > .monaco-list-rows
+  .monaco-list-row.selected {
+  font-family: "Cascadia Code", "Codicon" !important;
+  box-shadow: 0 0 8px 3px rgba(0, 255, 255, 0.5) !important;
+  border-radius: 25px !important;
+  left: 2px !important;
 }
-.monaco-list.list_id_1 .monaco-list-row.selected .label-name {
-  color: #00ff00 !important;
+.monaco-list.list_id_2
+  > .monaco-scrollable-element
+  > .monaco-list-rows
+  .monaco-list-row:hover {
+  font-family: "Algerian", "Codicon" !important;
+  background-color: rgba(255, 215, 0, 0.25) !important;
+  border-radius: 25px !important;
+  transition: all 0.6s ease-in-out !important;
+  * {
+    font-family: inherit !important;
+    font-weight: 100 !important;
+  }
 }
-.monaco-tree .monaco-tree-row .label-name,
-.monaco-list .monaco-list-row .monaco-icon-label .label-name {
+.monaco-list.list_id_2
+  > .monaco-scrollable-element
+  > .monaco-list-rows
+  .monaco-list-row
+  > .monaco-tl-row
+  .monaco-tl-contents
+  > .monaco-icon-label {
   font-size: 10px !important;
   font-weight: 600 !important;
   color: white !important;
   animation: glowCycle 10s infinite alternate ease-in-out;
 }
-.monaco-workbench .part.sidebar .title-actions .actions-container {
-  display: none !important;
-}
-.monaco-list-rows {
-  background: transparent !important;
-}
-.monaco-list-row {
-  transition: 0.5s ease-in-out !important;
-}
-.monaco-list-row:hover {
-  background-color: transparent !important;
-  transform: scale(1.1) !important;
-  transition: transform 0.5s ease-in-out !important;
-}
-.notifications-toasts .monaco-list-row:hover {
-  background: transparent !important;
+
+/* INFO: Bar Window Background */
+.monaco-workbench .part.sidebar::before,
+.monaco-workbench .part.auxiliarybar::before {
+  content: "";
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-image: url("/Users/dibakar/Documents/Code/CustomCode/Trident.png") !important;
+  background-position: center center !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+  opacity: 0.35 !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
 }
 
-/* Hover Effect on Activity Bar Icons */
-.monaco-workbench
-  .activitybar
-  > .content
-  :not(.monaco-menu)
-  > .monaco-action-bar
-  .action-label.codicon {
-  transition: transform 0.5s ease-in-out !important;
-}
-.monaco-workbench
-  .activitybar
-  > .content
-  :not(.monaco-menu)
-  > .monaco-action-bar
-  .action-label.codicon:hover {
-  transform: scale(1.2) !important;
-  transition: transform 0.5s ease-in-out !important;
-  color: #00ff00 !important;
+/* INFO: Vertical Borders */
+.monaco-sash.vertical.mac[style*="left: 280px"],
+.monaco-sash.vertical.mac[style*="left: 1240px"],
+.monaco-workbench .activitybar.right.bordered:before,
+.monaco-workbench .activitybar.bordered:before {
+  border-left: 2px solid rgba(150, 0, 255, 0.3) !important;
 }
 
-/* Sidebar Title */
-.monaco-workbench .part.sidebar > .title > .title-label h2 {
-  font-family: "Algerian", "Cascadia Code" !important;
+/* INFO: Custom Activity Bar Icons  */
+.codicon-accounts-view-bar-icon:before {
+  content: "";
+  width: 75%;
+  height: 75%;
+  position: absolute !important;
+  background-image: url("/Users/dibakar/Documents/Code/CustomCode/Photo.jpeg") !important;
+  background-size: 100% !important;
+  background-position: center center !important;
+  opacity: 1 !important;
+  border-radius: 50% !important;
+  object-fit: cover;
+}
+.codicon-settings-view-bar-icon:before {
+  content: "";
+  width: 65%;
+  height: 65%;
+  position: absolute !important;
+  background-image: url("/Users/dibakar/Documents/Code/CustomCode/Gears.png") !important;
+  background-size: 100% !important;
+  background-position: center center !important;
+  opacity: 0.8 !important;
+  border-radius: 50% !important;
+  object-fit: cover;
+}
+
+/* INFO: Hover Effect on Activity Bar Icons */
+.monaco-action-bar .action-label.codicon {
+  padding: 0 !important;
+  margin: 0 !important;
+  position: relative !important;
   display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-items: center !important;
-  font-size: 17px !important;
-  text-transform: uppercase;
-  color: white !important;
-  text-shadow: gold 0px 0 5px;
+  align-items: center;
+  justify-content: center;
+}
+.monaco-workbench
+  .activitybar
+  > .content
+  :not(.monaco-menu)
+  > .monaco-action-bar
+  .action-label.codicon::before {
+  position: absolute;
+  border-radius: 50%;
+  transition: transform 1s ease-in-out !important;
+  transition: transform 1s ease-in-out, color 1s ease-in-out,
+    box-shadow 1s ease-in-out !important;
+  color: #ffd700 !important;
+}
+.monaco-workbench
+  .activitybar
+  > .content
+  :not(.monaco-menu)
+  > .monaco-action-bar
+  .action-label.codicon:hover::before {
+  display: block !important;
+  position: absolute !important;
+  transform: scale(1.5) rotate(10deg) !important;
+  transition: transform 0.5s ease-in-out, color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out !important;
+  color: #00ff00 !important;
+  box-shadow: 0 0 4px 2px rgba(0, 255, 0, 0.8) !important;
+  border-radius: 50% !important;
+  background-color: #000 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  will-change: transform, color, box-shadow !important;
+  z-index: -1 !important;
 }
 
-/* Sidebar Top Shadow */
+/* INFO: Side bar Top Shadow */
 .monaco-scrollable-element > .shadow.top {
   box-shadow: 0px 0px 100px rgba(255, 0, 0, 0.75) !important;
 }
 
-/* Sidebar Scroll */
+/* INFO: Side bar Scroll */
 .slider {
   position: absolute !important;
   right: 1px !important;
@@ -298,80 +371,207 @@ body,
   display: block !important;
 }
 
-/* ToolTip Box Style ( Hover Over Something To Open Tool Tip ) */
+/* INFO: Tool Tip Box Style ( Hover Over Something To Open Tool Tip ) */
 .monaco-editor-hover,
 .monaco-hover {
+  font-family: "Cascadia Code", "Codicon" !important;
+  color: #00ff00 !important;
+  background-color: transparent !important;
+  border: 2px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 1s ease-in-out !important;
+}
+.monaco-editor-hover:hover,
+.monaco-hover:hover {
+  font-family: "Times New Roman", "Codicon" !important;
+  color: #ffd700 !important;
+  padding: 0 0 0.5% !important;
   box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.45) !important;
-  background-image: linear-gradient(#3c3c50 0%, #2a2b38 100%) !important;
-  backdrop-filter: blur(3px) !important;
+  border: 2px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 12px !important;
-  border: none !important;
-  min-width: 220px !important;
-}
-
-/* Chat Window Fixes */
-.chat-container .message {
-  padding: 14px !important;
-  display: flex !important;
-  align-items: flex-start !important;
-}
-.chat-container .icon-container {
-  margin-right: 16px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-width: 24px !important;
-}
-.chat-container .monaco-icon-label {
-  display: flex !important;
-  align-items: center !important;
-}
-.chat-container .monaco-icon-label-container {
-  margin-left: 8px !important;
-  padding-right: 8px !important;
-}
-.chat-container .monaco-list-row {
-  display: flex !important;
-  align-items: flex-start !important;
-  padding: 6px 0 !important;
-}
-.chat-container .label-name {
-  padding-left: 6px !important;
-}
-
-/* Command Palette */
-.quick-input-widget {
-  transform: translateY(-50%) !important;
-  top: 50% !important;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.45) !important;
-  padding: 10px 10px 18px 10px !important;
-  background-image: linear-gradient(#3c3c50 0%, #2a2b38 100%) !important;
   backdrop-filter: blur(3px) !important;
-  border-radius: 25px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  min-width: 220px !important;
+  transition: all 0.75s ease-in-out !important;
 }
-.monaco-inputbox input::placeholder {
-  color: rgba(255, 255, 255, 0.3) !important;
+
+/* INFO: Command Palette */
+.quick-input-widget,
+.quick-input-widget .quick-input-list,
+.quick-input-widget .quick-input-list > .monaco-list,
+.quick-input-widget
+  .quick-input-list
+  > .monaco-list
+  > .monaco-scrollable-element,
+.quick-input-widget
+  .quick-input-list
+  > .monaco-list
+  > .monaco-scrollable-element
+  > .monaco-list-rows,
+.quick-input-widget
+  .quick-input-list
+  > .monaco-list
+  > .monaco-scrollable-element
+  > .monaco-list-rows
+  .monaco-list-row {
+  background-color: transparent !important;
+}
+.quick-input-widget {
+  width: auto !important;
+  min-width: 62.5vw !important;
+  height: auto !important;
+  min-height: 46.875vh !important;
+  font-size: 16px !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  padding: 0.5% !important;
+  backdrop-filter: blur(4px) !important;
+  border: 2px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 25px !important;
+  box-shadow: 0 0 8px 2px rgba(0, 255, 255, 0.8) !important;
+}
+.quick-input-widget::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  background-image: url("/Users/dibakar/Documents/Code/CustomCode/Mask.png") !important;
+  background-position: center center !important;
+  background-size: 35% !important;
+  background-repeat: no-repeat !important;
+  opacity: 0.3 !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+.quick-input-widget .quick-input-header .quick-input-and-message {
+  max-height: 3.5vh !important;
+}
+.quick-input-widget
+  .quick-input-header
+  .quick-input-and-message
+  .quick-input-filter
+  .monaco-inputbox {
+  margin: 0 !important;
+}
+.quick-input-widget
+  .quick-input-header
+  .quick-input-and-message
+  > .quick-input-filter
+  > .quick-input-box
+  > .monaco-findInput
+  > .monaco-inputbox
+  > .ibwrapper
+  > .input {
+  border-radius: 25px !important;
+  box-shadow: 0 0 8px 2px rgba(255, 0, 255, 0.8) !important;
 }
 .quick-input-filter .monaco-inputbox {
-  border-radius: 12px !important;
   padding: 8px !important;
+  border-radius: 25px !important;
   border: none !important;
-  background-color: rgba(34, 34, 34, 0.4) !important;
-  font-family: "Geist Mono" !important;
+  font-family: "Cascadia Code", "Codicon" !important;
   font-size: 14px !important;
   margin-bottom: 16px !important;
 }
-#command-blur {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.15);
-  top: 0;
-  left: 0;
-  backdrop-filter: blur(8px);
+.quick-input-widget .quick-input-list {
+  padding: 0 !important;
+  height: auto !important;
+}
+.quick-input-widget .quick-input-list > .monaco-list {
+  width: auto !important;
+  height: auto !important;
+  max-height: 55vh !important;
+  font-size: 14px !important;
+  padding: 10px 0 !important;
+}
+.quick-input-widget
+  .quick-input-list
+  > .monaco-list
+  > .monaco-scrollable-element
+  > .monaco-list-rows {
+  padding-bottom: 10px !important;
+}
+.quick-input-widget
+  .quick-input-list
+  > .monaco-list
+  > .monaco-scrollable-element
+  > .monaco-list-rows
+  > .monaco-list-row {
+  width: auto !important;
+  min-width: 60.4vw !important;
+  margin: 5px 5px 0 5px !important;
+}
+.quick-input-widget
+  .quick-input-list
+  > .monaco-list
+  > .monaco-scrollable-element
+  > .monaco-list-rows
+  > .monaco-list-row:hover {
+  font-family: "Algerian", "Codicon" !important;
+  box-shadow: 0 0 8px 2px rgba(0, 255, 105, 0.8) !important;
+  border-radius: 25px !important;
+  transition: all 0.6s ease-in-out !important;
+  * {
+    font-family: inherit !important;
+    height: auto !important;
+  }
+}
+.quick-input-widget
+  .quick-input-list
+  > .monaco-list
+  > .monaco-scrollable-element
+  > .monaco-list-rows
+  > .monaco-list-row.focused {
+  font-family: "Algerian", "Codicon" !important;
+  border-left: 4px solid rgba(255, 0, 255, 0.8) !important;
+  border-right: 4px solid rgba(255, 0, 255, 0.8) !important;
+  border-radius: 25px !important;
+  color: #ffd700 !important;
+  filter: drop-shadow(6px 0 16px rgba(0, 255, 105, 1)) !important;
+  transition: all 0.6s ease-in-out !important;
+  * {
+    font-family: inherit !important;
+    height: auto !important;
+  }
+}
+.quick-input-widget
+  .quick-input-list
+  > .monaco-list
+  > .monaco-scrollable-element
+  > .monaco-list-rows
+  > .monaco-list-row.focused::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: -1 !important;
+  background: linear-gradient(
+    to right,
+    rgba(0, 255, 105, 0.08),
+    rgba(0, 255, 105, 0.025),
+    rgba(0, 255, 105, 0)
+  ) !important;
+}
+.quick-input-widget
+  .quick-input-list
+  > .monaco-list
+  > .monaco-scrollable-element
+  > .monaco-list-rows
+  > .monaco-list-row
+  > .monaco-tl-row
+  .monaco-tl-contents
+  > .quick-input-list-entry
+  .monaco-action-bar
+  > .actions-container {
+  padding-top: 3px !important;
 }
 
-/* Tab Switching and Tab Container */
+/* INFO: Tab Switching and Tab Container */
 .monaco-workbench
   .part.editor
   > .content
@@ -395,8 +595,13 @@ body,
   .editor-group-container.active
   > .title
   .tabs-container
-  > .tab {
-  color: white !important;
+  > .tab:has(
+    .monaco-icon-label
+      > .monaco-icon-label-container
+      > .monaco-icon-name-container
+      > .label-name
+  ) {
+  color: #f2f0ef !important;
   transition: 0.5s ease-in-out !important;
 }
 .monaco-workbench
@@ -405,7 +610,12 @@ body,
   .editor-group-container.active
   > .title
   .tabs-container
-  > .tab.active {
+  > .tab:has(
+    .monaco-icon-label
+      > .monaco-icon-label-container
+      > .monaco-icon-name-container
+      > .label-name
+  ).active {
   color: #00ff00 !important;
   transition: 0.5s ease-in-out !important;
 }
@@ -415,7 +625,12 @@ body,
   .editor-group-container.active
   > .title
   .tabs-container
-  > .tab:hover {
+  > .tab:has(
+    .monaco-icon-label
+      > .monaco-icon-label-container
+      > .monaco-icon-name-container
+      > .label-name
+  ):hover {
   transform: scale(1.2) !important;
   transition: transform 0.5s ease-in-out !important;
 }
@@ -461,13 +676,112 @@ body,
   > .tab-label
   > .monaco-icon-label-container::after {
   background: none !important;
-  background-color: none !important;
+  background-color: transparent !important;
   box-shadow: none !important;
   border: none !important;
 }
 .monaco-workbench .tabs-container {
+  background-color: transparent !important;
   animation: tabSlideIn 3s !important;
 }
 .monaco-workbench .part.editor .editor-group-container .title.tabs .tab {
+  background-color: transparent !important;
   animation: tabSlideIn 3s !important;
+}
+.monaco-workbench
+  .part.editor
+  .editor-group-container
+  .title.tabs
+  .tab.closing {
+  animation: tabSlideOut 3s !important;
+}
+
+/* INFO: Error Lens Icons */
+.monaco-editor .ced-1-TextEditorDecorationType33-2 {
+  background: url("/Users/dibakar/Documents/Code/CustomCode/ErrorLens01.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  border: none !important;
+  border-radius: 50% !important;
+}
+
+/* INFO: Notification Specifications */
+.monaco-workbench
+  > .notifications-toasts
+  .notification-toast-container
+  > .notification-toast,
+.monaco-workbench
+  > .notifications-toasts
+  .notification-toast-container
+  > .notification-toast
+  .monaco-list-row,
+.monaco-workbench
+  > .notifications-toasts
+  .notification-toast-container
+  > .notification-toast
+  .monaco-list:not(.element-focused):focus:before,
+.monaco-workbench
+  > .notifications-toasts
+  .notification-toast-container
+  > .notification-toast
+  .monaco-scrollable-element,
+.monaco-workbench > .notifications-toasts .notifications-list-container {
+  background: transparent !important;
+}
+.monaco-workbench > .notifications-toasts.visible {
+  transition: all 1s ease-in-out !important;
+}
+.monaco-workbench > .notifications-toasts.visible:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(2px) !important;
+  -webkit-backdrop-filter: blur(2px) !important;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5) !important;
+  border-radius: 25px !important;
+  transition: all 0.75s ease-in-out !important;
+}
+.monaco-workbench
+  .notifications-list-container
+  .notification-list-item
+  .notification-list-item-source {
+  background-color: transparent !important;
+  color: #ffd700;
+  font-family: "Times New Roman", "Codicon" !important;
+}
+.monaco-workbench
+  .notifications-list-container
+  .notification-list-item
+  .notification-list-item-buttons-container
+  .monaco-text-button {
+  background-color: transparent !important;
+  transition: transform 0.5s ease-in-out !important;
+  font-family: "Algerian", "Codicon" !important;
+}
+.monaco-workbench
+  .notifications-list-container
+  .notification-list-item
+  .notification-list-item-buttons-container
+  .monaco-text-button:hover {
+  background-color: transparent !important;
+  color: #00ff00 !important;
+  transform: scale(1.05) rotate(-2deg) !important;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out !important;
+  border: 0.1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 25px !important;
+  box-shadow: 0 0 5px 2px rgba(0, 255, 0, 0.8) !important;
+  position: relative !important;
+  z-index: 2 !important;
+  pointer-events: auto !important;
+}
+
+/* INFO: Custom Word Highlights */
+.monaco-editor .wordHighlight {
+  background-color: rgba(0, 255, 200, 0.13) !important;
+  border-radius: 2px;
+  box-shadow: 0 0 8px 2px rgba(0, 200, 255, 1) !important;
+}
+.monaco-editor .selected-text {
+  background-color: rgba(0, 255, 200, 0.13) !important;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(0, 255, 100, 1) !important;
 }

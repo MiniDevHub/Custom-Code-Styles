@@ -4,9 +4,75 @@
   "window.title": "MrDib ${activeEditorMedium} ${rootPath}",
   "breadcrumbs.enabled": false,
 
+  // INFO: Auto Save and ( Format / Indentation ) Specifications
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 2000,
+  "explorer.confirmDelete": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "notebook.formatOnSave.enabled": true,
+  "notebook.formatOnCellExecution": true,
+  "editor.detectIndentation": false,
+  "editor.guides.indentation": true,
+  "editor.guides.highlightActiveIndentation": false,
+  "editor.overviewRulerBorder": false,
+  "editor.renderLineHighlight": "none",
+  "workbench.colorCustomizations": {
+    "editorIndentGuide.background1": "#1E1E1E",
+    "terminal.background": "#00000000"
+  },
+  "python.createEnvironment.trigger": "off",
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.stickyScroll.enabled": false,
+  "editor.tabSize": 10,
+  "editor.insertSpaces": true,
+
+  // INFO: Code Formatter Specifications
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "notebook.defaultFormatter": "xaver.clang-format",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 10
+  },
+  "shellformat.effectLanguages": [
+    "shellscript",
+    "dockerfile",
+    "dotenv",
+    "hosts",
+    "jvmoptions",
+    "ignore",
+    "gitignore",
+    "properties",
+    "spring-boot-properties",
+    "azcli",
+    "bats"
+  ],
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+
   // INFO: Activity Bar and Window Specifications
   "workbench.sideBar.location": "right",
-  "workbench.activityBar.location": "default",
   "workbench.tree.indent": 10,
   "workbench.editor.enablePreview": false,
   "window.newWindowDimensions": "inherit",
@@ -20,7 +86,7 @@
   "editor.copyWithSyntaxHighlighting": false,
   "editor.suggestLineHeight": 30,
   "editor.colorDecorators": false,
-  "window.zoomLevel": 0.5,
+  "window.zoomLevel": 1.5,
   "editor.suggestFontSize": 20,
   "editor.hideCursorInOverviewRuler": true,
   "apc.stylesheet": {
@@ -62,47 +128,6 @@
   // INFO: Zoom Controls
   "editor.mouseWheelZoom": true,
 
-  // INFO: Code Formatter Specifications
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
-  "[c]": {
-    "editor.defaultFormatter": "xaver.clang-format"
-  },
-  "notebook.defaultFormatter": "xaver.clang-format",
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.autopep8",
-    "editor.formatOnSave": true,
-    "editor.tabSize": 10
-  },
-  "shellformat.effectLanguages": [
-    "shellscript",
-    "dockerfile",
-    "dotenv",
-    "hosts",
-    "jvmoptions",
-    "ignore",
-    "gitignore",
-    "properties",
-    "spring-boot-properties",
-    "azcli",
-    "bats"
-  ],
-  "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "[dockerfile]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "[dotenv]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "[ignore]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-
   // INFO: Terminal Specifications
   "terminal.integrated.fontFamily": "Cascadia Code",
   "terminal.integrated.tabs.title": "${process} ~ MrDib",
@@ -110,8 +135,8 @@
   "terminal.integrated.cursorStyle": "line",
   "python.terminal.focusAfterLaunch": true,
   "terminal.integrated.smoothScrolling": true,
-  "terminal.integrated.lineHeight": 1.5,
-  "terminal.integrated.fontSize": 9,
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.fontSize": 12.5,
   "debug.terminal.clearBeforeReusing": true,
 
   // INFO: Code Runner Specifications
@@ -177,30 +202,6 @@
     "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml",
     "gleam": "gleam run -m $fileNameWithoutExt"
   },
-
-  // INFO: Auto Save and ( Format / Indentation ) Specifications
-  "files.autoSave": "onFocusChange",
-  "explorer.confirmDelete": false,
-  "editor.formatOnSave": true,
-  "notebook.formatOnSave.enabled": true,
-  "notebook.formatOnCellExecution": true,
-  "editor.detectIndentation": false,
-  "editor.guides.indentation": true,
-  "editor.guides.highlightActiveIndentation": false,
-  "editor.overviewRulerBorder": false,
-  "editor.renderLineHighlight": "none",
-  "workbench.colorCustomizations": {
-    "editorIndentGuide.background1": "#1E1E1E",
-    "terminal.background": "#00000000"
-  },
-  "python.createEnvironment.trigger": "off",
-  "editor.smoothScrolling": true,
-  "workbench.list.smoothScrolling": true,
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.vertical": "hidden",
-  "editor.stickyScroll.enabled": false,
-  "editor.tabSize": 10,
-  "editor.insertSpaces": true,
 
   // INFO: WhiteSpace, WhiteLines and Problems Specifications
   "diffEditor.ignoreTrimWhitespace": false,
@@ -416,6 +417,7 @@
   // INFO: Unknown Words
   "cSpell.userWords": [
     "Aakash",
+    "afplay",
     "applescript",
     "asdfghjkl",
     "asgi",
@@ -442,8 +444,10 @@
     "Consolas",
     "consoleloggerparameters",
     "cscript",
+    "CUSTOMERID",
     "dibakar",
     "Dipika",
+    "displayplacer",
     "Divya",
     "dotenv",
     "dunder",
@@ -463,12 +467,14 @@
     "haxe",
     "Himsagar",
     "Huskie",
+    "ibwrapper",
     "ifsc",
     "ilike",
     "Indrajit",
     "Infotech",
     "inputbox",
     "intelephense",
+    "INVOICENO",
     "Japani",
     "jash",
     "javac",
@@ -485,8 +491,11 @@
     "lein",
     "lessc",
     "lightgray",
+    "linespace",
     "linestyle",
     "livewire",
+    "loadtxt",
+    "logspace",
     "madad",
     "Malik",
     "markerfacecolor",
@@ -509,6 +518,7 @@
     "mystrcpy",
     "mystrlen",
     "nameshort",
+    "nditer",
     "neeche",
     "Nologo",
     "octicon",
@@ -516,8 +526,8 @@
     "osascript",
     "passlib",
     "phpunit",
+    "polyfit",
     "popitem",
-    "Pornhub",
     "Portilla",
     "println",
     "PULLUP",
@@ -529,6 +539,7 @@
     "qwertyuiop",
     "Rahul",
     "Rampur",
+    "randn",
     "Renuka",
     "rgba",
     "Rohan",
@@ -539,6 +550,7 @@
     "saara",
     "Sachin",
     "sameer",
+    "savetxt",
     "sbcl",
     "scriptcs",
     "Sharma",
@@ -548,6 +560,7 @@
     "Shubham",
     "Shubhi",
     "Sinha",
+    "Siri",
     "skyfall",
     "smorest",
     "Soham",
@@ -566,6 +579,8 @@
     "toolkits",
     "trav'ller",
     "twistie",
+    "udemy",
+    "UNITPRICE",
     "useremail",
     "vbscript",
     "vetur",

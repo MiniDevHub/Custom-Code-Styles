@@ -75,64 +75,64 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // INFO: Custom KeyStrokes
-const toastContainer = document.createElement("div");
-Object.assign(toastContainer.style, {
-  position: "fixed",
-  bottom: "20px",
-  right: "20px",
-  display: "flex",
-  flexDirection: "column-reverse",
-  gap: "8px",
-  zIndex: 9999,
-});
-document.body.appendChild(toastContainer);
-document.addEventListener("keydown", (e) => {
-  const keys = [];
-  if (e.metaKey) keys.push("⌘");
-  if (e.ctrlKey) keys.push("Ctrl");
-  if (e.altKey) keys.push("Alt");
-  if (e.shiftKey) keys.push("Shift");
-  let rawKey = e.key;
-  const keyMap = {
-    " ": "Space",
-    Escape: "Esc",
-    ArrowUp: "↑",
-    ArrowDown: "↓",
-    ArrowLeft: "←",
-    ArrowRight: "→",
-    Enter: "Enter",
-    Tab: "Tab",
-    Backspace: "Backspace",
-  };
-  const normalizedKey = keyMap[rawKey] || rawKey.toUpperCase();
-  if (!["CONTROL", "SHIFT", "ALT", "META"].includes(normalizedKey)) {
-    keys.push(normalizedKey);
-  }
-  const combo = keys.join(" + ");
-  const toast = document.createElement("div");
-  toast.textContent = combo;
-  Object.assign(toast.style, {
-    background: "#222",
-    color: "#fff",
-    padding: "8px 12px",
-    fontSize: "14px",
-    borderRadius: "6px",
-    fontFamily: "monospace",
-    opacity: "0",
-    transform: "translateX(20px)",
-    transition: "all 0.4s ease",
-  });
-  toastContainer.appendChild(toast);
-  requestAnimationFrame(() => {
-    toast.style.opacity = "0.95";
-    toast.style.transform = "translateX(0)";
-  });
-  setTimeout(() => {
-    toast.style.opacity = "0";
-    toast.style.transform = "translateX(20px)";
-    setTimeout(() => toast.remove(), 400);
-  }, 2500);
-});
+// const toastContainer = document.createElement("div");
+// Object.assign(toastContainer.style, {
+//   position: "fixed",
+//   bottom: "20px",
+//   right: "20px",
+//   display: "flex",
+//   flexDirection: "column-reverse",
+//   gap: "8px",
+//   zIndex: 9999,
+// });
+// document.body.appendChild(toastContainer);
+// document.addEventListener("keydown", (e) => {
+//   const keys = [];
+//   if (e.metaKey) keys.push("⌘");
+//   if (e.ctrlKey) keys.push("Ctrl");
+//   if (e.altKey) keys.push("Alt");
+//   if (e.shiftKey) keys.push("Shift");
+//   let rawKey = e.key;
+//   const keyMap = {
+//     " ": "Space",
+//     Escape: "Esc",
+//     ArrowUp: "↑",
+//     ArrowDown: "↓",
+//     ArrowLeft: "←",
+//     ArrowRight: "→",
+//     Enter: "Enter",
+//     Tab: "Tab",
+//     Backspace: "Backspace",
+//   };
+//   const normalizedKey = keyMap[rawKey] || rawKey.toUpperCase();
+//   if (!["CONTROL", "SHIFT", "ALT", "META"].includes(normalizedKey)) {
+//     keys.push(normalizedKey);
+//   }
+//   const combo = keys.join(" + ");
+//   const toast = document.createElement("div");
+//   toast.textContent = combo;
+//   Object.assign(toast.style, {
+//     background: "#222",
+//     color: "#fff",
+//     padding: "8px 12px",
+//     fontSize: "14px",
+//     borderRadius: "6px",
+//     fontFamily: "monospace",
+//     opacity: "0",
+//     transform: "translateX(20px)",
+//     transition: "all 0.4s ease",
+//   });
+//   toastContainer.appendChild(toast);
+//   requestAnimationFrame(() => {
+//     toast.style.opacity = "0.95";
+//     toast.style.transform = "translateX(0)";
+//   });
+//   setTimeout(() => {
+//     toast.style.opacity = "0";
+//     toast.style.transform = "translateX(20px)";
+//     setTimeout(() => toast.remove(), 400);
+//   }, 2500);
+// });
 
 // INFO: Custom Welcome 🎉
 const style = document.createElement("style");
