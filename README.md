@@ -9,7 +9,7 @@
 
 **Transform your VS Code from a text editor into a cyberpunk command center 🚀**
 
-[Installation](#-installation) • [Features](#-features) • [Customization](#-customization) • [Gallery](#-gallery)
+[Installation](#-installation) • [Features](#-features) • [Customization](#-customization)
 
 </div>
 
@@ -62,7 +62,7 @@ Welcome to my personal VS Code transformation kit! This isn't just a theme - it'
 1. **Clone this repository:**
 
    ```bash
-   git clone https://github.com/yourusername/Custom-Code-Styles.git
+   git clone https://github.com/MiniDevHub/Custom-Code-Styles.git
    cd Custom-Code-Styles
    ```
 
@@ -157,31 +157,6 @@ The main colors are defined in `styles/CustomCSS.css`:
 
 ---
 
-## 📸 Gallery
-
-<details>
-<summary><b>Click to see the awesomeness</b></summary>
-
-### Welcome Animation
-
-![Welcome Screen](screenshots/welcome-animation.gif)
-
-### Command Palette
-
-![Command Palette](screenshots/command-palette.png)
-
-### File Explorer
-
-![File Explorer](screenshots/file-explorer.png)
-
-### Full Setup
-
-![Overview](screenshots/overview.png)
-
-</details>
-
----
-
 ## 🛠️ Troubleshooting
 
 | Issue                    | Solution                                    |
@@ -191,7 +166,7 @@ The main colors are defined in `styles/CustomCSS.css`:
 | **Lost after update**    | Re-run "Enable Custom CSS and JS" command   |
 | **Performance issues**   | Reduce animation count in JS config         |
 
-For more issues, check [TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)
+For more issues, check [TROUBLESHOOTING.md](Docs/TROUBLESHOOTING.md)
 
 ---
 
@@ -234,7 +209,7 @@ MIT - Do whatever you want with this. If you make something cooler, just let me 
 
 Made with 💚 and probably too much caffeine
 
-[Report Bug](https://github.com/yourusername/Custom-Code-Styles/issues) • [Request Feature](https://github.com/yourusername/Custom-Code-Styles/issues)
+[Report Bug](https://github.com/MiniDevHub/Custom-Code-Styles/issues) • [Request Feature](https://github.com/MiniDevHub/Custom-Code-Styles/issues)
 
 </div>
 
