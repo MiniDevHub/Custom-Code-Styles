@@ -1,0 +1,1112 @@
+{
+  // ╔══════════════════════════════════════════════════════════════════╗
+  // ║                     🎨 MrDib's VS CODE CONFIG                    ║
+  // ║                    Professional Edition v2.0                     ║
+  // ╚══════════════════════════════════════════════════════════════════╝
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                    🪟 WINDOW & INTERFACE                        │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: Window Appearance
+  "window.customTitleBarVisibility": "windowed",
+  "window.title": "MrDib ${activeEditorMedium} ${rootPath}",
+  "window.newWindowDimensions": "inherit",
+  "window.nativeFullScreen": true,
+  "window.zoomLevel": 1.5,
+
+  // INFO: Transparency & Visual Effects (That fancy glass effect! 🥃)
+  "apc.electron": {
+    "opacity": 0.95,
+    "transparent": true,
+    "backgroundColor": "#00000000",
+    "vibrancy": "ultra-dark"
+  },
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                    📁 FILE MANAGEMENT                           │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: Auto-Save Configuration (Because who has time for Ctrl+S? 💾)
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 2000,
+
+  // INFO: File Cleanup & Formatting
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+
+  // INFO: File Associations & Language Mappings
+  "files.associations": {
+    "*.html": "html",
+    ".php_cs": "php",
+    ".php_cs.dist": "php"
+  },
+
+  // INFO: File Explorer Settings
+  "files.enableTrash": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.autoReveal": true,
+
+  // INFO: File Exclusions (Hide the boring stuff 🙈)
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+
+  // INFO: File Watcher Exclusions
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true
+  },
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                    ✏️ EDITOR CONFIGURATION                      │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: Editor Display Settings
+  "breadcrumbs.enabled": false,
+  "editor.minimap.enabled": false,
+  "editor.renderLineHighlight": "none",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.renderControlCharacters": false,
+  "editor.colorDecorators": false,
+  "editor.lightbulb.enabled": "off",
+  "editor.stickyScroll.enabled": false,
+  "editor.matchBrackets": "never",
+
+  // INFO: Cursor Settings (The magical glowing cursor! ✨)
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "apc.stylesheet": {
+    ".monaco-editor .cursor": "background: #ffffff !important; box-shadow: 0 0 70px 5px #ffffff, #ffffff 0px 0px 34px 1px; color: #161616 !important"
+  },
+
+  // INFO: Scrolling & Smooth Movement
+  "editor.smoothScrolling": true,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.mouseWheelZoom": true,
+
+  // INFO: Indentation & Formatting
+  "editor.tabSize": 10,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.guides.indentation": true,
+  "editor.guides.highlightActiveIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+
+  // INFO: Selection & Highlighting
+  "editor.selectionHighlight": true,
+  "editor.occurrencesHighlight": "singleFile",
+  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+
+  // INFO: Font & Typography
+  "editor.fontLigatures": true,
+
+  // INFO: Suggestions & IntelliSense
+  "editor.suggestLineHeight": 30,
+  "editor.suggestFontSize": 20,
+  "editor.snippetSuggestions": "top",
+  "editor.copyWithSyntaxHighlighting": false,
+
+  // INFO: Hover Settings
+  "editor.hover.delay": 1500,
+  "editor.hover.enabled": true,
+
+  // INFO: Navigation Settings
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+
+  // INFO: Accessibility
+  "editor.accessibilitySupport": "off",
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                    🎨 WORKBENCH & THEME                         │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: Theme & Icons (The eye candy! 🍬)
+  "workbench.colorTheme": "Transparent Color Theme",
+  "workbench.iconTheme": "material-icon-theme",
+
+  // INFO: Custom Color Overrides
+  "workbench.colorCustomizations": {
+    "editorIndentGuide.background1": "#1E1E1E",
+    "terminal.background": "#00000000"
+  },
+
+  // INFO: Layout Configuration
+  "workbench.sideBar.location": "right",
+  "workbench.tree.indent": 10,
+  "workbench.statusBar.visible": false,
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": true,
+  "workbench.list.smoothScrolling": true,
+
+  // INFO: Editor Tabs Configuration
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.labelFormat": "default",
+  "workbench.editor.openPositioning": "last",
+  "workbench.editor.closeEmptyGroups": true,
+  "workbench.editor.showIcons": false,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.wrapTabs": false,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.tabActionCloseVisibility": false,
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                    🚀 ANIMATIONS & EFFECTS                      │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: VS Code Animations (Making coding fun! 🎮)
+  "animations.Enabled": true,
+  "animations.CursorAnimation": true,
+  "animations.Command-Palette": "Fade",
+  "animations.Active": "Indent",
+  "animations.Install-Method": "Apc Customize UI++",
+  "animations.CursorAnimationOptions": {
+    "TrailLength": 20
+  },
+
+  // INFO: Animation Imports
+  "apc.imports": [
+    "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+  ],
+
+  // INFO: Legacy Custom CSS Imports (For extra customization! 🎨)
+  "vscode_custom_css.imports": [
+    "file:///Users/dibakar/Documents/Code/CustomCode/CustomCSS.css",
+    "file:///Users/dibakar/Documents/Code/CustomCode/CustomJavascript.js",
+    "file:///Users/dibakar/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+  ],
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                    💻 TERMINAL CONFIGURATION                    │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: Terminal Appearance
+  "terminal.integrated.fontFamily": "Cascadia Code, MesloLGS NF",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.tabs.title": "${process} ~ MrDib",
+
+  // INFO: Terminal Behavior
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.smoothScrolling": true,
+  "debug.terminal.clearBeforeReusing": true,
+  "python.terminal.focusAfterLaunch": true,
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                    🔧 LANGUAGE FORMATTERS                       │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: Default Formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // INFO: HTML Configuration
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  // INFO: Python Configuration (Snake charmer settings! 🐍)
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 10
+  },
+  "python.createEnvironment.trigger": "off",
+
+  // INFO: Java Configuration (Coffee time! ☕)
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+    "editor.formatOnSave": true
+  },
+  "java.import.generatesMetadataFilesAtProjectRoot": true,
+
+  // INFO: C Language Configuration
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+
+  // INFO: Shell Script Configuration
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+
+  "[dockerfile]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+
+  // INFO: Shell Format Languages
+  "shellformat.effectLanguages": [
+    "shellscript",
+    "dockerfile",
+    "dotenv",
+    "hosts",
+    "jvmoptions",
+    "ignore",
+    "gitignore",
+    "properties",
+    "spring-boot-properties",
+    "azcli",
+    "bats"
+  ],
+
+  // INFO: Notebook Configuration
+  "notebook.defaultFormatter": "xaver.clang-format",
+  "notebook.formatOnSave.enabled": true,
+  "notebook.formatOnCellExecution": true,
+
+  // INFO: JavaScript Import Management
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // INFO: Emmet Language Support
+  "emmet.includeLanguages": {
+    "html": "html",
+    "django-html": "html",
+    "blade": "html",
+    "vue-html": "html",
+    "vue": "html",
+    "react": "html",
+    "javascript": "html"
+  },
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                    ▶️ CODE RUNNER CONFIGURATION                 │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: Code Runner General Settings
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.showExecutionMessage": false,
+  "code-runner.runInTerminal": true,
+
+  // INFO: Code Runner Language Executors (The polyglot's paradise! 🌍)
+  "code-runner.executorMap": {
+    // INFO: Compiled Languages
+    "c": "clear && cd $dir && gcc $fileName -o $fileNameWithoutExt && ./$(basename $fileNameWithoutExt)",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "go": "go run",
+    "zig": "zig run",
+
+    // INFO: Scripting Languages
+    "python": "clear && python3 -u",
+    "javascript": "node",
+    "typescript": "ts-node",
+    "ruby": "ruby",
+    "perl": "perl",
+    "perl6": "perl6",
+    "php": "php",
+    "lua": "lua",
+
+    // INFO: Shell & System Scripts
+    "shellscript": "bash",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "applescript": "osascript",
+
+    // INFO: Functional Languages
+    "haskell": "runghc",
+    "fsharp": "fsi",
+    "scala": "scala",
+    "clojure": "lein exec",
+    "erlang": "escript",
+    "lisp": "sbcl --script",
+    "scheme": "csi -script",
+    "sml": "cd $dir && sml $fileName",
+
+    // INFO: Modern Languages
+    "swift": "swift",
+    "kotlin": "kotlin",
+    "dart": "dart",
+    "julia": "julia",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "crystal": "crystal",
+    "mojo": "mojo run",
+    "gleam": "gleam run -m $fileNameWithoutExt",
+
+    // INFO: Web Languages
+    "coffeescript": "coffee",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+
+    // INFO: Scientific Languages
+    "r": "Rscript",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+
+    // INFO: Other Languages
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "groovy": "groovy",
+    "racket": "racket",
+    "ocaml": "ocaml",
+    "vbscript": "cscript //Nologo",
+    "csharp": "scriptcs",
+    "autoit": "autoit3",
+    "autohotkey": "autohotkey",
+    "ahk": "autohotkey",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "kit": "kitc --run",
+    "v": "v run",
+    "spwn": "spwn build",
+    "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml"
+  },
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                    🎯 GIT & VERSION CONTROL                     │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: Git Core Settings
+  "git.path": "/usr/bin/git",
+  "git.autofetch": true,
+  "git.enableCommitSigning": true,
+  "git.confirmSync": false,
+  "git.confirmForcePush": false,
+  "git.decorations.enabled": true,
+  "git.inputValidation": true,
+  "git.inputValidationLength": 50,
+  "git.mergeEditor": true,
+  "git.useEditorAsCommitInput": true,
+  "git.showInlineOpenFileAction": true,
+  "git.detectSubmodules": true,
+  "git.openRepositoryInParentFolders": "never",
+
+  // INFO: Git Locations & Repositories
+  "git.defaultCloneDirectory": "~/Projects",
+  "git.scanRepositories": [],
+  "git.ignoredRepositories": ["~/Projects/legacy-repo"],
+
+  // INFO: GitLens Configuration (Git superpowers! 💪)
+  "gitlens.currentLine.enabled": true,
+  "gitlens.codeLens.enabled": true,
+  "gitlens.hovers.enabled": true,
+  "gitlens.statusBar.enabled": true,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": true
+  },
+
+  // INFO: SCM Settings
+  "scm.diffDecorations": "none",
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                    💬 BETTER COMMENTS                           │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: Better Comments Configuration (Making comments pop! 💥)
+  "better-comments.highlightPlainText": true,
+  "better-comments.multilineComments": true,
+  "better-comments.tags": [
+    {
+      "tag": "*",
+      "color": "#7CFC00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": true
+    },
+    {
+      "tag": "!",
+      "color": "#FF00FF",
+      "strikethrough": false,
+      "underline": true,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": false
+    },
+    {
+      "tag": "TODO:",
+      "color": "#EA580C",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": true
+    },
+    {
+      "tag": "FIXME:",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": true
+    },
+    {
+      "tag": "BUG:",
+      "color": "#9333EA",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": true
+    },
+    {
+      "tag": "HACK:",
+      "color": "#C026D3",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": false
+    },
+    {
+      "tag": "NOTE:",
+      "color": "#2563EB",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": true
+    },
+    {
+      "tag": "INFO:",
+      "color": "cyan",
+      "strikethrough": false,
+      "backgroundColor": "transparent",
+      "bold": true
+    },
+    {
+      "tag": "IDEA:",
+      "color": "#FFF",
+      "strikethrough": false,
+      "backgroundColor": "#EAB308",
+      "bold": true
+    }
+  ],
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                    ⚠️ ERROR LENS                                │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: Error Lens Settings (Death to bugs! ☠️)
+  "errorLens.messageBackgroundMode": "none",
+  "errorLens.fontWeight": "800",
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.severityText": ["☠️", "☠️", "☠️", "☠️"],
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                    🧘 ZEN MODE                                  │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: Zen Mode Settings (For when you need to focus! 🎯)
+  "zenMode.fullScreen": true,
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": true,
+  "zenMode.hideStatusBar": true,
+  "zenMode.hideActivityBar": true,
+  "zenMode.restore": false,
+  "zenMode.silentNotifications": false,
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                    🔍 SEARCH & NAVIGATION                       │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: Search Configuration
+  "search.useIgnoreFiles": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": false,
+
+  // INFO: Problem Panel
+  "problems.decorations.enabled": false,
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                    🔮 MISCELLANEOUS                             │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: Live Server / Preview
+  "livePreview.customExternalBrowser": "Chrome",
+
+  // INFO: Security & Privacy
+  "redhat.telemetry.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // INFO: Profile Settings Sync
+  "workbench.settings.applyToAllProfiles": [
+    "workbench.colorCustomizations",
+    "editor.fontFamily",
+    "editor.fontSize",
+    "editor.lineHeight",
+    "terminal.integrated.fontFamily",
+    "terminal.integrated.fontSize",
+    "files.exclude",
+    "search.exclude",
+    "emmet.includeLanguages",
+    "editor.minimap.enabled",
+    "editor.minimap.scale",
+    "workbench.editor.showTabs",
+    "explorer.autoReveal",
+    "git.autofetch",
+    "window.zoomLevel"
+  ],
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                    📚 SPELL CHECK DICTIONARY                    │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: Custom Dictionary (All the words VS Code doesn't know! 📖)
+  "cSpell.userWords": [
+    "Aakash",
+    "ABNB",
+    "addopts",
+    "adminsdk",
+    "afplay",
+    "AFRM",
+    "ahk",
+    "aiohttp",
+    "Airtel",
+    "Anooy",
+    "Anthropic",
+    "apikey",
+    "appendonly",
+    "applescript",
+    "appsettings",
+    "ARKK",
+    "aroon",
+    "asdfghjkl",
+    "asgi",
+    "ashi",
+    "ASIANPAINT",
+    "ASML",
+    "atmelavr",
+    "authtoken",
+    "autofetch",
+    "autohotkey",
+    "autoindent",
+    "autoit",
+    "Automorphic",
+    "autopep",
+    "autosetupmerge",
+    "autosetuprebase",
+    "auxiliarybar",
+    "Axios",
+    "AXISBANK",
+    "azcli",
+    "Backtest",
+    "backtesting",
+    "Bajaj",
+    "BAJFINANCE",
+    "basepanel",
+    "bats",
+    "bhai",
+    "Bharti",
+    "BHARTIARTL",
+    "BIDU",
+    "billi",
+    "blocklist",
+    "blueutil",
+    "bmewburn",
+    "BNTX",
+    "Bollinger",
+    "boto",
+    "Botpress",
+    "BSESN",
+    "bson",
+    "Cardano",
+    "Cascadia",
+    "CCPA",
+    "celerybeat",
+    "Cgreen",
+    "Chalo",
+    "Chalooo",
+    "chartjs",
+    "Chausa",
+    "ckpt",
+    "clojure",
+    "CLOV",
+    "codesnap",
+    "codicon",
+    "codingbat",
+    "coffeescript",
+    "collectstatic",
+    "Connor",
+    "Consolas",
+    "consoleloggerparameters",
+    "corsheaders",
+    "craco",
+    "createsuperuser",
+    "Creset",
+    "crystal",
+    "cscript",
+    "Cupertino",
+    "CUSTOMERID",
+    "cython",
+    "dart",
+    "dibakar",
+    "Dipika",
+    "displayplacer",
+    "Divya",
+    "djangorestframework",
+    "djecrety",
+    "DKNG",
+    "dmypy",
+    "DOCU",
+    "Doji",
+    "donchian",
+    "donotpresent",
+    "dotenv",
+    "dunder",
+    "Duniya",
+    "ebitda",
+    "ehthumbs",
+    "encryptable",
+    "endcomment",
+    "endfor",
+    "eqhc",
+    "erlang",
+    "esbenp",
+    "escript",
+    "eslintcache",
+    "etfs",
+    "EURUSD",
+    "eventsource",
+    "excchain",
+    "excludesfile",
+    "expandtab",
+    "FAANG",
+    "figsize",
+    "filehistory",
+    "fileicon",
+    "filemode",
+    "financials",
+    "findstr",
+    "fintech",
+    "Fira",
+    "FIRSTPARTY",
+    "flaskenv",
+    "flymake",
+    "fontsize",
+    "Forex",
+    "fori",
+    "fortran",
+    "FortranFreeForm",
+    "foxundermoon",
+    "fseventsd",
+    "fsharp",
+    "funcache",
+    "GBPUSD",
+    "Geeksfor",
+    "gfortran",
+    "gintonyc",
+    "gitk",
+    "gitmessage",
+    "gleam",
+    "gpgsign",
+    "groovy",
+    "GSPC",
+    "Gunicorn",
+    "gussed",
+    "haskell",
+    "haxe",
+    "HCLTECH",
+    "HDFC",
+    "HDFCBANK",
+    "heikin",
+    "helpgrep",
+    "Himsagar",
+    "HINDUNILVR",
+    "hlsearch",
+    "hstack",
+    "htmlcov",
+    "Huskie",
+    "hyperparameters",
+    "ibwrapper",
+    "ichimoku",
+    "icns",
+    "iconcache",
+    "iconservices",
+    "iconset",
+    "iconutil",
+    "ifei",
+    "ifsc",
+    "ignorecase",
+    "ilike",
+    "importances",
+    "incsearch",
+    "Indrajit",
+    "Infotech",
+    "INFY",
+    "Inorder",
+    "inoremap",
+    "inputbox",
+    "intelephense",
+    "intraday",
+    "INVOICENO",
+    "ipynb",
+    "ipython",
+    "isin",
+    "isort",
+    "IXIC",
+    "janky",
+    "Japani",
+    "jash",
+    "javac",
+    "joblib",
+    "Joota",
+    "jsonify",
+    "jspm",
+    "julia",
+    "jvmoptions",
+    "Kaise",
+    "keltner",
+    "killall",
+    "kit",
+    "kitc",
+    "Knupp",
+    "Kolkata",
+    "komodoproject",
+    "komodotools",
+    "Kotak",
+    "KOTAKBANK",
+    "kotlin",
+    "kruskal",
+    "kubeconfig",
+    "kursi",
+    "Langra",
+    "laravel",
+    "lbfgs",
+    "LCID",
+    "LEGB",
+    "lein",
+    "lessc",
+    "levelname",
+    "lightgbm",
+    "lightgray",
+    "linecap",
+    "linespace",
+    "linestyle",
+    "lisp",
+    "livewire",
+    "loadtxt",
+    "LOCALFOLDER",
+    "logallrefupdates",
+    "logspace",
+    "lsregister",
+    "lua",
+    "Luca",
+    "MACD",
+    "madad",
+    "Mahindra",
+    "makemigrations",
+    "Malik",
+    "malloc",
+    "mapleader",
+    "markerfacecolor",
+    "markersize",
+    "Maruti",
+    "meer",
+    "Menlo",
+    "Mera",
+    "mergetool",
+    "Microbundle",
+    "millis",
+    "minipip",
+    "minmax",
+    "mispredictions",
+    "mkdocs",
+    "mlruns",
+    "Moderna",
+    "Mohishila",
+    "mojo",
+    "Monaspace",
+    "MOVEQ",
+    "MOVNE",
+    "mplot",
+    "MQTT",
+    "MRNA",
+    "MRVL",
+    "msbuild",
+    "msix",
+    "MSTR",
+    "mutmut",
+    "mypy",
+    "myset",
+    "mystrcpy",
+    "mystrlen",
+    "namedfork",
+    "nameshort",
+    "nbproject",
+    "nditer",
+    "neeche",
+    "Neko",
+    "Nestlé",
+    "NESTLEIND",
+    "netrwhist",
+    "nim",
+    "nnoremap",
+    "nohlsearch",
+    "noignorecase",
+    "noinput",
+    "Nologo",
+    "nonumber",
+    "noopener",
+    "noreferrer",
+    "nosetests",
+    "nosniff",
+    "NSEI",
+    "numpy",
+    "nuxt",
+    "ocaml",
+    "octicon",
+    "officedocument",
+    "OHLC",
+    "oneline",
+    "onnx",
+    "openai",
+    "Opendoor",
+    "openxmlformats",
+    "osascript",
+    "pascal",
+    "passlib",
+    "perl",
+    "perl6",
+    "pgsql",
+    "php",
+    "phpunit",
+    "Pinduoduo",
+    "pipenv",
+    "Pipfile",
+    "pkill",
+    "pkl",
+    "PLTR",
+    "Polkadot",
+    "polyfit",
+    "popitem",
+    "Portilla",
+    "postorder",
+    "powershell",
+    "precomposeunicode",
+    "preorder",
+    "prepost",
+    "prerequest",
+    "println",
+    "proba",
+    "psar",
+    "pstats",
+    "psvm",
+    "psycopg",
+    "PULLUP",
+    "pybuilder",
+    "pycache",
+    "pycodestyle",
+    "pyenv",
+    "pyflow",
+    "pyjokes",
+    "Pylint",
+    "pylintrc",
+    "pypa",
+    "pypackages",
+    "pyproject",
+    "pytest",
+    "pythonscript",
+    "pyttsx",
+    "pytype",
+    "pytz",
+    "qwertyuiop",
+    "racket",
+    "Rahul",
+    "Rampur",
+    "randn",
+    "randomforest",
+    "RBLX",
+    "reactobs",
+    "reactrepo",
+    "recbuilder",
+    "redoc",
+    "relativenumber",
+    "renko",
+    "Replacicon",
+    "repositoryformatversion",
+    "repr",
+    "rgba",
+    "Ritchie",
+    "Rivian",
+    "RIVN",
+    "Robinhood",
+    "ROCE",
+    "ropeproject",
+    "Roro",
+    "Rscript",
+    "ruby",
+    "runghc",
+    "runserver",
+    "rustc",
+    "saara",
+    "Sachin",
+    "safecrlf",
+    "safetensors",
+    "sameer",
+    "sass",
+    "savetxt",
+    "sbcl",
+    "scala",
+    "scheme",
+    "Scikit",
+    "scrapy",
+    "scriptcs",
+    "scss",
+    "sdist",
+    "selectbox",
+    "sensative",
+    "SENSEX",
+    "setuptools",
+    "Sharma",
+    "shellformat",
+    "shellscript",
+    "shiftwidth",
+    "Shitz",
+    "Shivam",
+    "shortlog",
+    "showlegend",
+    "showmatch",
+    "Shubham",
+    "Shubhi",
+    "signingkey",
+    "signum",
+    "Sinha",
+    "Siri",
+    "skyfall",
+    "smartindent",
+    "sml",
+    "smorest",
+    "Soham",
+    "Solana",
+    "Sonodyne",
+    "souf",
+    "sout",
+    "SPCE",
+    "SPDR",
+    "spreadsheetml",
+    "spwn",
+    "spyderproject",
+    "spyproject",
+    "statemachine",
+    "staticfiles",
+    "statsmodels",
+    "stdlib",
+    "stoch",
+    "Stockpredict",
+    "stockpredictor",
+    "stockvibe",
+    "stockvibepredictor",
+    "streampipe",
+    "strikethrough",
+    "stylesheet",
+    "subproblems",
+    "SUNPHARMA",
+    "Suor",
+    "swift",
+    "tabclose",
+    "tabn",
+    "tabnew",
+    "tabnine",
+    "tabonly",
+    "tabp",
+    "tailwindcss",
+    "takiye",
+    "taskkill",
+    "technicals",
+    "testc",
+    "testpass",
+    "testpaths",
+    "testuser",
+    "textposition",
+    "tflite",
+    "thik",
+    "THIRDPARTY",
+    "thisdict",
+    "timemachine",
+    "toolkits",
+    "tostr",
+    "Toubro",
+    "tradingview",
+    "trav'ller",
+    "tryf",
+    "TTFB",
+    "twistie",
+    "TWLO",
+    "typescript",
+    "udemy",
+    "ULTRACEMCO",
+    "UNITPRICE",
+    "UPST",
+    "useremail",
+    "vbscript",
+    "venv",
+    "vetur",
+    "viewsets",
+    "Vimming",
+    "vimrc",
+    "vimtutor",
+    "virtualenv",
+    "vite",
+    "vnew",
+    "vnoremap",
+    "vsplit",
+    "vuepress",
+    "vwap",
+    "VWAP",
+    "watchlist",
+    "watchlists",
+    "webassets",
+    "webfonts",
+    "whil",
+    "whitenoise",
+    "WIPRO",
+    "Woah",
+    "wsgi",
+    "xaver",
+    "xaxis",
+    "xgboost",
+    "xlabel",
+    "xlim",
+    "XPEV",
+    "XXXYYY",
+    "yabai",
+    "yaxis",
+    "yfinance",
+    "ylabel",
+    "ylim",
+    "youstr",
+    "zaxis",
+    "Zhang",
+    "zig",
+    "zlabel",
+    "zlim",
+    "zxcvbnm"
+  ],
+  "[snippets]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+
+  // ╔══════════════════════════════════════════════════════════════════╗
+  // ║                        END OF CONFIGURATION                      ║
+  // ║                                                                  ║
+  // ║  "Code with style, debug with a smile!" ~ MrDib 🚀               ║
+  // ╚══════════════════════════════════════════════════════════════════╝
+}

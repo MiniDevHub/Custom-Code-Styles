@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "be5invis.vscode-custom-css",
+    "brandonkirbyson.vscode-animations",
+    "dhedgecock.radical-vscode",
+    "usernamehw.errorlens",
+    "esbenp.prettier-vscode",
+    "PKief.material-icon-theme",
+    "aaron-bond.better-comments",
+    "formulahendry.code-runner",
+    "ms-python.black-formatter",
+    "redhat.java"
+  ]
+}
