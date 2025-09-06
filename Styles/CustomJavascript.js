@@ -210,7 +210,7 @@ style.textContent = `
   /* INFO: Individual matrix characters - Fancy styled! 💎 */
   .matrix-char {
     position: absolute;
-    top: 0;
+    top: -100px;
     font-family: 'Cascadia Code', monospace;
     font-size: 16px;
     color: #00ff00;
