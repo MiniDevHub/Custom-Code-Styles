@@ -818,6 +818,15 @@
     ],
     "description": "Creates public static short method"
   },
+  "Public Static Void Method": {
+    "prefix": "psvoid",
+    "description": "Creates public static void method",
+    "body": [
+      "public static void ${1:methodName}(${2:parameters}) {",
+      "\t$0",
+      "}"
+    ]
+  },
   "Public Static Generic Method": {
     "prefix": "psg",
     "body": [
