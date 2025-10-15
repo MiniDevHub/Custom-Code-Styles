@@ -1,21 +1,24 @@
 {
   // ╔══════════════════════════════════════════════════════════════════╗
-  // ║                     🎨 MrDib's VS CODE CONFIG                    ║
-  // ║                    Professional Edition v2.0                     ║
+  // ║                   🎨 MrDib's VS CODE MASTERPIECE                 ║
+  // ║                  ⚡ Professional Edition v2.0 ⚡                 ║
+  // ║             "Where Code Meets Art & Productivity" 🚀             ║
   // ╚══════════════════════════════════════════════════════════════════╝
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │                    🪟 WINDOW & INTERFACE                        │
+  // │             🪟 WINDOW & INTERFACE MAGNIFICENCE                  │
+  // │         Making your IDE look like it came from 2050             │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: Window Appearance
+  // INFO: 🎭 Window Appearance - Because first impressions matter!
   "window.customTitleBarVisibility": "windowed",
   "window.title": "MrDib ${activeEditorMedium} ${rootPath}",
   "window.newWindowDimensions": "inherit",
   "window.nativeFullScreen": true,
   "window.zoomLevel": 1.5,
 
-  // INFO: Transparency & Visual Effects (That fancy glass effect! 🥃)
+  // INFO: 💎 Transparency & Visual Effects - That sexy glass effect!
+  // WARNING: May cause productivity boost due to sheer awesomeness 🥃
   "apc.electron": {
     "opacity": 0.95,
     "transparent": true,
@@ -24,32 +27,33 @@
   },
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │                    📁 FILE MANAGEMENT                           │
+  // │                 📁 FILE MANAGEMENT EXCELLENCE                   │
+  // │            Because your files deserve VIP treatment             │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: Auto-Save Configuration (Because who has time for Ctrl+S? 💾)
+  // INFO: 💾 Auto-Save Magic - Ctrl+S is so 2010! Your fingers will thank you
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 2000,
 
-  // INFO: File Cleanup & Formatting
+  // INFO: 🧹 File Cleanup Squad - Keeping your code pristine & professional
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
 
-  // INFO: File Associations & Language Mappings
+  // INFO: 🗂️ File Associations - Teaching VS Code what's what
   "files.associations": {
     "*.html": "html",
     ".php_cs": "php",
     ".php_cs.dist": "php"
   },
 
-  // INFO: File Explorer Settings
+  // INFO: 🗺️ Explorer Settings - Navigate like a pro!
   "files.enableTrash": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.autoReveal": true,
 
-  // INFO: File Exclusions (Hide the boring stuff 🙈)
+  // INFO: 🙈 File Exclusions - Hide the mundane, show the extraordinary
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
@@ -57,7 +61,7 @@
     "**/.factorypath": true
   },
 
-  // INFO: File Watcher Exclusions
+  // INFO: 👁️ Watcher Exclusions - Don't watch what doesn't matter
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
@@ -65,10 +69,11 @@
   },
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │                    ✏️ EDITOR CONFIGURATION                      │
+  // │                 ✏️ EDITOR CONFIGURATION PARADISE                │
+  // │           Where coding dreams become reality™                   │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: Editor Display Settings
+  // INFO: 🎯 Minimalist Display - Less clutter, more focus, maximum zen
   "breadcrumbs.enabled": false,
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "none",
@@ -80,20 +85,21 @@
   "editor.stickyScroll.enabled": false,
   "editor.matchBrackets": "never",
 
-  // INFO: Cursor Settings (The magical glowing cursor! ✨)
+  // INFO: ✨ LEGENDARY CURSOR SETTINGS - The cursor that conquered a thousand bugs!
+  //! Witness the glowing beacon of productivity! 🌟
   "editor.cursorBlinking": "expand",
   "editor.cursorSmoothCaretAnimation": "on",
   "apc.stylesheet": {
     ".monaco-editor .cursor": "background: #ffffff !important; box-shadow: 0 0 70px 5px #ffffff, #ffffff 0px 0px 34px 1px; color: #161616 !important"
   },
 
-  // INFO: Scrolling & Smooth Movement
+  // INFO: 🏄 Smooth Scrolling - Butter smooth, like your code should be
   "editor.smoothScrolling": true,
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "hidden",
   "editor.mouseWheelZoom": true,
 
-  // INFO: Indentation & Formatting
+  // INFO: 📐 Indentation Perfection - Because spaces matter (literally!)
   "editor.tabSize": 10,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
@@ -102,49 +108,55 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
 
-  // INFO: Selection & Highlighting
+  // INFO: 🔦 Selection & Highlighting - Illuminate your code journey
   "editor.selectionHighlight": true,
   "editor.occurrencesHighlight": "singleFile",
   "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
 
-  // INFO: Font & Typography
+  // INFO: 🔤 Typography Excellence - Ligatures for the sophisticated developer
   "editor.fontLigatures": true,
 
-  // INFO: Suggestions & IntelliSense
+  // INFO: 🧠 IntelliSense & Suggestions - Your AI coding companion
   "editor.suggestLineHeight": 30,
   "editor.suggestFontSize": 20,
   "editor.snippetSuggestions": "top",
   "editor.copyWithSyntaxHighlighting": false,
 
-  // INFO: Hover Settings
+  // INFO: 📝 Snippet settings - Because even snippets deserve formatting
+  "[snippets]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+
+  // INFO: 🎈 Hover Settings - Patience is a virtue
   "editor.hover.delay": 1500,
   "editor.hover.enabled": true,
 
-  // INFO: Navigation Settings
+  // INFO: 🧭 Navigation Settings - Jump to definition like a ninja!
   "editor.gotoLocation.multipleReferences": "goto",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto",
 
-  // INFO: Accessibility
+  // INFO: ♿ Accessibility - We code for everyone
   "editor.accessibilitySupport": "off",
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │                    🎨 WORKBENCH & THEME                         │
+  // │                  🎨 WORKBENCH & THEME ARTISTRY                  │
+  // │              Where aesthetics meet functionality                │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: Theme & Icons (The eye candy! 🍬)
+  // INFO: 🍬 Theme & Icons - Eye candy that doesn't cause cavities!
   "workbench.colorTheme": "Transparent Color Theme",
   "workbench.iconTheme": "material-icon-theme",
 
-  // INFO: Custom Color Overrides
+  // INFO: 🎨 Custom Color Palette - Painted with love and precision
   "workbench.colorCustomizations": {
     "editorIndentGuide.background1": "#1E1E1E",
     "terminal.background": "#00000000"
   },
 
-  // INFO: Layout Configuration
+  // INFO: 🏗️ Layout Architecture - Feng Shui for your workspace
   "workbench.sideBar.location": "right",
   "workbench.tree.indent": 10,
   "workbench.statusBar.visible": false,
@@ -152,7 +164,7 @@
   "workbench.tips.enabled": true,
   "workbench.list.smoothScrolling": true,
 
-  // INFO: Editor Tabs Configuration
+  // INFO: 📑 Tab Management - Organizing tabs like a boss since 2024
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.labelFormat": "default",
@@ -165,10 +177,12 @@
   "workbench.editor.tabActionCloseVisibility": false,
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │                    🚀 ANIMATIONS & EFFECTS                      │
+  // │               🚀 ANIMATIONS & SPECIAL EFFECTS                   │
+  // │        Because coding should feel like a video game!            │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: VS Code Animations (Making coding fun! 🎮)
+  // INFO: 🎮 VS Code Animations - Level up your coding experience!
+  // WARNING: Side effects may include increased dopamine levels
   "animations.Enabled": true,
   "animations.CursorAnimation": true,
   "animations.Command-Palette": "Fade",
@@ -178,12 +192,12 @@
     "TrailLength": 20
   },
 
-  // INFO: Animation Imports
+  // INFO: 🎬 Animation Imports - The magic sauce
   "apc.imports": [
     "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
   ],
 
-  // INFO: Legacy Custom CSS Imports (For extra customization! 🎨)
+  // INFO: 🎪 Legacy Custom CSS - For the rebels who want MORE customization!
   "vscode_custom_css.imports": [
     "file:///Users/dibakar/Documents/Code/CustomCode/CustomCSS.css",
     "file:///Users/dibakar/Documents/Code/CustomCode/CustomJavascript.js",
@@ -191,16 +205,17 @@
   ],
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │                    💻 TERMINAL CONFIGURATION                    │
+  // │                💻 TERMINAL CONFIGURATION HQ                     │
+  // │             Your command line, but make it fashion              │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: Terminal Appearance
+  // INFO: 🖥️ Terminal Aesthetics - Making terminal sessions sexy since forever
   "terminal.integrated.fontFamily": "Cascadia Code, MesloLGS NF",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.lineHeight": 1.2,
   "terminal.integrated.tabs.title": "${process} ~ MrDib",
 
-  // INFO: Terminal Behavior
+  // INFO: ⚡ Terminal Behavior - Smooth as silk, fast as lightning
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.smoothScrolling": true,
@@ -208,19 +223,20 @@
   "python.terminal.focusAfterLaunch": true,
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │                    🔧 LANGUAGE FORMATTERS                       │
+  // │              🔧 LANGUAGE FORMATTERS & COMPILERS                 │
+  // │         Supporting more languages than the United Nations       │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: Default Formatter
+  // INFO: 🎯 Default Formatter - Prettier, because ugly code is a crime
   "editor.defaultFormatter": "esbenp.prettier-vscode",
 
-  // INFO: HTML Configuration
+  // INFO: 🌐 HTML Configuration - Making the web beautiful
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
 
-  // INFO: Python Configuration (Snake charmer settings! 🐍)
+  // INFO: 🐍 Python Configuration - Taming the snake with style!
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
@@ -228,19 +244,19 @@
   },
   "python.createEnvironment.trigger": "off",
 
-  // INFO: Java Configuration (Coffee time! ☕)
+  // INFO: ☕ Java Configuration - Brewing perfect code since 1995
   "[java]": {
     "editor.defaultFormatter": "redhat.java",
     "editor.formatOnSave": true
   },
   "java.import.generatesMetadataFilesAtProjectRoot": true,
 
-  // INFO: C Language Configuration
+  // INFO: 🔩 C Language Configuration - Old school cool
   "[c]": {
     "editor.defaultFormatter": "xaver.clang-format"
   },
 
-  // INFO: Shell Script Configuration
+  // INFO: 🐚 Shell Script Configuration - Unix philosophy approved!
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
@@ -257,7 +273,7 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
 
-  // INFO: Shell Format Languages
+  // INFO: 🌊 Shell Format Languages - Format ALL the things!
   "shellformat.effectLanguages": [
     "shellscript",
     "dockerfile",
@@ -272,15 +288,15 @@
     "bats"
   ],
 
-  // INFO: Notebook Configuration
+  // INFO: 📓 Notebook Configuration - Jupyter never looked so good
   "notebook.defaultFormatter": "xaver.clang-format",
   "notebook.formatOnSave.enabled": true,
   "notebook.formatOnCellExecution": true,
 
-  // INFO: JavaScript Import Management
+  // INFO: 📦 JavaScript Import Management - ES6 modules FTW!
   "javascript.updateImportsOnFileMove.enabled": "always",
 
-  // INFO: Emmet Language Support
+  // INFO: 🏃 Emmet Language Support - HTML zen coding everywhere!
   "emmet.includeLanguages": {
     "html": "html",
     "django-html": "html",
@@ -292,17 +308,18 @@
   },
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │                    ▶️ CODE RUNNER CONFIGURATION                 │
+  // │              ▶️ CODE RUNNER - THE POLYGLOT'S PARADISE           │
+  // │         Execute code in 50+ languages with one keystroke!       │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: Code Runner General Settings
+  // INFO: 🏃‍♂️ Code Runner General Settings - Run fast, debug faster!
   "code-runner.clearPreviousOutput": true,
   "code-runner.showExecutionMessage": false,
   "code-runner.runInTerminal": true,
 
-  // INFO: Code Runner Language Executors (The polyglot's paradise! 🌍)
+  // INFO: 🌍 The Grand Executor Map - Supporting every language under the sun!
   "code-runner.executorMap": {
-    // INFO: Compiled Languages
+    //! 🏗️ Compiled Languages - Build it strong!
     "c": "clear && cd $dir && gcc $fileName -o $fileNameWithoutExt && ./$(basename $fileNameWithoutExt)",
     "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
@@ -310,7 +327,7 @@
     "go": "go run",
     "zig": "zig run",
 
-    // INFO: Scripting Languages
+    //! 📜 Scripting Languages - Script your way to success!
     "python": "clear && python3 -u",
     "javascript": "node",
     "typescript": "ts-node",
@@ -320,13 +337,13 @@
     "php": "php",
     "lua": "lua",
 
-    // INFO: Shell & System Scripts
+    //! 💻 Shell & System Scripts - Command the command line!
     "shellscript": "bash",
     "powershell": "powershell -ExecutionPolicy ByPass -File",
     "bat": "cmd /c",
     "applescript": "osascript",
 
-    // INFO: Functional Languages
+    //! 🎓 Functional Languages - For the intellectuals
     "haskell": "runghc",
     "fsharp": "fsi",
     "scala": "scala",
@@ -336,7 +353,7 @@
     "scheme": "csi -script",
     "sml": "cd $dir && sml $fileName",
 
-    // INFO: Modern Languages
+    //! 🆕 Modern Languages - The new kids on the block
     "swift": "swift",
     "kotlin": "kotlin",
     "dart": "dart",
@@ -346,20 +363,20 @@
     "mojo": "mojo run",
     "gleam": "gleam run -m $fileNameWithoutExt",
 
-    // INFO: Web Languages
+    //! 🌐 Web Languages - Making the internet pretty
     "coffeescript": "coffee",
     "sass": "sass --style expanded",
     "scss": "scss --style expanded",
     "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
 
-    // INFO: Scientific Languages
+    //! 🔬 Scientific Languages - For when you need to science!
     "r": "Rscript",
     "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
 
-    // INFO: Other Languages
+    //! 🎪 Exotic Languages - Because why not?
     "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
     "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
@@ -379,10 +396,11 @@
   },
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │                    🎯 GIT & VERSION CONTROL                     │
+  // │                 🎯 GIT & VERSION CONTROL MASTERY                │
+  // │              Because commit history should tell a story         │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: Git Core Settings
+  // INFO: 🐙 Git Core Settings - Version control done right!
   "git.path": "/usr/bin/git",
   "git.autofetch": true,
   "git.enableCommitSigning": true,
@@ -397,12 +415,12 @@
   "git.detectSubmodules": true,
   "git.openRepositoryInParentFolders": "never",
 
-  // INFO: Git Locations & Repositories
+  // INFO: 📍 Git Locations & Repositories - Know where your code lives
   "git.defaultCloneDirectory": "~/Projects",
   "git.scanRepositories": [],
   "git.ignoredRepositories": ["~/Projects/legacy-repo"],
 
-  // INFO: GitLens Configuration (Git superpowers! 💪)
+  // INFO: 💪 GitLens - Git superpowers activated!
   "gitlens.currentLine.enabled": true,
   "gitlens.codeLens.enabled": true,
   "gitlens.hovers.enabled": true,
@@ -411,14 +429,15 @@
     "suppressCommitHasNoPreviousCommitWarning": true
   },
 
-  // INFO: SCM Settings
+  // INFO: 🎨 SCM Visual Settings - Clean and minimal
   "scm.diffDecorations": "none",
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │                    💬 BETTER COMMENTS                           │
+  // │               💬 BETTER COMMENTS - CODE ANNOTATION 2.0          │
+  // │                Making your TODOs impossible to ignore!          │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: Better Comments Configuration (Making comments pop! 💥)
+  // INFO: 💥 Better Comments - Because plain comments are boring!
   "better-comments.highlightPlainText": true,
   "better-comments.multilineComments": true,
   "better-comments.tags": [
@@ -444,7 +463,7 @@
       "tag": "!",
       "color": "#FF00FF",
       "strikethrough": false,
-      "underline": true,
+      "underline": false,
       "backgroundColor": "transparent",
       "bold": true,
       "italic": false
@@ -497,24 +516,35 @@
       "strikethrough": false,
       "backgroundColor": "#EAB308",
       "bold": true
+    },
+    {
+      "tag": "WARNING:",
+      "color": "#FF6B35",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": false
     }
   ],
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │                    ⚠️ ERROR LENS                                │
+  // │               ⚠️ ERROR LENS - BUG DESTROYER 9000                │
+  // │                  Making errors impossible to miss!              │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: Error Lens Settings (Death to bugs! ☠️)
+  // INFO: ☠️ Error Lens - Because bugs deserve no mercy!
   "errorLens.messageBackgroundMode": "none",
   "errorLens.fontWeight": "800",
   "errorLens.gutterIconsEnabled": true,
   "errorLens.severityText": ["☠️", "☠️", "☠️", "☠️"],
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │                    🧘 ZEN MODE                                  │
+  // │                  🧘 ZEN MODE - FOCUS MAXIMIZER                  │
+  // │              When you need to enter the coding zone             │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: Zen Mode Settings (For when you need to focus! 🎯)
+  // INFO: 🎯 Zen Mode - Distraction-free coding nirvana awaits!
   "zenMode.fullScreen": true,
   "zenMode.centerLayout": false,
   "zenMode.hideLineNumbers": true,
@@ -524,29 +554,31 @@
   "zenMode.silentNotifications": false,
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │                    🔍 SEARCH & NAVIGATION                       │
+  // │              🔍 SEARCH & NAVIGATION EXCELLENCE                  │
+  // │                   Find anything, anywhere, instantly            │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: Search Configuration
+  // INFO: 🔎 Search Configuration - Sherlock Holmes mode activated
   "search.useIgnoreFiles": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
 
-  // INFO: Problem Panel
+  // INFO: 🚫 Problem Panel - Clean workspace, clear mind
   "problems.decorations.enabled": false,
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │                    🔮 MISCELLANEOUS                             │
+  // │                    🔮 MISCELLANEOUS MAGIC                       │
+  // │                  The secret sauce ingredients                   │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: Live Server / Preview
+  // INFO: 🌐 Live Preview - Test in real-time like a wizard
   "livePreview.customExternalBrowser": "Chrome",
 
-  // INFO: Security & Privacy
+  // INFO: 🔒 Security & Privacy - Your code, your rules
   "redhat.telemetry.enabled": false,
   "security.workspace.trust.untrustedFiles": "open",
 
-  // INFO: Profile Settings Sync
+  // INFO: 🔄 Profile Settings Sync - Consistency across the multiverse
   "workbench.settings.applyToAllProfiles": [
     "workbench.colorCustomizations",
     "editor.fontFamily",
@@ -566,33 +598,64 @@
   ],
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │                    📚 SPELL CHECK DICTIONARY                    │
+  // │           📚 SPELL CHECK DICTIONARY - THE WORD VAULT            │
+  // │        Custom dictionary for all the words VS Code missed       │
+  // │                  (It's quite a collection! 🏆)                  │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: Custom Dictionary (All the words VS Code doesn't know! 📖)
+  // INFO: 📖 The Epic Dictionary - From Aakash to זxcvbnm and beyond!
+  //! Includes: Tech terms, frameworks, Indian languages, and MrDib's favorites
   "cSpell.userWords": [
     "Aakash",
+    "aall",
     "ABNB",
+    "absl",
+    "addgroup",
     "addopts",
+    "adduser",
     "adminsdk",
+    "aestivum",
     "afplay",
     "AFRM",
+    "Agri",
+    "AGRO",
+    "agtech",
     "ahk",
+    "Ahmedabad",
     "aiohttp",
     "Airtel",
+    "albumentations",
+    "allauth",
+    "amondnet",
+    "amqp",
+    "Andhra",
+    "annot",
+    "anonymization",
     "Anooy",
     "Anthropic",
+    "anyio",
     "apikey",
+    "APMC",
+    "appconf",
     "appendonly",
     "applescript",
     "appsettings",
+    "arctan",
+    "argrelextrema",
+    "argsort",
     "ARKK",
     "aroon",
+    "arrinit",
+    "Arunachal",
     "asdfghjkl",
     "asgi",
+    "asgiref",
     "ashi",
     "ASIANPAINT",
     "ASML",
+    "astunparse",
+    "asyncio",
+    "athrows",
     "atmelavr",
     "authtoken",
     "autofetch",
@@ -601,6 +664,7 @@
     "autoit",
     "Automorphic",
     "autopep",
+    "AUTOREFRESH",
     "autosetupmerge",
     "autosetuprebase",
     "auxiliarybar",
@@ -611,8 +675,12 @@
     "backtesting",
     "Bajaj",
     "BAJFINANCE",
+    "bajra",
+    "Barddhaman",
+    "barplot",
     "basepanel",
     "bats",
+    "beautifulsoup",
     "bhai",
     "Bharti",
     "BHARTIARTL",
@@ -625,61 +693,108 @@
     "Bollinger",
     "boto",
     "Botpress",
+    "bqueue",
+    "brandonkirbyson",
+    "Browsable",
     "BSESN",
     "bson",
+    "btna",
+    "bytree",
+    "cachetools",
     "Cardano",
     "Cascadia",
+    "ccon",
     "CCPA",
     "celerybeat",
+    "certifi",
+    "cffi",
     "Cgreen",
     "Chalo",
     "Chalooo",
     "chartjs",
     "Chausa",
+    "Chhattisgarh",
+    "chlorothalonil",
+    "chromedriver",
     "ckpt",
+    "clahe",
     "clojure",
     "CLOV",
+    "cmap",
+    "cmol",
+    "codeinline",
     "codesnap",
     "codicon",
     "codingbat",
     "coffeescript",
     "collectstatic",
+    "colorama",
+    "colsample",
     "Connor",
     "Consolas",
     "consoleloggerparameters",
+    "Contentful",
+    "contourpy",
+    "Convolutional",
+    "cookieconsent",
+    "corrcoef",
     "corsheaders",
+    "cowal",
     "craco",
     "createsuperuser",
+    "Creational",
     "Creset",
+    "cropanalysis",
+    "crossentropy",
     "crystal",
     "cscript",
+    "CUDA",
     "Cupertino",
     "CUSTOMERID",
+    "customex",
     "cython",
     "dart",
+    "dateutil",
+    "dcon",
+    "defusedxml",
+    "Deque",
+    "dhedgecock",
     "dibakar",
+    "didyoumean",
     "Dipika",
     "displayplacer",
     "Divya",
     "djangorestframework",
     "djecrety",
+    "djongo",
     "DKNG",
+    "dlat",
+    "dlon",
     "dmypy",
+    "dnspython",
+    "doctrees",
     "DOCU",
     "Doji",
     "donchian",
     "donotpresent",
     "dotenv",
+    "dsphere",
+    "dtypes",
     "dunder",
     "Duniya",
+    "earthengine",
     "ebitda",
     "ehthumbs",
+    "einsum",
     "encryptable",
     "endcomment",
     "endfor",
+    "enumsingleton",
     "eqhc",
     "erlang",
+    "errorlens",
     "esbenp",
+    "Esca",
     "escript",
     "eslintcache",
     "etfs",
@@ -687,40 +802,72 @@
     "eventsource",
     "excchain",
     "excludesfile",
+    "exhandler",
     "expandtab",
     "FAANG",
+    "favorability",
     "figsize",
     "filehistory",
     "fileicon",
     "filemode",
+    "filterset",
     "financials",
     "findstr",
+    "finm",
     "fintech",
     "Fira",
     "FIRSTPARTY",
     "flaskenv",
+    "flatbuffers",
+    "Flexbox",
     "flymake",
+    "fontawesome",
     "fontsize",
+    "fonttools",
     "Forex",
     "fori",
+    "formcontact",
+    "formdata",
+    "formgroup",
+    "formlogin",
+    "formnewsletter",
+    "formregister",
+    "formulahendry",
     "fortran",
     "FortranFreeForm",
     "foxundermoon",
+    "fread",
+    "fromarray",
+    "fset",
     "fseventsd",
     "fsharp",
     "funcache",
+    "fwrite",
+    "gast",
     "GBPUSD",
+    "geckodriver",
     "Geeksfor",
+    "geographiclib",
+    "Geolocation",
+    "geopandas",
+    "geopy",
+    "geospatial",
+    "gevent",
     "gfortran",
     "gintonyc",
     "gitk",
     "gitmessage",
     "gleam",
+    "googlefont",
     "gpgsign",
+    "graphene",
     "groovy",
+    "grpcio",
     "GSPC",
     "Gunicorn",
     "gussed",
+    "Hackathon",
+    "Haryana",
     "haskell",
     "haxe",
     "HCLTECH",
@@ -728,12 +875,20 @@
     "HDFCBANK",
     "heikin",
     "helpgrep",
+    "herokuapp",
+    "Himachal",
     "Himsagar",
     "HINDUNILVR",
+    "hiredis",
+    "Hispa",
     "hlsearch",
     "hstack",
+    "HSTS",
     "htmlcov",
+    "HTTPONLY",
+    "httptools",
     "Huskie",
+    "hyperlocal",
     "hyperparameters",
     "ibwrapper",
     "ichimoku",
@@ -742,43 +897,72 @@
     "iconservices",
     "iconset",
     "iconutil",
+    "idna",
     "ifei",
     "ifsc",
     "ignorecase",
     "ilike",
+    "imageio",
+    "imagenet",
+    "imgaug",
+    "imglazy",
+    "imgr",
     "importances",
+    "imread",
+    "imwrite",
     "incsearch",
     "Indrajit",
     "Infotech",
     "INFY",
+    "iniconfig",
     "Inorder",
     "inoremap",
     "inputbox",
+    "inputdate",
+    "inputfile",
+    "inputnum",
+    "inputrange",
     "intelephense",
     "intraday",
+    "invis",
     "INVOICENO",
     "ipynb",
     "ipython",
+    "isget",
     "isin",
+    "isoformat",
     "isort",
     "IXIC",
     "janky",
     "Japani",
     "jash",
     "javac",
+    "Jharkhand",
     "joblib",
     "Joota",
+    "jowar",
     "jsonify",
+    "jsonlogger",
+    "jsonschema",
     "jspm",
     "julia",
     "jvmoptions",
     "Kaise",
+    "Karnataka",
+    "keepalive",
+    "KEEPCNT",
+    "KEEPIDLE",
+    "KEEPINTVL",
     "keltner",
+    "keras",
     "killall",
+    "KISAN",
     "kit",
     "kitc",
+    "kiwisolver",
     "Knupp",
     "Kolkata",
+    "kombu",
     "komodoproject",
     "komodotools",
     "Kotak",
@@ -787,53 +971,86 @@
     "kruskal",
     "kubeconfig",
     "kursi",
+    "lambb",
     "Langra",
     "laravel",
     "lbfgs",
     "LCID",
+    "ldjson",
     "LEGB",
     "lein",
     "lessc",
     "levelname",
+    "lhci",
+    "libc",
+    "libclang",
     "lightgbm",
     "lightgray",
     "linecap",
     "linespace",
     "linestyle",
+    "linkpreload",
     "lisp",
     "livewire",
+    "llist",
     "loadtxt",
     "LOCALFOLDER",
     "logallrefupdates",
+    "Loggable",
     "logspace",
+    "lookback",
     "lsregister",
+    "LSTM",
     "lua",
     "Luca",
+    "lxml",
     "MACD",
     "madad",
+    "Madhya",
     "Mahindra",
     "makemigrations",
     "Malik",
     "malloc",
+    "mancozeb",
+    "mandi",
+    "MAPBOX",
+    "MAPE",
     "mapleader",
+    "Marathwada",
     "markerfacecolor",
     "markersize",
     "Maruti",
+    "matplotlib",
+    "mccabe",
+    "mdurl",
     "meer",
+    "Meghalaya",
     "Menlo",
     "Mera",
     "mergetool",
+    "metaauthor",
+    "metadesc",
+    "metakey",
+    "metaog",
+    "metarobots",
+    "metatwitter",
     "Microbundle",
+    "Microdata",
     "millis",
     "minipip",
     "minmax",
     "mispredictions",
+    "Mizoram",
     "mkdocs",
     "mlruns",
     "Moderna",
     "Mohishila",
     "mojo",
     "Monaspace",
+    "mongodump",
+    "mongoengine",
+    "mongoexport",
+    "Morphism",
     "MOVEQ",
     "MOVNE",
     "mplot",
@@ -848,17 +1065,28 @@
     "myset",
     "mystrcpy",
     "mystrlen",
+    "Nadu",
     "namedfork",
     "nameshort",
+    "namex",
+    "natm",
     "nbproject",
+    "ndarray",
     "nditer",
+    "NDVI",
+    "ndwi",
     "neeche",
     "Neko",
     "Nestlé",
     "NESTLEIND",
     "netrwhist",
+    "networkx",
+    "newanon",
+    "newrelic",
+    "nextjs",
     "nim",
     "nnoremap",
+    "noauth",
     "nohlsearch",
     "noignorecase",
     "noinput",
@@ -868,89 +1096,148 @@
     "noreferrer",
     "nosetests",
     "nosniff",
+    "notistack",
     "NSEI",
     "numpy",
     "nuxt",
     "ocaml",
     "octicon",
+    "odfpy",
+    "Odisha",
     "officedocument",
     "OHLC",
     "oneline",
     "onnx",
+    "onrender",
     "openai",
+    "opencv",
     "Opendoor",
+    "openpyxl",
+    "OPENWEATHER",
+    "openweathermap",
     "openxmlformats",
+    "optree",
+    "Oryza",
     "osascript",
     "pascal",
     "passlib",
+    "pathspec",
+    "pcon",
     "perl",
     "perl6",
     "pgsql",
+    "phonenumber",
+    "phonenumbers",
     "php",
     "phpunit",
+    "pincode",
     "Pinduoduo",
     "pipenv",
     "Pipfile",
     "pkill",
     "pkl",
+    "platformdirs",
     "PLTR",
+    "pluggy",
+    "Poaceae",
+    "pointcut",
     "Polkadot",
     "polyfit",
     "popitem",
     "Portilla",
     "postorder",
     "powershell",
+    "pqueue",
+    "Pradesh",
     "precomposeunicode",
+    "preds",
     "preorder",
     "prepost",
     "prerequest",
     "println",
+    "priorit",
     "proba",
+    "Procfile",
+    "prosm",
+    "prsm",
     "psar",
+    "psbool",
+    "psbyte",
+    "pschar",
+    "psdbl",
+    "psfloat",
+    "psint",
+    "pslong",
+    "psshort",
+    "psstr",
     "pstats",
+    "psutil",
     "psvm",
+    "psvoid",
     "psycopg",
     "PULLUP",
+    "pyasn",
     "pybuilder",
     "pycache",
     "pycodestyle",
+    "pycparser",
+    "pycropwat",
+    "pycryptodome",
     "pyenv",
+    "pyeto",
+    "pyflakes",
     "pyflow",
+    "Pygments",
     "pyjokes",
     "Pylint",
     "pylintrc",
+    "pymongo",
+    "pyowm",
     "pypa",
     "pypackages",
+    "pyparsing",
     "pyproject",
     "pytest",
+    "pythonjsonlogger",
     "pythonscript",
     "pyttsx",
     "pytype",
     "pytz",
+    "qudida",
+    "queryset",
     "qwertyuiop",
     "racket",
     "Rahul",
+    "rainfed",
     "Rampur",
     "randn",
     "randomforest",
+    "rasterio",
+    "Ravi",
     "RBLX",
+    "rcssmin",
     "reactobs",
     "reactrepo",
     "recbuilder",
     "redoc",
     "relativenumber",
+    "relu",
     "renko",
     "Replacicon",
     "repositoryformatversion",
     "repr",
+    "reqs",
     "rgba",
     "Ritchie",
     "Rivian",
     "RIVN",
+    "rjsmin",
+    "rmse",
     "Robinhood",
     "ROCE",
     "ropeproject",
     "Roro",
+    "rpds",
     "Rscript",
     "ruby",
     "runghc",
@@ -964,16 +1251,28 @@
     "sass",
     "savetxt",
     "sbcl",
+    "sbuf",
     "scala",
     "scheme",
     "Scikit",
+    "scipy",
     "scrapy",
     "scriptcs",
+    "scriptinline",
+    "scriptmodule",
+    "scrollbars",
     "scss",
     "sdist",
+    "seaborn",
+    "searchbar",
     "selectbox",
+    "sendgrid",
     "sensative",
     "SENSEX",
+    "sentinelsat",
+    "Septoria",
+    "serviceworker",
+    "setex",
     "setuptools",
     "Sharma",
     "shellformat",
@@ -988,16 +1287,24 @@
     "Shubhi",
     "signingkey",
     "signum",
+    "signup",
+    "simplejwt",
     "Sinha",
     "Siri",
     "skyfall",
+    "smartcrop",
+    "smartcropadvisory",
+    "smartfarmer",
     "smartindent",
     "sml",
     "smorest",
+    "sniffio",
+    "softmax",
     "Soham",
     "Solana",
     "Sonodyne",
     "souf",
+    "soupsieve",
     "sout",
     "SPCE",
     "SPDR",
@@ -1005,6 +1312,7 @@
     "spwn",
     "spyderproject",
     "spyproject",
+    "sqlparse",
     "statemachine",
     "staticfiles",
     "statsmodels",
@@ -1021,7 +1329,9 @@
     "SUNPHARMA",
     "Suor",
     "swift",
+    "systemstatus",
     "tabclose",
+    "tablib",
     "tabn",
     "tabnew",
     "tabnine",
@@ -1031,34 +1341,65 @@
     "takiye",
     "taskkill",
     "technicals",
+    "Telangana",
+    "tensorboard",
+    "termcolor",
     "testc",
+    "testd",
+    "testp",
     "testpass",
     "testpaths",
     "testuser",
     "textposition",
+    "tfjs",
     "tflite",
+    "tfrecord",
+    "tfstate",
     "thik",
     "THIRDPARTY",
     "thisdict",
+    "threadpoolctl",
+    "tifffile",
     "timemachine",
+    "tmap",
+    "tnqtyxicnqnfwgnu",
     "toolkits",
     "tostr",
     "Toubro",
+    "tqdm",
     "tradingview",
     "trav'ller",
+    "Triticum",
     "tryf",
+    "tset",
     "TTFB",
+    "tungro",
     "twistie",
     "TWLO",
     "typescript",
+    "tzdata",
     "udemy",
     "ULTRACEMCO",
+    "unidecode",
     "UNITPRICE",
     "UPST",
+    "uritemplate",
+    "urllib",
+    "urlpatterns",
     "useremail",
+    "usernamehw",
+    "USERPROFILE",
+    "utcnow",
+    "Uttar",
+    "Uttarakhand",
+    "uvicorn",
+    "uvloop",
+    "validanno",
     "vbscript",
     "venv",
+    "vercel",
     "vetur",
+    "viewset",
     "viewsets",
     "Vimming",
     "vimrc",
@@ -1071,42 +1412,66 @@
     "vuepress",
     "vwap",
     "VWAP",
+    "watchfiles",
     "watchlist",
     "watchlists",
+    "WCAG",
+    "wcwidth",
     "webassets",
     "webfonts",
+    "webp",
+    "Werkzeug",
     "whil",
     "whitenoise",
     "WIPRO",
     "Woah",
+    "worldbank",
     "wsgi",
     "xaver",
     "xaxis",
+    "xcopy",
     "xgboost",
     "xlabel",
+    "xlarge",
     "xlim",
+    "xlrd",
+    "xlwt",
+    "xmlfile",
     "XPEV",
+    "xticklabels",
+    "xticks",
     "XXXYYY",
     "yabai",
+    "yasg",
     "yaxis",
     "yfinance",
     "ylabel",
     "ylim",
+    "yourdomain",
     "youstr",
+    "yticklabels",
+    "yticks",
+    "zaid",
     "zaxis",
     "Zhang",
     "zig",
     "zlabel",
     "zlim",
-    "zxcvbnm"
-  ],
-  "[snippets]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  }
+    "zxcvbnm",
+    "मराठी",
+    "हिन्दी",
+    "ਪੰਜਾਬੀ",
+    "ગુજરાતી",
+    "தமிழ்",
+    "తెలుగు"
+  ]
 
   // ╔══════════════════════════════════════════════════════════════════╗
-  // ║                        END OF CONFIGURATION                      ║
+  // ║                     🎊 END OF CONFIGURATION 🎊                   ║
   // ║                                                                  ║
-  // ║  "Code with style, debug with a smile!" ~ MrDib 🚀               ║
+  // ║     "Code with style, debug with a smile, ship with pride!"      ║
+  // ║                         ~ MrDib 🚀                               ║
+  // ║                                                                  ║
+  // ║  Remember: A well-configured editor is half the code written! 💪 ║
   // ╚══════════════════════════════════════════════════════════════════╝
 }

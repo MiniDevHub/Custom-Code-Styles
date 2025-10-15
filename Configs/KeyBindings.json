@@ -1,3 +1,4 @@
+// Place your key bindings in this file to override the defaults
 [
   {
     "key": "shift+alt+cmd+b",
@@ -10,5 +11,17 @@
   {
     "key": "shift+alt+cmd+d",
     "command": "extension.uninstallCustomCSS"
+  },
+  {
+    "key": "ctrl+cmd+j",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "shift+alt+cmd+n",
+    "command": "extension.advancedNewFile"
+  },
+  {
+    "key": "alt+cmd+n",
+    "command": "-extension.advancedNewFile"
   }
 ]
