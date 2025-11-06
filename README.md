@@ -39,45 +39,93 @@ I got tired of boring code editors, so I decided to make mine look like I'm hack
 
 ---
 
+Perfect! Here's the updated folder structure section for your README:
+
+---
+
 ## 📦 What's in the Box?
 
 ```
 🎁 The Complete MrDib Package
 ├── 🎨 Assets/
-│   ├── art.svg                  → SVG artwork
-│   ├── CustomProfile.jpg        → Your profile photo
-│   ├── CustomWallpaper.jpg      → Editor background
-│   ├── ErrorLens-01.png         → Custom error icons
-│   ├── Gears.png                → Settings icon
-│   ├── Mask.png                 → Overlay effects
-│   ├── Photo.jpeg               → Account icon photo
-│   └── Trident.png              → Additional icons
+│   ├── 🖼️ Images/
+│   │   ├── art.svg                  → SVG artwork & decorations
+│   │   ├── CustomProfile.jpg        → Your profile photo
+│   │   ├── CustomWallpaper.jpg      → Editor background wallpaper
+│   │   ├── ErrorLens-01.png         → Custom error icons
+│   │   ├── Gears.png                → Settings gear icon
+│   │   ├── Mask.png                 → Command palette overlay
+│   │   ├── Photo.jpeg               → Account icon photo
+│   │   └── Trident.png              → Sidebar background decoration
+│   │
+│   └── 📘 README.md                 → Asset usage guide & image specs
 │
 ├── ⚙️ Configs/
-│   ├── Extensions.json          → Recommended VS Code extensions
-│   ├── KeyBindings.json         → MrDib's VS Code keyboard shortcuts
-│   └── Settings.json            → Complete VS Code configuration
+│   ├── 📦 Extensions.json           → 60+ recommended extensions (categorized!)
+│   ├── ⌨️ KeyBindings.json          → MrDib's custom keyboard shortcuts
+│   ├── 🛠️ Settings.json             → 2,000+ lines of perfection
+│   └── 📘 README.md                 → Complete configuration guide
 │
 ├── 📚 Docs/
-│   ├── CUSTOMIZATION.md         → Personalization guide
-│   ├── INSTALLATION.md          → Step-by-step setup
-│   ├── Package.md               → Ultimate resources package
-│   └── TROUBLESHOOTING.md       → When things go sideways
+│   ├── 🎨 CUSTOMIZATION.md          → Personalization guide (colors, animations, themes)
+│   ├── 📦 INSTALLATION.md           → Step-by-step setup instructions
+│   ├── ⌨️ KEYBOARD-SHORTCUTS.md     → MrDib's LEGENDARY shortcuts guide
+│   ├── 📦 PACKAGES.md               → Ultimate developer resources (18k+ words!)
+│   ├── 🔧 TROUBLESHOOTING.md        → Fix common issues
+│   └── 📘 README.md                 → Documentation index & navigation
 │
 ├── ✂️ Snippets/
-│   ├── HTML.json                → 120+ HTML snippets
-│   ├── Java.json                → 200+ Java snippets
-│   └── README.md                → Snippets documentation
+│   ├── 📄 HTML.json                 → 120+ HTML snippets (forms, components, SEO)
+│   ├── ☕ Java.json                 → 200+ Java snippets (methods, classes, patterns)
+│   └── 📘 README.md                 → Complete snippets reference
 │
 ├── 💅 Styles/
-│   ├── CustomCSS.css            → Visual magic (transparency, glow, animations)
-│   └── CustomJavascript.js      → Interactive wizardry (matrix rain, welcome screen)
+│   ├── 🎨 CustomCSS.css             → Visual magic (~800 lines: glass effects, glows, animations)
+│   ├── ⚡ CustomJavascript.js       → Interactive wizardry (~400 lines: matrix rain, welcome screen)
+│   └── 📘 README.md                 → Detailed CSS/JS documentation
 │
-├── 🔧 .gitignore                → Git exclusions
-├── 📜 LICENSE                   → MIT License
-├── 📖 README.md                 → You are here! 👋
-└── 💻 VSCODE.md                 → Legendary keyboard shortcuts guide
+├── 🙈 .gitignore                    → Git exclusions
+├── 🤝 CONTRIBUTING.md               → Contribution guidelines
+├── 📜 LICENSE                       → MIT License
+└── 📖 README.md                     → You are here! 👋
 ```
+
+---
+
+<div align="center">
+
+## 📊 Project Stats
+
+| Category             | Count    | Details                         |
+| -------------------- | -------- | ------------------------------- |
+| 📝 **Documentation** | 11 files | ~25,500 words total             |
+| 🎨 **Visual Assets** | 8 images | Wallpapers, icons, overlays     |
+| ⚙️ **Config Files**  | 3 files  | Extensions, shortcuts, settings |
+| ✂️ **Code Snippets** | 320+     | 200 Java + 120 HTML             |
+| 💅 **Style Files**   | 2 files  | ~1,200 lines of CSS/JS          |
+| 📊 **Total Files**   | 30+      | Complete development setup      |
+
+</div>
+
+---
+
+## 🎯 Quick Access
+
+**New to this?** Start here:<br>
+📦 [INSTALLATION.md](Docs/INSTALLATION.md) - Get set up in 10 minutes<br>
+⌨️ [KEYBOARD-SHORTCUTS.md](Docs/KEYBOARD-SHORTCUTS.md) - Code faster<br>
+🎨 [CUSTOMIZATION.md](Docs/CUSTOMIZATION.md) - Make it yours
+
+**Need resources?**<br>
+📦 [PACKAGES.md](Docs/PACKAGES.md) - 18,000+ words of tools, libraries, & resources
+
+**Having issues?** <br>
+🔧 [TROUBLESHOOTING.md](Docs/TROUBLESHOOTING.md) - Common fixes
+
+**Want to dive deep?** Here you go:<br>
+💅 [Styles/README.md](Styles/README.md) - How the magic works<br>
+⚙️ [Configs/README.md](Configs/README.md) - Settings explained<br>
+🎨 [Assets/README.md](Assets/README.md) - Image resources guide
 
 ---
 
@@ -128,7 +176,6 @@ Open VS Code settings (press `Cmd/Ctrl + Shift + P` → `Preferences: Open Setti
 ```
 
 > ⚠️ **Replace `/ABSOLUTE/PATH/TO/` with your actual path!**
->
 > - macOS/Linux: `/Users/yourusername/Documents/Custom-Code-Styles/...`
 > - Windows: `C:/Users/YourName/Documents/Custom-Code-Styles/...`
 
