@@ -2,7 +2,7 @@
 
 # 🎨 MrDib's Custom Code Styles - VS Code on Steroids 💉
 
-![VS Code](https://img.shields.io/badge/VS%20Code-1.85+-blue?style=for-the-badge&logo=visual-studio-code)
+![VS Code](https://img.shields.io/badge/VS%20Code-1.95+-blue?style=for-the-badge&logo=visual-studio-code)
 ![CSS3](https://img.shields.io/badge/CSS3-Custom-orange?style=for-the-badge&logo=css3)
 ![JavaScript](https://img.shields.io/badge/JavaScript-Enhanced-yellow?style=for-the-badge&logo=javascript)
 ![Status](https://img.shields.io/badge/Status-Actively%20Awesome-success?style=for-the-badge)
@@ -16,11 +16,18 @@
 
 ---
 
+<div align="center">
+
 ## 🌟 What's This Sorcery?
+
+</div>
 
 Welcome to **MrDib's personal VS Code transformation kit!** This isn't just another theme or config—it's a **complete visual and functional overhaul** that turns your code editor into a **neon-soaked, glass-morphed, animation-filled powerhouse** straight out of a sci-fi movie.
 
 I got tired of boring code editors, so I decided to make mine look like I'm hacking into the mainframe. Now you can too! 😎
+
+> 💡 **New!** Looking for developer resources, tools, and cheat sheets?
+> Check out my companion repo: **[DevResourceVault](https://github.com/yourusername/DevResourceVault)** - Your ultimate collection of design resources, frontend libraries, terminal commands, and more!
 
 ### ✨ Key Features
 
@@ -32,62 +39,63 @@ I got tired of boring code editors, so I decided to make mine look like I'm hack
 - 🔮 **Command Palette Blur** - Background dims when searching, because focus matters
 - 👤 **Personalized Activity Bar** - Your photo as account icon (narcissistic? maybe. cool? definitely.)
 - 🌊 **Smooth Transitions** - Everything animates smoothly, no jarring movements
-- 🎯 **200+ Snippets** - Lightning-fast coding with Java & HTML snippets
+- 🎯 **320+ Snippets** - Lightning-fast coding with Java & HTML snippets
 - ⚙️ **Complete Config** - Professional settings, keybindings, and extensions
+- 📚 **Comprehensive Docs** - 25,500+ words of guides and tutorials
 
-> _"If your code editor doesn't have RGB and animations, are you even a real developer?"_ - MrDib, 2024
-
----
-
-Perfect! Here's the updated folder structure section for your README:
+> _"If your code editor doesn't have RGB and animations, are you even a real developer?"_ - MrDib, 2025
 
 ---
+
+<div align="center">
 
 ## 📦 What's in the Box?
+
+</div>
 
 ```
 🎁 The Complete MrDib Package
 ├── 🎨 Assets/
-│   ├── 🖼️ Images/
-│   │   ├── art.svg                  → SVG artwork & decorations
-│   │   ├── CustomProfile.jpg        → Your profile photo
-│   │   ├── CustomWallpaper.jpg      → Editor background wallpaper
-│   │   ├── ErrorLens-01.png         → Custom error icons
-│   │   ├── Gears.png                → Settings gear icon
-│   │   ├── Mask.png                 → Command palette overlay
-│   │   ├── Photo.jpeg               → Account icon photo
-│   │   └── Trident.png              → Sidebar background decoration
-│   │
-│   └── 📘 README.md                 → Asset usage guide & image specs
+│ ├── 🖼️ Images/
+│ │ ├── art.svg → SVG artwork & decorations
+│ │ ├── CustomProfile.jpg → Your profile photo
+│ │ ├── CustomWallpaper.jpg → Editor background wallpaper
+│ │ ├── ErrorLens-01.png → Custom error icons
+│ │ ├── Gears.png → Settings gear icon
+│ │ ├── Mask.png → Command palette overlay
+│ │ ├── Photo.jpeg → Account icon photo
+│ │ └── Trident.png → Sidebar background decoration
+│ │
+│ └── 📘 README.md → Asset usage guide & image specs
 │
 ├── ⚙️ Configs/
-│   ├── 📦 Extensions.json           → 60+ recommended extensions (categorized!)
-│   ├── ⌨️ KeyBindings.json          → MrDib's custom keyboard shortcuts
-│   ├── 🛠️ Settings.json             → 2,000+ lines of perfection
-│   └── 📘 README.md                 → Complete configuration guide
+│ ├── 📦 Extensions.json → 60+ recommended extensions (categorized!)
+│ ├── ⌨️ KeyBindings.json → MrDib's custom keyboard shortcuts
+│ ├── 🛠️ Settings.json → 2,000+ lines of perfection
+│ └── 📘 README.md → Complete configuration guide
 │
 ├── 📚 Docs/
-│   ├── 🎨 CUSTOMIZATION.md          → Personalization guide (colors, animations, themes)
-│   ├── 📦 INSTALLATION.md           → Step-by-step setup instructions
-│   ├── ⌨️ KEYBOARD-SHORTCUTS.md     → MrDib's LEGENDARY shortcuts guide
-│   ├── 📦 PACKAGES.md               → Ultimate developer resources (18k+ words!)
-│   ├── 🔧 TROUBLESHOOTING.md        → Fix common issues
-│   └── 📘 README.md                 → Documentation index & navigation
+│ ├── 🎨 Customization.md → Personalization guide (colors, animations, themes)
+│ ├── 📦 Installation.md → Step-by-step setup instructions
+│ ├── ⌨️ Keyboard-Shortcuts.md → Keyboard shortcuts reference
+│ ├── 📦 Packages.md → Ultimate developer resources (18k+ words!)
+│ ├── 🔧 TroubleShooting.md → Fix common issues
+│ └── 📘 README.md → Documentation index & navigation
 │
 ├── ✂️ Snippets/
-│   ├── 📄 HTML.json                 → 120+ HTML snippets (forms, components, SEO)
-│   ├── ☕ Java.json                 → 200+ Java snippets (methods, classes, patterns)
-│   └── 📘 README.md                 → Complete snippets reference
+│ ├── 📄 HTML.json → 120+ HTML snippets (forms, components, SEO)
+│ ├── ☕ Java.json → 200+ Java snippets (methods, classes, patterns)
+│ └── 📘 README.md → Complete snippets reference
 │
 ├── 💅 Styles/
-│   ├── 🎨 CustomCSS.css             → Visual magic (~800 lines: glass effects, glows, animations)
-│   ├── ⚡ CustomJavascript.js       → Interactive wizardry (~400 lines: matrix rain, welcome screen)
-│   └── 📘 README.md                 → Detailed CSS/JS documentation
+│ ├── 🎨 CustomCSS.css → Visual magic (~800 lines: glass effects, glows, animations)
+│ ├── ⚡ CustomJavascript.js → Interactive wizardry (~400 lines: matrix rain, welcome screen)
+│ └── 📘 README.md → Detailed CSS/JS documentation
 │
-├── 🙈 .gitignore                    → Git exclusions
-├── 🤝 CONTRIBUTING.md               → Contribution guidelines
-├── 📜 LICENSE                       → MIT License
-└── 📖 README.md                     → You are here! 👋
+├── 🙈 .gitignore → Git exclusions
+├── 🤝 CONTRIBUTING.md → Contribution guidelines
+├── 📜 LICENSE → MIT License
+└── 📖 README.md → You are here! 👋
 ```
 
 ---
@@ -109,27 +117,41 @@ Perfect! Here's the updated folder structure section for your README:
 
 ---
 
+<div align="center">
+
 ## 🎯 Quick Access
 
-**New to this?** Start here:<br>
-📦 [INSTALLATION.md](Docs/INSTALLATION.md) - Get set up in 10 minutes<br>
-⌨️ [KEYBOARD-SHORTCUTS.md](Docs/KEYBOARD-SHORTCUTS.md) - Code faster<br>
-🎨 [CUSTOMIZATION.md](Docs/CUSTOMIZATION.md) - Make it yours
+</div>
 
-**Need resources?**<br>
-📦 [PACKAGES.md](Docs/PACKAGES.md) - 18,000+ words of tools, libraries, & resources
+### New to This Setup?
 
-**Having issues?** <br>
-🔧 [TROUBLESHOOTING.md](Docs/TROUBLESHOOTING.md) - Common fixes
+📦 **[Installation.md](Docs/Installation.md)** - Get set up in 10 minutes
+⌨️ **[Keyboard-Shortcuts.md](Docs/Keyboard-Shortcuts.md)** - Code faster
+🎨 **[Customization.md](Docs/Customization.md)** - Make it yours
 
-**Want to dive deep?** Here you go:<br>
-💅 [Styles/README.md](Styles/README.md) - How the magic works<br>
-⚙️ [Configs/README.md](Configs/README.md) - Settings explained<br>
-🎨 [Assets/README.md](Assets/README.md) - Image resources guide
+### Need Developer Resources?
+
+🚀 **[DevResourceVault](https://github.com/yourusername/DevResourceVault)** - Design tools, frontend libraries, productivity tips
+📦 **[Packages.md](Docs/Packages.md)** - 18,000+ words of tools & resources (also in this repo!)
+
+### Having Issues?
+
+🔧 **[TroubleShooting.md](Docs/TroubleShooting.md)** - Common fixes
+💬 **[GitHub Issues](https://github.com/MiniDevHub/Custom-Code-Styles/issues)** - Report bugs or request features
+
+### Want to Dive Deep?
+
+💅 **[Styles/README.md](Styles/README.md)** - How the magic works
+⚙️ **[Configs/README.md](Configs/README.md)** - Settings explained
+🎨 **[Assets/README.md](Assets/README.md)** - Image resources guide
 
 ---
 
+<div align="center">
+
 ## 🚀 Quick Start
+
+</div>
 
 ### Prerequisites
 
@@ -140,7 +162,7 @@ Perfect! Here's the updated folder structure section for your README:
    code --install-extension brandonkirbyson.vscode-animations
    ```
 
-### Installation (3 Minutes to Awesome)
+### Installation (5 Minutes to Awesome)
 
 **Step 1: Clone this repository**
 
@@ -154,16 +176,16 @@ cd Custom-Code-Styles
 ```bash
 # macOS/Linux
 mkdir -p ~/Documents/Code/CustomCode
-cp Assets/* ~/Documents/Code/CustomCode/
+cp -r Assets/Images/* ~/Documents/Code/CustomCode/
 
 # Windows (PowerShell)
 mkdir $env:USERPROFILE\Documents\Code\CustomCode
-Copy-Item Assets\* $env:USERPROFILE\Documents\Code\CustomCode\
+Copy-Item Assets\Images\* $env:USERPROFILE\Documents\Code\CustomCode\ -Recurse
 ```
 
 **Step 3: Update VS Code Settings**
 
-Open VS Code settings (press `Cmd/Ctrl + Shift + P` → `Preferences: Open Settings (JSON)`) and add:
+Open VS Code settings (`Cmd/Ctrl + Shift + P` → `Preferences: Open User Settings (JSON)`) and add:
 
 ```json
 {
@@ -178,53 +200,58 @@ Open VS Code settings (press `Cmd/Ctrl + Shift + P` → `Preferences: Open Setti
 > ⚠️ **Replace `/ABSOLUTE/PATH/TO/` with your actual path!**
 >
 > - macOS/Linux: `/Users/yourusername/Documents/Custom-Code-Styles/...`
-> - Windows: `C:/Users/YourName/Documents/Custom-Code-Styles/...`
+> - Windows: `C:/Users/YourName/Documents/Custom-Code-Styles/...` (use forward slashes!)
 
 **Step 4: Enable Custom CSS**
 
-1. Command Palette (`Cmd/Ctrl + Shift + P`)
+1. Open Command Palette (`Cmd/Ctrl + Shift + P`)
 2. Run: **`Enable Custom CSS and JS`**
 3. Restart VS Code
 4. Enjoy the magic! ✨
 
 > 💡 **VS Code Warning:** You'll see "VS Code is corrupt" - **This is normal!** Click "Don't Show Again"
 
-### Optional: Install MrDib's Config
+### Optional: Install MrDib's Full Config
 
-Want the full experience? Copy the configs:
+Want the complete experience? Copy the configs:
 
 ```bash
-# Recommended extensions
-cp Configs/Extensions.json .vscode/extensions.json
+# Install recommended extensions (review Extensions.json first!)
+# Copy/paste extension IDs to install individually
 
-# Keyboard shortcuts (merge with your existing)
-# Copy content from Configs/KeyBindings.json to your keybindings.json
+# Merge keyboard shortcuts (don't overwrite yours!)
+# Open Configs/KeyBindings.json and copy shortcuts you want
 
-# Settings (merge carefully!)
-# Copy sections you want from Configs/Settings.json
+# Merge settings carefully
+# Open Configs/Settings.json and copy sections you need
 ```
 
-**Need detailed instructions?** Check [📚 INSTALLATION.md](Docs/INSTALLATION.md)
+**Need detailed instructions?** Check [📚 Installation.md](Docs/Installation.md)
 
 ---
 
+<div align="center">
+
 ## 🎮 Features Breakdown
+
+</div>
 
 ### 🌐 The Matrix Has You
 
 Every startup: cascading Katakana characters + glitched welcome message. **Personalize it:**
 
 ```javascript
-// Edit Styles/CustomJavascript.js
+// Edit Styles/CustomJavascript.js (around line 15)
 const GLITCH_CONFIG = {
   message: "⚡ Welcome back, MrDib ⚡", // 👈 Change YOUR name here!
-  // ...
+  duration: 3000,
+  colors: ["#00ff00", "#00ffff", "#ff00ff"],
 };
 ```
 
 ### 🔍 Command Palette Glass Effect
 
-Hit `Cmd/Ctrl + P` → background blurs into dreamy haze, command palette floats like holographic interface.
+Hit `Cmd/Ctrl + P` → background blurs into dreamy haze, command palette floats like a holographic interface.
 
 ### 📁 File Explorer Glow
 
@@ -239,38 +266,57 @@ Tabs slide in from left when opened, slide out when closed. Smooth as butter. �
 **200+ Java snippets** + **120+ HTML snippets** = coding at the speed of thought!
 
 ```java
-// Type "psint" + Tab
-public static int methodName() {
-    return 0;
+// Type "psvm" + Tab
+public static void main(String[] args) {
+
 }
 
 // Type "pojo" + Tab → instant POJO class!
+public class ClassName {
+    // Auto-generated fields, getters, setters, toString
+}
 ```
 
 ```html
-<!-- Type "!!!" + Tab → complete HTML5 boilerplate with SEO! -->
+<!-- Type "html5" + Tab → complete HTML5 boilerplate with SEO! -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
 ```
 
+<div align="center">
+
 **Learn all snippets:** [✂️ Snippets/README.md](Snippets/README.md)
+
+---
 
 ### 🎯 Custom Keyboard Shortcuts
 
 MrDib's productivity shortcuts pre-configured:
 
-| Shortcut                | Action                 |
-| ----------------------- | ---------------------- |
-| `Shift + Opt + Cmd + B` | Toggle Activity Bar    |
-| `Shift + Opt + Cmd + E` | Install Custom CSS     |
-| `Shift + Opt + Cmd + D` | Uninstall Custom CSS   |
-| `Ctrl + Cmd + J`        | Maximize Panel         |
-| `Shift + Opt + C`       | Toggle GitHub Copilot  |
-| `Alt + O`               | Change All Occurrences |
+| Shortcut          | Action                 | Why It's Useful        |
+| ----------------- | ---------------------- | ---------------------- |
+| `Shift+Opt+Cmd+B` | Toggle Activity Bar    | More screen space      |
+| `Shift+Opt+Cmd+E` | Enable Custom CSS      | Quick CSS reload       |
+| `Shift+Opt+Cmd+D` | Disable Custom CSS     | Troubleshooting        |
+| `Ctrl+Cmd+J`      | Maximize Panel         | Full terminal view     |
+| `Shift+Opt+C`     | Toggle GitHub Copilot  | AI coding assistant    |
+| `Alt+O`           | Change All Occurrences | Batch rename variables |
+| `Cmd+K Cmd+T`     | Change Theme           | Quick theme switching  |
 
-**See all shortcuts:** [💻 VSCODE.md](VSCODE.md) - MrDib's legendary guide!
+**See all shortcuts:** [⌨️ Keyboard-Shortcuts.md](Docs/Keyboard-Shortcuts.md)
 
 ---
 
 ## 🎨 Customization
+
+</div>
 
 ### Quick Tweaks
 
@@ -278,7 +324,10 @@ MrDib's productivity shortcuts pre-configured:
 
 ```javascript
 // Styles/CustomJavascript.js, line ~15
-message: "⚡ Welcome back, YOUR_NAME ⚡",
+const GLITCH_CONFIG = {
+  message: "⚡ Welcome back, YOUR_NAME ⚡", // 👈 Change this!
+  duration: 3000,
+};
 ```
 
 **Modify Colors:**
@@ -290,61 +339,90 @@ message: "⚡ Welcome back, YOUR_NAME ⚡",
   --glow-cyan: #00ffff; /* Highlights */
   --glow-purple: #ff00ff; /* Accents */
   --glow-gold: #ffd700; /* Hover effects */
+  --glow-blue: #00aaff; /* Links & buttons */
 }
 ```
 
-**Change Background:**
+**Change Background Wallpaper:**
 
 ```css
-/* Replace CustomWallpaper.jpg in Assets/ folder */
-/* Update path in CustomCSS.css if needed */
+/* Option 1: Replace the image file */
+1. Replace Assets/Images/CustomWallpaper.jpg with your image
+2. Reload VS Code (no code changes needed!)
+
+/* Option 2: Use a different path */
+/* In CustomCSS.css, find: */
+.monaco-workbench {
+  background-image: url("file:///path/to/CustomWallpaper.jpg");
+}
 ```
 
-**Add Your Photo:**
+**Add Your Photo to Activity Bar:**
 
 ```
-1. Replace Assets/CustomProfile.jpg with your photo
-2. Update path in CustomCSS.css
+1. Replace Assets/Images/CustomProfile.jpg with your photo (square, 200x200px recommended)
+2. Ensure path in CustomCSS.css points to your file
 3. Reload VS Code
+4. Enjoy seeing yourself in the corner! 😎
 ```
 
-**Want more?** Check [🎨 CUSTOMIZATION.md](Docs/CUSTOMIZATION.md) for:
+**Adjust Matrix Rain Intensity:**
 
-- Matrix rain config
-- Animation timings
-- Performance modes
-- Creating theme variants
-- And much more!
+```javascript
+// Styles/CustomJavascript.js
+const MATRIX_CONFIG = {
+  charCount: 50, // Reduce for better performance
+  fontSize: 16, // Larger = fewer characters
+  speed: 33, // Higher = slower (milliseconds per frame)
+  opacity: 0.05, // Lower = more subtle
+};
+```
+
+**Want more customization?** Check [🎨 Customization.md](Docs/Customization.md) for:
+
+- Creating theme variants (light mode, blue theme, etc.)
+- Animation timing adjustments
+- Performance modes (battery saver → ultra mode)
+- Advanced CSS modifications
+- Creating your own glitch effects
 
 ---
 
+<div align="center">
+
 ## 🛠️ Troubleshooting
 
-| Issue                      | Solution                                            |
-| -------------------------- | --------------------------------------------------- |
-| "VS Code is corrupt"       | Normal! Click "Don't Show Again"                    |
-| Styles not loading         | Check file paths are absolute, restart VS Code      |
-| Lost after VS Code update  | Re-run "Enable Custom CSS and JS"                   |
-| Performance issues         | Reduce animations in CustomJavascript.js            |
-| Matrix rain too intense    | Lower `charCount` in MATRIX_CONFIG                  |
-| Welcome screen not showing | Check browser console for errors                    |
-| Icons not displaying       | Verify paths in CustomCSS.css, check Assets/ folder |
+| Issue                        | Solution                                                | More Info                 |
+| ---------------------------- | ------------------------------------------------------- | ------------------------- |
+| "VS Code is corrupt" warning | Normal! Click "Don't Show Again"                        | Not actually corrupt      |
+| Styles not loading           | Check file paths are absolute, restart VS Code          | Use `file:///` protocol   |
+| Lost after VS Code update    | Re-run "Enable Custom CSS and JS"                       | Updates disable it        |
+| Performance issues           | Reduce animations in CustomJavascript.js                | Lower charCount           |
+| Matrix rain too intense      | Lower `charCount` and increase `speed` in MATRIX_CONFIG | See Customization.md      |
+| Welcome screen not showing   | Check browser console (Help → Toggle Developer Tools)   | Look for JS errors        |
+| Icons not displaying         | Verify paths in CustomCSS.css, check Assets/ folder     | Use absolute paths        |
+| Extensions not working       | Install extensions manually, check Extensions.json      | Some need workspace trust |
+| Custom CSS not applying      | Admin permissions may be needed, run VS Code as admin   | Windows users especially  |
 
-**More issues?** → [🔧 TROUBLESHOOTING.md](Docs/TROUBLESHOOTING.md)
+**More issues?** → [🔧 TroubleShooting.md](Docs/TroubleShooting.md)
+**Still stuck?** → [Open an Issue](https://github.com/MiniDevHub/Custom-Code-Styles/issues)
 
 ---
 
 ## 📚 Resources
 
-### 📖 Documentation
+</div>
 
-- **[💻 VSCODE.md](VSCODE.md)** - MrDib's LEGENDARY keyboard shortcuts
+### 📖 This Repository's Documentation
 
-  - Master your workspace
-  - Level up from noob to ninja 🥷
-  - Includes memes & coffee breaks ☕
+- **[⌨️ Keyboard-Shortcuts.md](Docs/Keyboard-Shortcuts.md)** - Master VS Code shortcuts
 
-- **[📦 Package.md](Docs/Package.md)** - Ultimate Developer Resources
+  - Essential shortcuts for productivity
+  - Multi-cursor techniques
+  - Navigation wizardry
+  - Custom keybindings explained
+
+- **[📦 Packages.md](Docs/Packages.md)** - Ultimate Developer Resources (18k+ words!)
 
   - 🎨 Design resources (icons, colors, backgrounds)
   - 💻 Dev tools & packages (React, Node, Python)
@@ -352,45 +430,66 @@ message: "⚡ Welcome back, YOUR_NAME ⚡",
   - ☁️ Deployment platforms (Vercel, Netlify, Railway)
   - ⚡ Performance optimization tips
   - 📚 Learning resources & tutorials
-  - **18,000+ words of pure developer gold!**
 
-- **[🎨 CUSTOMIZATION.md](Docs/CUSTOMIZATION.md)** - Make it yours
+- **[🎨 Customization.md](Docs/Customization.md)** - Make it yours
 
   - Change colors, animations, effects
   - Performance modes (battery saver → ultra mode)
   - Create your own theme variants
+  - Advanced CSS/JS modifications
 
-- **[📦 INSTALLATION.md](Docs/INSTALLATION.md)** - Detailed setup
+- **[📦 Installation.md](Docs/Installation.md)** - Detailed setup guide
 
-  - Platform-specific notes
+  - Platform-specific instructions
   - Extension installation
   - Verification steps
+  - Common setup issues
 
 - **[✂️ Snippets/README.md](Snippets/README.md)** - Snippet reference
   - All 200+ Java snippets explained
   - All 120+ HTML snippets documented
   - Usage examples & workflows
 
-### ⚙️ Configuration Files
+---
 
-- **[Extensions.json](Configs/Extensions.json)** - Recommended extensions
+<div align="center">
+
+## 🚀 DevResourceVault (Companion Repository)
+
+> **NEW!** Check out my comprehensive developer resource collection:
+> **[DevResourceVault](https://github.com/MiniDevHub/DevResourceVault.git)**
+
+</div>
+
+What's inside DevResourceVault:
+
+- 🎨 **Design Resources** - Color tools, icon libraries, backgrounds, typography
+- 💻 **Web Development** - Frontend libraries, CSS frameworks, animation tools
+- 🛠️ **Productivity** - Terminal commands (macOS), dev tools, automation scripts
+- 📚 **Learning Hub** - Tutorials, documentation, YouTube channels
+- 🚀 **Deployment** - Hosting platforms, CI/CD tools, cloud services
+
+### ⚙️ Configuration Files in This Repo
+
+- **[Extensions.json](Configs/Extensions.json)** - 60+ recommended extensions
 
   - Custom CSS & JS
   - Animations
   - Error Lens
   - Prettier
   - Material Icons
-  - Code Runner
+  - GitLens
   - Better Comments
-  - And more!
+  - Code Runner
+  - And more!<br><br>
 
-- **[KeyBindings.json](Configs/KeyBindings.json)** - MrDib's shortcuts
+- **[KeyBindings.json](Configs/KeyBindings.json)** - MrDib's custom shortcuts
 
-  - Activity bar toggle
+  - Activity bartoggle
   - Custom CSS controls
   - Panel maximizer
   - Copilot toggle
-  - Advanced file creation
+  - Advanced file operations<br><br>
 
 - **[Settings.json](Configs/Settings.json)** - Complete configuration
   - **2,000+ lines** of perfection
@@ -404,25 +503,20 @@ message: "⚡ Welcome back, YOUR_NAME ⚡",
   - Error Lens setup
   - **Every setting explained with comments!**
 
-### 🎯 Quick Access
+### 🎯 External Resources
 
-```bash
-# View snippets
-cat Snippets/README.md
-
-# Read keyboard shortcuts
-cat VSCODE.md
-
-# Check resources
-cat Docs/Package.md
-
-# Review settings
-cat Configs/Settings.json
-```
+- [VS Code Documentation](https://code.visualstudio.com/docs) - Official docs
+- [VS Code Tips & Tricks](https://code.visualstudio.com/docs/getstarted/tips-and-tricks) - Official tips
+- [Awesome VS Code](https://github.com/viatsko/awesome-vscode) - Curated extensions
+- [DevResourceVault](https://github.com/yourusername/DevResourceVault) - My resource collection
 
 ---
 
+<div align="center">
+
 ## 🤝 Contributing
+
+</div>
 
 Got cool ideas? Found a bug? Want more cyberpunk?
 
@@ -435,15 +529,24 @@ Got cool ideas? Found a bug? Want more cyberpunk?
 
 ### Contribution Ideas
 
-- 🎨 New color schemes
-- ✨ Additional animations
-- 🎭 Theme variations (light mode... if you dare)
-- ✂️ More snippets (React? Vue? TypeScript?)
-- 🔧 Performance improvements
-- 📝 Documentation enhancements
-- 🐛 Bug fixes
+- 🎨 New color schemes (dark variants, light mode if you dare)
+- ✨ Additional animations (slide effects, fade transitions)
+- 🎭 Theme variations (cyberpunk blue, neon purple, hacker green)
+- ✂️ More snippets (React, Vue, TypeScript, Python)
+- 🔧 Performance improvements (reduce CPU/memory usage)
+- 📝 Documentation enhancements (tutorials, videos)
+- 🐛 Bug fixes (always appreciated!)
+- 🌍 Translations (if docs grow)<br><br>
+
+<div align="center">
+
+**Read the full guidelines:** [🤝 CONTRIBUTING.md](CONTRIBUTING.md)
+
+</div>
 
 ---
+
+<div align="center">
 
 ## 📜 License
 
@@ -451,28 +554,43 @@ MIT License - Do whatever you want! Just don't blame me if your coworkers get je
 
 Share your cool modifications back with the community!
 
+See [LICENSE](LICENSE) for details.
+
 ---
 
 ## 🙏 Credits & Shoutouts
 
+</div>
+
 - **VS Code Team** - For making an editor worth customizing
-- **Custom CSS Extension** - The real MVP
-- **The Matrix (1999)** - For the inspiration
-- **Cyberpunk 2077** - For the neon aesthetic
+- **Custom CSS Extension** - The real MVP enabling this magic
+- **The Matrix (1999)** - For the inspiration & aesthetic
+- **Cyberpunk 2077** - For the neon dreams
 - **Coffee** ☕ - None of this would exist without you
 - **Stack Overflow** - For saving my bacon 1000+ times
-- **My Keyboard** - RIP some keys
+- **My Keyboard** - RIP some keys (F for respects)
 - **You!** - For using this and making your editor awesome
+
+**Special Thanks:**
+
+- Everyone who starred this repo ⭐
+- Contributors who submitted PRs
+- Users who reported bugs
+- The VS Code community
 
 ---
 
+<div align="center">
+
 ## 💬 Final Words from MrDib
 
-> _"Your VS Code is a reflection of your soul. Mine apparently has RGB lighting, glowing text, matrix rain, 200+ snippets, and thinks it's living in a cyberpunk movie. And you know what? I regret nothing."_
+> _"Your VS Code is a reflection of your soul. Mine apparently has RGB lighting, glowing text, matrix rain, 320+ snippets, and thinks it's living in a cyberpunk movie. And you know what? I regret nothing."_
 >
-> — **MrDib**, 2024 (probably hopped up on coffee ☕)
+> — **MrDib**, 2025 (probably hopped up on coffee ☕)
 
-### Why I Built This
+## Why I Built This
+
+</div>
 
 I spent **way too much time** staring at VS Code, so I figured: why not make it awesome? Life's too short for boring tools. If I'm coding 8+ hours a day, I want to feel like I'm in The Matrix, not doing spreadsheets.
 
@@ -486,7 +604,20 @@ Plus, RGB makes code run faster. Science fact. (Don't fact-check this.)
 - 💚 **Share creations with the world**
 - ☕ **Coffee first, code second**
 - 🎮 **Work hard, customize harder**
-- 📝 **Document everything** (hence 18k+ words of docs!)
+- 📝 **Document everything** (hence 25k+ words of docs!)
+- 🌟 **Have fun with technology**
+
+### What's Next?
+
+- 🔮 VS Code extension version (easier installation)
+- 🎨 More theme variants (community requested)
+- ✂️ React/TypeScript snippet packs
+- 📱 Mobile coding setup guide
+- 🎬 Video tutorials
+- 🌐 Web-based theme customizer
+- 🤖 AI-powered snippet generator
+
+**Want to help?** Contributions welcome! Check [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ---
 
@@ -498,6 +629,8 @@ Plus, RGB makes code run faster. Science fact. (Don't fact-check this.)
 
 **Share with dev friends!** Let them join the cyberpunk coding revolution.
 
+**Check out DevResourceVault!** [More developer resources](https://github.com/yourusername/DevResourceVault)
+
 **Follow me on GitHub!** More cool stuff coming soon.
 
 ---
@@ -506,11 +639,11 @@ Made with 💚, ☕, and probably too much caffeine by **MrDib**
 
 _Powered by late-night coding sessions and questionable life choices_
 
-_Last Updated: November 2025 | Version 3.0 - Now with MORE EVERYTHING!_
+_Last Updated: November 2025 | Version 4.0 - Now with MORE EVERYTHING!_
 
 ---
 
-[Report Bug](https://github.com/MiniDevHub/Custom-Code-Styles/issues) • [Request Feature](https://github.com/MiniDevHub/Custom-Code-Styles/issues) • [Star on GitHub](https://github.com/MiniDevHub/Custom-Code-Styles)
+[Report Bug](https://github.com/MiniDevHub/Custom-Code-Styles/issues) • [Request Feature](https://github.com/MiniDevHub/Custom-Code-Styles/issues) • [Star on GitHub](https://github.com/MiniDevHub/Custom-Code-Styles) • [DevResourceVault](https://github.com/yourusername/DevResourceVault)
 
 </div>
 
@@ -555,19 +688,21 @@ Now go make your VS Code legendary! 🚀
 - ✅ 2,000+ lines of Settings
 - ✅ 200+ Java Snippets
 - ✅ 120+ HTML Snippets
-- ✅ 18,000+ words of Documentation
+- ✅ 25,500+ words of Documentation
 - ✅ Custom CSS & JavaScript
 - ✅ Matrix Rain Effects
 - ✅ Glowing Animations
 - ✅ Glass Morphism
 - ✅ Professional Configs
+- ✅ 8 Custom Images
 - ✅ 100% MrDib Approved
+- ✅ Links to DevResourceVault
 
 ---
 
 > **Pro Tip:** Use `Cmd/Ctrl + F` to search this README
 
-> **Bookmark:** [VSCODE.md](VSCODE.md) for shortcuts | [Package.md](Docs/Package.md) for resources
+> **Bookmark:** Check out [DevResourceVault](https://github.com/yourusername/DevResourceVault) for developer resources
 
 > **Remember:** RGB makes you code faster. It's science. 🧪
 
