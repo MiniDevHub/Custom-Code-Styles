@@ -335,11 +335,11 @@ const GLITCH_CONFIG = {
 ```css
 /* Styles/CustomCSS.css, top of file */
 :root {
-  --glow-green: #00ff00; /* Matrix green */
-  --glow-cyan: #00ffff; /* Highlights */
-  --glow-purple: #ff00ff; /* Accents */
-  --glow-gold: #ffd700; /* Hover effects */
-  --glow-blue: #00aaff; /* Links & buttons */
+  --glow-green: #00ff00;   /* Matrix green */
+  --glow-cyan: #00ffff;    /* Highlights */
+  --glow-purple: #ff00ff;  /* Accents */
+  --glow-gold: #ffd700;    /* Hover effects */
+  --glow-blue: #00aaff;    /* Links & buttons */
 }
 ```
 
@@ -371,10 +371,10 @@ const GLITCH_CONFIG = {
 ```javascript
 // Styles/CustomJavascript.js
 const MATRIX_CONFIG = {
-  charCount: 50, // Reduce for better performance
-  fontSize: 16, // Larger = fewer characters
-  speed: 33, // Higher = slower (milliseconds per frame)
-  opacity: 0.05, // Lower = more subtle
+  charCount: 50,   // Reduce for better performance
+  fontSize: 16,    // Larger = fewer characters
+  speed: 33,       // Higher = slower (milliseconds per frame)
+  opacity: 0.05,   // Lower = more subtle
 };
 ```
 
