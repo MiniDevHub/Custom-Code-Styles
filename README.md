@@ -2,6 +2,8 @@
 
 # 🎨 MrDib's Custom Code Styles - VS Code on Steroids 💉
 
+# Hello Hello Hello
+
 ![VS Code](https://img.shields.io/badge/VS%20Code-1.95+-blue?style=for-the-badge&logo=visual-studio-code)
 ![CSS3](https://img.shields.io/badge/CSS3-Custom-orange?style=for-the-badge&logo=css3)
 ![JavaScript](https://img.shields.io/badge/JavaScript-Enhanced-yellow?style=for-the-badge&logo=javascript)
@@ -335,11 +337,11 @@ const GLITCH_CONFIG = {
 ```css
 /* Styles/CustomCSS.css, top of file */
 :root {
-  --glow-green: #00ff00;   /* Matrix green */
-  --glow-cyan: #00ffff;    /* Highlights */
-  --glow-purple: #ff00ff;  /* Accents */
-  --glow-gold: #ffd700;    /* Hover effects */
-  --glow-blue: #00aaff;    /* Links & buttons */
+  --glow-green: #00ff00; /* Matrix green */
+  --glow-cyan: #00ffff; /* Highlights */
+  --glow-purple: #ff00ff; /* Accents */
+  --glow-gold: #ffd700; /* Hover effects */
+  --glow-blue: #00aaff; /* Links & buttons */
 }
 ```
 
@@ -371,10 +373,10 @@ const GLITCH_CONFIG = {
 ```javascript
 // Styles/CustomJavascript.js
 const MATRIX_CONFIG = {
-  charCount: 50,   // Reduce for better performance
-  fontSize: 16,    // Larger = fewer characters
-  speed: 33,       // Higher = slower (milliseconds per frame)
-  opacity: 0.05,   // Lower = more subtle
+  charCount: 50, // Reduce for better performance
+  fontSize: 16, // Larger = fewer characters
+  speed: 33, // Higher = slower (milliseconds per frame)
+  opacity: 0.05, // Lower = more subtle
 };
 ```
 
