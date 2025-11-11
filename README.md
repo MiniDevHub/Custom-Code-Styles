@@ -335,11 +335,11 @@ const GLITCH_CONFIG = {
 ```css
 /* Styles/CustomCSS.css, top of file */
 :root {
-  --glow-green: #00ff00;   /* Matrix green */
-  --glow-cyan: #00ffff;    /* Highlights */
-  --glow-purple: #ff00ff;  /* Accents */
-  --glow-gold: #ffd700;    /* Hover effects */
-  --glow-blue: #00aaff;    /* Links & buttons */
+  --glow-green: #00ff00; /* Matrix green */
+  --glow-cyan: #00ffff; /* Highlights */
+  --glow-purple: #ff00ff; /* Accents */
+  --glow-gold: #ffd700; /* Hover effects */
+  --glow-blue: #00aaff; /* Links & buttons */
 }
 ```
 
@@ -371,10 +371,10 @@ const GLITCH_CONFIG = {
 ```javascript
 // Styles/CustomJavascript.js
 const MATRIX_CONFIG = {
-  charCount: 50,   // Reduce for better performance
-  fontSize: 16,    // Larger = fewer characters
-  speed: 33,       // Higher = slower (milliseconds per frame)
-  opacity: 0.05,   // Lower = more subtle
+  charCount: 50, // Reduce for better performance
+  fontSize: 16, // Larger = fewer characters
+  speed: 33, // Higher = slower (milliseconds per frame)
+  opacity: 0.05, // Lower = more subtle
 };
 ```
 
@@ -650,11 +650,11 @@ _Last Updated: November 2025 | Version 4.0 - Now with MORE EVERYTHING!_
 ---
 
 <div align="center">
-<img src="data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='235' height='28'><path d='M5 0H230C232.761 0 235 2.23858 235 5V23C235 25.7614 232.761 28 230 28H5C2.23858 28 0 25.7614 0 23V5C0 2.23858 2.23858 0 5 0Z' fill='%239CCC65'/><path d='M5 0H30V28H5C2.23858 28 0 25.7614 0 23V5C0 2.23858 2.23858 0 5 0Z' fill='%238BC34A'/><text x='132.5' y='17.5' fill='%23FFFFFF' text-anchor='middle' font-family='Verdana,Geneva,DejaVu Sans,sans-serif' font-size='11' font-weight='bold'>POWERED BY ELECTRICITY</text><g transform='translate(6, 7.1) scale(0.6)'><path fill='%23FFFFFF' d='M12.9 0C12.4 0 12.1 0.4 12 0.9L10 13.9C9.9 14.4 10.2 14.9 10.7 14.9H15.9V22.9C15.9 23.4 16.2 23.8 16.7 23.9C17.2 24 17.7 23.7 17.8 23.2L20.2 10.2C20.3 9.7 20 9.2 19.5 9.2H14.3V1.2C14.3 0.7 13.9 0.2 13.4 0.1C13 0 12.9 0 12.9 0Z' /></g></svg>" alt="Powered by Electricity badge"/>
-<img src="data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='28'><path d='M5 0H175C177.761 0 180 2.23858 180 5V23C180 25.7614 177.761 28 175 28H5C2.23858 28 0 25.7614 0 23V5C0 2.23858 2.23858 0 5 0Z' fill='%23EF8A62'/><path d='M5 0H30V28H5C2.23858 28 0 25.7614 0 23V5C0 2.23858 2.23858 0 5 0Z' fill='%23EA6F49'/><text x='105' y='17.5' fill='%23FFFFFF' text-anchor='middle' font-family='Verdana,Geneva,DejaVu Sans,sans-serif' font-size='11' font-weight='bold'>BUILT WITH LOVE</text><g transform='translate(6, 7.1) scale(0.6)'><path fill='%23FFFFFF' d='M15.4 0.5C13.2 -1.4 10 0.5 10 3C10 5.5 12.6 7.4 15.4 10.1C18.2 7.4 20.8 5.5 20.8 3C20.8 0.5 17.6 -1.4 15.4 0.5ZM15.4 1.7C16.9 0.6 18.9 1.6 18.9 3C18.9 4.2 17.6 5.3 15.4 7.6C13.2 5.3 11.9 4.2 11.9 3C11.9 1.6 13.9 0.6 15.4 1.7Z' /></g></svg>" alt="Built with Love badge"/>
-<img src="data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='225' height='28'><path d='M5 0H220C222.761 0 225 2.23858 225 5V23C225 25.7614 222.761 28 220 28H5C2.23858 28 0 25.7614 0 23V5C0 2.23858 2.23858 0 5 0Z' fill='%236F4E37'/><path d='M5 0H30V28H5C2.23858 28 0 25.7614 0 23V5C0 2.23858 2.23858 0 5 0Z' fill='%23593E2D'/><g transform='translate(6, 7.1) scale(0.6)'><path fill='%23FFFFFF' d='M9.1 0C6.6 0 4.5 2.1 4.5 4.6V18.4C4.5 20.9 6.6 23 9.1 23H19.4C21.9 23 24 20.9 24 18.4V14.5H25.3C27.5 14.5 29.3 12.8 29.3 10.5C29.3 8.3 27.5 6.5 25.3 6.5H24V4.6C24 2.1 21.9 0 19.4 0H9.1ZM9.1 2.9H19.4C20.4 2.9 21.1 3.7 21.1 4.6V6.5H7.4V4.6C7.4 3.7 8.1 2.9 9.1 2.9ZM7.4 9.4H21.1V18.4C21.1 19.4 20.4 20.1 19.4 20.1H9.1C8.1 20.1 7.4 19.4 7.4 18.4V9.4ZM24 9.4H25.3C26.1 9.4 26.4 10.2 26.4 10.5C26.4 10.9 26.1 11.6 25.3 11.6H24V9.4Z' /></g><text x='127.5' y='17.5' fill='%23FFFFFF' text-anchor='middle' font-family='Verdana,Geneva,DejaVu Sans,sans-serif' font-size='11' font-weight='bold'>MAINTAINED WITH COFFEE</text></svg>" alt="Maintained with Coffee badge"/>
-<img src="data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='225' height='28'><path d='M5 0H220C222.761 0 225 2.23858 225 5V23C225 25.7614 222.761 28 220 28H5C2.23858 28 0 25.7614 0 23V5C0 2.23858 2.23858 0 5 0Z' fill='%23FFB300'/><path d='M5 0H30V28H5C2.23858 28 0 25.7614 0 23V5C0 2.23858 2.23858 0 5 0Z' fill='%23FFA000'/><text x='127.5' y='17.5' fill='%23FFFFFF' text-anchor='middle' font-family='Verdana,Geneva,DejaVu Sans,sans-serif' font-size='11' font-weight='bold'>MAKES PEOPLE SMILE</text><g transform='translate(6, 7.1) scale(0.6)'><path fill='%23FFFFFF' d='M15 0C6.7 0 0 6.7 0 15C0 23.3 6.7 30 15 30C23.3 30 30 23.3 30 15C30 6.7 23.3 0 15 0ZM15 2.9C21.7 2.9 27.1 8.3 27.1 15C27.1 21.7 21.7 27.1 15 27.1C8.3 27.1 2.9 21.7 2.9 15C2.9 8.3 8.3 2.9 15 2.9ZM7.8 11.7C8.9 11.7 9.8 10.8 9.8 9.7C9.8 8.6 8.9 7.7 7.8 7.7C6.7 7.7 5.8 8.6 5.8 9.7C5.8 10.8 6.7 11.7 7.8 11.7ZM22.2 11.7C23.3 11.7 24.2 10.8 24.2 9.7C24.2 8.6 23.3 7.7 22.2 7.7C21.1 7.7 20.2 8.6 20.2 9.7C20.2 10.8 21.1 11.7 22.2 11.7ZM15 22.5C11.3 22.5 8.2 19.5 7.8 15.9H22.2C21.8 19.5 18.7 22.5 15 22.5Z' /></g></svg>" alt="Makes People Smile badge"/>
-<img src="data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='165' height='28'><path d='M5 0H160C162.761 0 165 2.23858 165 5V23C165 25.7614 162.761 28 160 28H5C2.23858 28 0 25.7614 0 23V5C0 2.23858 2.23858 0 5 0Z' fill='%2364B5F6'/><path d='M5 0H30V28H5C2.23858 28 0 25.7614 0 23V5C0 2.23858 2.23858 0 5 0Z' fill='%2342A5F5'/><text x='97.5' y='17.5' fill='%23FFFFFF' text-anchor='middle' font-family='Verdana,Geneva,DejaVu Sans,sans-serif' font-size='11' font-weight='bold'>GLUTEN FREE</text><g transform='translate(6, 7.1) scale(0.6)'><path fill='%23FFFFFF' d='M15 0L10 10L12 11L10 12L12 13L10 14L15 24L20 14L18 13L20 12L18 11L20 10L15 0Z' /></g></svg>" alt="Gluten Free badge"/>
+<img src=".github/badges/electricity.svg" alt="Powered by Electricity badge"/>
+<img src=".github/badges/love.svg" alt="Built with Love badge"/>
+<img src=".github/badges/coffee.svg" alt="Maintained with Coffee badge"/>
+<img src=".github/badges/smile.svg" alt="Makes People Smile badge"/>
+<img src=".github/badges/gluten-free.svg" alt="Gluten Free badge"/>
 </div>
 
 ---
