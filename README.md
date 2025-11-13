@@ -645,7 +645,7 @@ _Last Updated: November 2025 | Version 4.0 - Now with MORE EVERYTHING!_
 
 ---
 
-[Report Bug](https://github.com/MiniDevHub/Custom-Code-Styles/issues) • [Request Feature](https://github.com/MiniDevHub/Custom-Code-Styles/issues) • [Star on GitHub](https://github.com/MiniDevHub/Custom-Code-Styles) • [DevResourceVault](https://github.com/yourusername/DevResourceVault)
+[Report Bug](https://github.com/MiniDevHub/Custom-Code-Styles/issues) • [Request Feature](https://github.com/MiniDevHub/Custom-Code-Styles/issues) • [Star on GitHub](https://github.com/MiniDevHub/Custom-Code-Styles) • [Dev-Resource-Vault](https://github.com/MiniDevHub/Dev-Resource-Vault.git)
 
 </div>
 
@@ -706,7 +706,7 @@ Now go make your VS Code legendary! 🚀
 
 > **Pro Tip:** Use `Cmd/Ctrl + F` to search this README
 
-> **Bookmark:** Check out [DevResourceVault](https://github.com/yourusername/DevResourceVault) for developer resources
+> **Bookmark:** Check out [Dev-Resource-Vault](https://github.com/MiniDevHub/Dev-Resource-Vault.git) for developer resources
 
 > **Remember:** RGB makes you code faster. It's science. 🧪
 
