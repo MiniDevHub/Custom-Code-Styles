@@ -29,7 +29,7 @@ Welcome to **MrDib's personal VS Code transformation kit!** This isn't just anot
 I got tired of boring code editors, so I decided to make mine look like I'm hacking into the mainframe. Now you can too! 😎
 
 > 💡 **New!** Looking for developer resources, tools, and cheat sheets?
-> Check out my companion repo: **[DevResourceVault](https://github.com/yourusername/DevResourceVault)** - Your ultimate collection of design resources, frontend libraries, terminal commands, and more!
+> Check out my companion repo: **[Dev-Resource-Vault](https://github.com/MiniDevHub/Dev-Resource-Vault.git)** - Your ultimate collection of design resources, frontend libraries, terminal commands, and more!
 
 ### ✨ Key Features
 
@@ -127,24 +127,24 @@ I got tired of boring code editors, so I decided to make mine look like I'm hack
 
 ### New to This Setup?
 
-📦 **[Installation.md](Docs/Installation.md)** - Get set up in 10 minutes
-⌨️ **[Keyboard-Shortcuts.md](Docs/Keyboard-Shortcuts.md)** - Code faster
+📦 **[Installation.md](Docs/Installation.md)** - Get set up in 10 minutes<br>
+⌨️ **[Keyboard-Shortcuts.md](Docs/Keyboard-Shortcuts.md)** - Code faster<br>
 🎨 **[Customization.md](Docs/Customization.md)** - Make it yours
 
 ### Need Developer Resources?
 
-🚀 **[DevResourceVault](https://github.com/yourusername/DevResourceVault)** - Design tools, frontend libraries, productivity tips
+🚀 **[DevResourceVault](https://github.com/yourusername/DevResourceVault)** - Design tools, frontend libraries, productivity tips<br>
 📦 **[Packages.md](Docs/Packages.md)** - 18,000+ words of tools & resources (also in this repo!)
 
 ### Having Issues?
 
-🔧 **[TroubleShooting.md](Docs/TroubleShooting.md)** - Common fixes
+🔧 **[TroubleShooting.md](Docs/TroubleShooting.md)** - Common fixes<br>
 💬 **[GitHub Issues](https://github.com/MiniDevHub/Custom-Code-Styles/issues)** - Report bugs or request features
 
 ### Want to Dive Deep?
 
-💅 **[Styles/README.md](Styles/README.md)** - How the magic works
-⚙️ **[Configs/README.md](Configs/README.md)** - Settings explained
+💅 **[Styles/README.md](Styles/README.md)** - How the magic works<br>
+⚙️ **[Configs/README.md](Configs/README.md)** - Settings explained<br>
 🎨 **[Assets/README.md](Assets/README.md)** - Image resources guide
 
 ---
