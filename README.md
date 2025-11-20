@@ -2,8 +2,6 @@
 
 # 🎨 MrDib's Custom Code Styles - VS Code on Steroids 💉
 
-# Hello Hello Hello
-
 ![VS Code](https://img.shields.io/badge/VS%20Code-1.95+-blue?style=for-the-badge&logo=visual-studio-code)
 ![CSS3](https://img.shields.io/badge/CSS3-Custom-orange?style=for-the-badge&logo=css3)
 ![JavaScript](https://img.shields.io/badge/JavaScript-Enhanced-yellow?style=for-the-badge&logo=javascript)
@@ -133,7 +131,7 @@ I got tired of boring code editors, so I decided to make mine look like I'm hack
 
 ### Need Developer Resources?
 
-🚀 **[DevResourceVault](https://github.com/yourusername/DevResourceVault)** - Design tools, frontend libraries, productivity tips<br>
+🚀 **[DevResourceVault](https://github.com/MiniDevHub/Dev-Resource-Vault.git)** - Design tools, frontend libraries, productivity tips<br>
 📦 **[Packages.md](Docs/Packages.md)** - 18,000+ words of tools & resources (also in this repo!)
 
 ### Having Issues?
@@ -459,7 +457,7 @@ const MATRIX_CONFIG = {
 ## 🚀 DevResourceVault (Companion Repository)
 
 > **NEW!** Check out my comprehensive developer resource collection:
-> **[DevResourceVault](https://github.com/MiniDevHub/DevResourceVault.git)**
+> **[DevResourceVault](https://github.com/MiniDevHub/Dev-Resource-Vault.git)**
 
 </div>
 
@@ -510,7 +508,7 @@ What's inside DevResourceVault:
 - [VS Code Documentation](https://code.visualstudio.com/docs) - Official docs
 - [VS Code Tips & Tricks](https://code.visualstudio.com/docs/getstarted/tips-and-tricks) - Official tips
 - [Awesome VS Code](https://github.com/viatsko/awesome-vscode) - Curated extensions
-- [DevResourceVault](https://github.com/yourusername/DevResourceVault) - My resource collection
+- [DevResourceVault](https://github.com/MiniDevHub/Dev-Resource-Vault.git) - My resource collection
 
 ---
 
@@ -631,7 +629,7 @@ Plus, RGB makes code run faster. Science fact. (Don't fact-check this.)
 
 **Share with dev friends!** Let them join the cyberpunk coding revolution.
 
-**Check out DevResourceVault!** [More developer resources](https://github.com/yourusername/DevResourceVault)
+**Check out DevResourceVault!** [More developer resources](https://github.com/MiniDevHub/Dev-Resource-Vault.git)
 
 **Follow me on GitHub!** More cool stuff coming soon.
 
