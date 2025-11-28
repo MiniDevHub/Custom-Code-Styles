@@ -185,7 +185,7 @@ body,
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("/Users/dibakar/Documents/Code/CustomCode/CustomWallpaper.jpg") !important;
+  background-image: url("/Users/dibakar/Documents/Documents%20-%20DIBAKAR%E2%80%99s%20MacBook%20Pro/Code/CustomCode/CustomWallpaper.jpg") !important;
   background-size: cover !important;
   background-position: center center !important;
   opacity: 0.3 !important;
@@ -335,7 +335,7 @@ body,
   width: 75%;
   height: 75%;
   position: absolute !important;
-  background-image: url("/Users/dibakar/Documents/Code/CustomCode/Photo.jpeg") !important;
+  background-image: url("/Users/dibakar/Documents/Documents%20-%20DIBAKAR%E2%80%99s%20MacBook%20Pro/Code/CustomCode/Photo.jpeg") !important;
   background-size: 100% !important;
   background-position: center center !important;
   opacity: 1 !important;
@@ -349,7 +349,7 @@ body,
   width: 65%;
   height: 65%;
   position: absolute !important;
-  background-image: url("/Users/dibakar/Documents/Code/CustomCode/Gears.png") !important;
+  background-image: url("/Users/dibakar/Documents/Documents%20-%20DIBAKAR%E2%80%99s%20MacBook%20Pro/Code/CustomCode/Gears.png") !important;
   background-size: 100% !important;
   background-position: center center !important;
   opacity: 0.8 !important;
@@ -643,7 +643,7 @@ body,
   left: 0;
   width: 100% !important;
   height: 100% !important;
-  background-image: url("/Users/dibakar/Documents/Code/CustomCode/Mask.png") !important;
+  background-image: url("/Users/dibakar/Documents/Documents%20-%20DIBAKAR%E2%80%99s%20MacBook%20Pro/Code/CustomCode/Mask.png") !important;
   background-position: center center !important;
   background-size: 35% !important;
   background-repeat: no-repeat !important;
@@ -916,7 +916,7 @@ body,
 
 /* INFO: Vertical Borders - Subtle white dividers! │ */
 .monaco-sash.vertical.mac[style*="left: 280px"],
-.monaco-sash.vertical.mac[style*="left: 1440px"],
+.monaco-sash.vertical.mac[style*="left: 1580px"],
 .monaco-workbench .activitybar.right.bordered:before,
 .monaco-workbench .activitybar.bordered:before {
   border-left: 2px solid rgb(255 255 255 / 13%) !important;
