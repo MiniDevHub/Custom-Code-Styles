@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
       WebkitBackdropFilter: "blur(2.5px)",
       backgroundColor: "rgba(0, 0, 0, 0.25)",
       pointerEvents: "none",
-      transition: "all 0.3s ease-in-out", // Enhancement: Smooth transition
+      transition: "all 0.3s ease-in-out",
     });
 
     targetDiv.appendChild(newElement);
@@ -98,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function handleEscape() {
     const element = document.getElementById("command-blur");
     if (element) {
-      // Enhancement: Fade out effect
       element.style.opacity = "0";
       setTimeout(() => element.remove(), 300);
     }
@@ -169,15 +168,15 @@ style.textContent = `
   @keyframes glitch {
     0% {
       opacity: 0.3;
-      transform: scale(1.1) skew(2deg);
+      transform: scale(1.05) skew(1deg);
       color: #0f0;
-      text-shadow: 2px 2px 0 #ff00ff, -2px -2px 0 #00ffff;
+      text-shadow: 1px 1px 0 #ff00ff, -1px -1px 0 #00ffff;
     }
     50% {
-      opacity: 1;
-      transform: scale(0.95) skew(-1deg);
-      color: #fff;
-      text-shadow: 1px 1px 0 #ff00ff, -1px -1px 0 #00ffff;
+      opacity: 0.6;
+      transform: scale(0.98) skew(-0.5deg);
+      color: #0ff;
+      text-shadow: 0.5px 0.5px 0 #ff00ff, -0.5px -0.5px 0 #00ffff;
     }
     100% {
       opacity: 1;
@@ -190,7 +189,7 @@ style.textContent = `
   /* Enhancement: Pulse animation for characters */
   @keyframes charPulse {
     0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+    50% { transform: scale(1.05); }
   }
 
   /* ═══════════════════ ELEMENT STYLES ═══════════════════ */
@@ -243,24 +242,24 @@ style.textContent = `
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
-    letter-spacing: 0.1em; /* Enhancement: Better spacing */
+    letter-spacing: 0.1em;
   }
 
   /* INFO: Individual glitch characters */
   .glitch-char {
     display: inline-block;
-    animation: glitch 0.4s ease-in-out;
+    animation: glitch 0.3s ease-in-out forwards;
     font-size: inherit !important;
     position: relative;
   }
 
-  /* Enhancement: Rainbow glow for special chars */
+  /* Enhancement: Staggered animation */
   .glitch-char:nth-child(odd) {
-    animation-delay: 0.1s;
+    animation-delay: 0.05s;
   }
 
   .glitch-char:nth-child(even) {
-    animation-delay: 0.05s;
+    animation-delay: 0.02s;
   }
 `;
 document.head.appendChild(style);
@@ -297,13 +296,13 @@ document.body.appendChild(matrixRain);
 
 // INFO: Configuration for matrix rain
 const MATRIX_CONFIG = {
-  charCount: 200, // Number of falling characters
-  minDelay: 0, // Minimum animation delay
-  maxDelay: 4, // Maximum animation delay
-  minDuration: 3, // Minimum fall duration
-  maxDuration: 5, // Maximum fall duration
-  charRange: 96, // Range of Katakana characters
-  baseChar: 0x30a0, // Katakana Unicode base
+  charCount: 200,
+  minDelay: 0,
+  maxDelay: 4,
+  minDuration: 3,
+  maxDuration: 5,
+  charRange: 96,
+  baseChar: 0x30a0,
 };
 
 // INFO: Generate matrix rain characters - Let it rain! ☔
@@ -311,7 +310,6 @@ for (let i = 0; i < MATRIX_CONFIG.charCount; i++) {
   const char = document.createElement("div");
   char.classList.add("matrix-char");
 
-  // Random Katakana or special character
   const isSpecial = Math.random() > 0.9;
   char.textContent = isSpecial
     ? ["⚡", "🔥", "💀", "👾", "🎯"][Math.floor(Math.random() * 5)]
@@ -319,14 +317,11 @@ for (let i = 0; i < MATRIX_CONFIG.charCount; i++) {
         MATRIX_CONFIG.baseChar + Math.random() * MATRIX_CONFIG.charRange
       );
 
-  // Random positioning and timing
   const left = Math.random() * window.innerWidth * 1.5;
   const delay = MATRIX_CONFIG.minDelay + Math.random() * MATRIX_CONFIG.maxDelay;
   const duration =
     MATRIX_CONFIG.minDuration +
     Math.random() * (MATRIX_CONFIG.maxDuration - MATRIX_CONFIG.minDuration);
-
-  // Enhancement: Variable opacity for depth effect
   const opacity = 0.3 + Math.random() * 0.7;
 
   Object.assign(char.style, {
@@ -334,7 +329,7 @@ for (let i = 0; i < MATRIX_CONFIG.charCount; i++) {
     animationDelay: `${delay}s`,
     animationDuration: `${duration}s`,
     opacity: opacity,
-    fontSize: isSpecial ? "20px" : "16px", // Enhancement: Bigger special chars
+    fontSize: isSpecial ? "20px" : "16px",
   });
 
   matrixRain.appendChild(char);
@@ -349,141 +344,122 @@ window.addEventListener("resize", () => {
 });
 
 /* ┌─────────────────────────────────────────────────────────────────┐ */
-/* │                    💬 WELCOME MESSAGE                           │ */
+/* │                     💬 WELCOME MESSAGE (FIXED)                  │ */
 /* └─────────────────────────────────────────────────────────────────┘ */
 
-// INFO: Create splash screen container - The grand entrance! 🎭
-const splash = document.createElement("div");
-splash.innerHTML = `<span id="glitch-text"></span>`;
-Object.assign(splash.style, {
-  position: "fixed",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  fontSize: `${Math.min(window.innerWidth * 0.05, 42)}px`,
-  fontFamily: "'Cascadia Code', 'Fira Code', monospace",
-  color: "#00ff00",
-  padding: "0.5em 1em",
-  maxWidth: "90vw",
-  overflow: "hidden",
-  whiteSpace: "nowrap",
-  background:
-    "linear-gradient(135deg, rgba(0,255,0,0.05), rgba(0,255,255,0.05))",
-  borderRadius: "16px",
-  border: "2px solid rgba(0, 255, 0, 0.2)",
-  boxShadow: `
-    0 0 20px rgba(0, 255, 100, 0.25),
-    0 0 40px rgba(0, 255, 100, 0.15),
-    inset 0 0 20px rgba(0, 255, 100, 0.1)
-  `, // Enhancement: Multiple shadow layers
-  backdropFilter: "blur(6px)",
-  WebkitBackdropFilter: "blur(6px)",
-  zIndex: "9999",
-  textAlign: "center",
-  animation: `
-    holdGlow 3s ease-out both,
-    fadeOutSmooth 2s ease-in-out 3s forwards
-  `,
-  cursor: "default", // Enhancement: Better UX
-});
-document.body.appendChild(splash);
+// FIX: Check if splash already exists to prevent double-typing bug!
+if (!document.getElementById("dib-splash-container")) {
+  const splash = document.createElement("div");
+  splash.id = "dib-splash-container";
+  splash.innerHTML = `<span id="glitch-text"></span>`;
 
-/* ┌─────────────────────────────────────────────────────────────────┐ */
-/* │                    ⚡ GLITCH TEXT ANIMATION                     │ */
-/* └─────────────────────────────────────────────────────────────────┘ */
-
-// INFO: Configuration for glitch text
-const GLITCH_CONFIG = {
-  message: "⚡ Welcome back, Dibakar ⚡",
-  typeDelay: 60, // Delay between characters
-  glitchDuration: 80, // How long glitch lasts
-  randomDelay: 100, // Random additional delay
-  glitchChars: "アカサタナハマヤラワ0123456789@#$%^&*!?<>[]{}",
-};
-
-// INFO: Get random glitch character - Matrix style! 🎲
-function getRandomChar() {
-  return GLITCH_CONFIG.glitchChars[
-    Math.floor(Math.random() * GLITCH_CONFIG.glitchChars.length)
-  ];
-}
-
-// INFO: Typewriter with glitch effect - The coolest typing! ⌨️
-const target = document.getElementById("glitch-text");
-let charIndex = 0;
-
-const typeGlitchChar = () => {
-  if (charIndex >= GLITCH_CONFIG.message.length) {
-    // Enhancement: Pulse effect after typing completes
-    setTimeout(() => {
-      target.style.animation = "charPulse 1s ease-in-out infinite";
-    }, 500);
-    return;
-  }
-
-  const realChar = GLITCH_CONFIG.message[charIndex];
-  const glitchChar = document.createElement("span");
-  glitchChar.classList.add("glitch-char");
-
-  // Show glitch character first
-  glitchChar.textContent = getRandomChar();
-  target.appendChild(glitchChar);
-
-  // Replace with real character
-  setTimeout(() => {
-    glitchChar.innerHTML = realChar === " " ? "&nbsp;" : realChar;
-
-    // Enhancement: Add glow to special characters
-    if (realChar === "⚡") {
-      glitchChar.style.color = "#ffff00";
-      glitchChar.style.textShadow = "0 0 15px #ffff00";
-    }
-  }, GLITCH_CONFIG.glitchDuration + Math.random() * GLITCH_CONFIG.randomDelay);
-
-  charIndex++;
-  setTimeout(typeGlitchChar, GLITCH_CONFIG.typeDelay);
-};
-
-// Start the glitch typing animation
-typeGlitchChar();
-
-/* ┌─────────────────────────────────────────────────────────────────┐ */
-/* │                    📱 RESPONSIVE HANDLERS                       │ */
-/* └─────────────────────────────────────────────────────────────────┘ */
-
-// INFO: Responsive font sizing - Looks good on any screen! 📺
-window.addEventListener("resize", () => {
-  splash.style.fontSize = `clamp(16px, ${window.innerWidth * 0.04}px, 34px)`;
-});
-
-/* ┌─────────────────────────────────────────────────────────────────┐ */
-/* │                    🧹 CLEANUP TIMERS                            │ */
-/* └─────────────────────────────────────────────────────────────────┘ */
-
-// INFO: Animation restart timer
-setTimeout(() => {
-  requestAnimationFrame(() => {
-    splash.style.animation = `
-      holdGlow 3s ease-out both,
-      fadeOutSmooth 2s ease-in-out 3s forwards
-    `;
+  Object.assign(splash.style, {
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    fontSize: `${Math.min(window.innerWidth * 0.05, 42)}px`,
+    fontFamily: "'Cascadia Code', 'Fira Code', monospace",
+    color: "#00ff00",
+    padding: "0.5em 1em",
+    maxWidth: "90vw",
+    overflow: "hidden",
+    whiteSpace: "nowrap",
+    background:
+      "linear-gradient(135deg, rgba(0,255,0,0.05), rgba(0,255,255,0.05))",
+    borderRadius: "16px",
+    border: "2px solid rgba(0, 255, 0, 0.2)",
+    boxShadow: `0 0 20px rgba(0, 255, 100, 0.25), 0 0 40px rgba(0, 255, 100, 0.15)`,
+    backdropFilter: "blur(6px)",
+    WebkitBackdropFilter: "blur(6px)",
+    zIndex: "9999",
+    textAlign: "center",
+    animation: `holdGlow 3s ease-out both, fadeOutSmooth 2s ease-in-out 3s forwards`,
+    cursor: "default",
   });
-}, 5000);
+  document.body.appendChild(splash);
 
-// INFO: Final cleanup - Remove all welcome elements! 🗑️
-setTimeout(() => {
-  // Fade out matrix rain first
-  matrixRain.style.transition = "opacity 0.5s ease-out";
-  matrixRain.style.opacity = "0";
+  /* ┌─────────────────────────────────────────────────────────────────┐ */
+  /* │                    ⚡ GLITCH TEXT ANIMATION (FIXED)             │ */
+  /* └─────────────────────────────────────────────────────────────────┘ */
 
-  // Remove all elements
+  const GLITCH_CONFIG = {
+    message: "⚡ Welcome back, Dibakar ⚡",
+    typeDelay: 80, // Increased for better visibility
+    glitchDuration: 200, // FIXED: Increased so the real char shows properly
+    randomDelay: 50,
+    glitchChars: "アカサタナハマヤラワ0123456789@#$%^&*!?",
+  };
+
+  const target = document.getElementById("glitch-text");
+  let charIndex = 0;
+
+  const typeGlitchChar = () => {
+    // Double check: if the target was removed by a cleanup timer, stop typing
+    if (!document.getElementById("glitch-text")) return;
+
+    if (charIndex >= GLITCH_CONFIG.message.length) {
+      setTimeout(() => {
+        if (target)
+          target.style.animation = "charPulse 1s ease-in-out infinite";
+      }, 500);
+      return;
+    }
+
+    const realChar = GLITCH_CONFIG.message[charIndex];
+    const glitchChar = document.createElement("span");
+    glitchChar.classList.add("glitch-char");
+
+    // FIXED: Start with random glitch character
+    glitchChar.textContent =
+      GLITCH_CONFIG.glitchChars[
+        Math.floor(Math.random() * GLITCH_CONFIG.glitchChars.length)
+      ];
+
+    target.appendChild(glitchChar);
+
+    // FIXED: Change to real character after glitch duration
+    setTimeout(() => {
+      if (glitchChar && glitchChar.parentNode) {
+        glitchChar.textContent = realChar === " " ? "\u00A0" : realChar;
+
+        // Special styling for lightning bolts
+        if (realChar === "⚡") {
+          glitchChar.style.color = "#ffff00";
+          glitchChar.style.textShadow = "0 0 15px #ffff00";
+          glitchChar.style.filter = "brightness(1.5)";
+        }
+      }
+    }, GLITCH_CONFIG.glitchDuration);
+
+    charIndex++;
+    setTimeout(typeGlitchChar, GLITCH_CONFIG.typeDelay);
+  };
+
+  // Start typing after a small delay
+  setTimeout(typeGlitchChar, 100);
+
+  // INFO: Responsive font sizing - Looks good on any screen! 📺
+  window.addEventListener("resize", () => {
+    if (splash && splash.parentNode) {
+      splash.style.fontSize = `${Math.min(window.innerWidth * 0.05, 42)}px`;
+    }
+  });
+
+  // Final cleanup
   setTimeout(() => {
-    splash.remove();
-    bgFade.remove();
-    matrixRain.remove();
-    console.log("✨ Welcome sequence complete! Happy coding, Dibakar! 🚀");
-  }, 500);
-}, 5200);
+    if (matrixRain && matrixRain.parentNode) {
+      matrixRain.style.transition = "opacity 0.5s ease-out";
+      matrixRain.style.opacity = "0";
+    }
+    setTimeout(() => {
+      if (splash && splash.parentNode) splash.remove();
+      if (bgFade && bgFade.parentNode) bgFade.remove();
+      if (matrixRain && matrixRain.parentNode) matrixRain.remove();
+      console.log("✨ Welcome sequence complete! Happy coding, Dibakar! 🚀");
+    }, 500);
+  }, 5500);
+}
 
 /* ╔══════════════════════════════════════════════════════════════════╗ */
 /* ║                     END OF CUSTOM JAVASCRIPT                     ║ */
