@@ -1,8 +1,8 @@
 {
   // ╔══════════════════════════════════════════════════════════════════╗
   // ║                   🎨 MrDib's VS CODE MASTERPIECE                 ║
-  // ║                  ⚡ Professional Edition v2.0 ⚡                 ║
-  // ║             "Where Code Meets Art & Productivity" 🚀             ║
+  // ║              ⚡ Professional AI-Enhanced Edition v3.0 ⚡          ║
+  // ║        "Where Code Meets Art, Productivity & Intelligence" 🚀    ║
   // ╚══════════════════════════════════════════════════════════════════╝
 
   // ┌─────────────────────────────────────────────────────────────────┐
@@ -193,10 +193,12 @@
   },
 
   // INFO: 🎪 Modern Custom UI - Replaces the broken Legacy Loader
+  "apc.imports": [
+    "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+  ],
   "vscode_custom_css.imports": [
     "file:///Users/dibakar/Documents/Documents%20-%20DIBAKAR%E2%80%99s%20MacBook%20Pro/Code/CustomCode/CustomCSS.css",
-    "file:///Users/dibakar/Documents/Documents%20-%20DIBAKAR%E2%80%99s%20MacBook%20Pro/Code/CustomCode/CustomJavascript.js",
-    "file:///Users/dibakar/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+    "file:///Users/dibakar/Documents/Documents%20-%20DIBAKAR%E2%80%99s%20MacBook%20Pro/Code/CustomCode/CustomJavascript.js"
   ],
 
   // ┌─────────────────────────────────────────────────────────────────┐
@@ -230,8 +232,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+
+  // INFO: 🐍 Python Configuration - Snake charming at its finest
   "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
-  "python.pythonPath": "/opt/homebrew/bin/python3",
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.tabSize": 4,
@@ -389,6 +392,13 @@
     "spwn": "spwn build",
     "pkl": "cd $dir && pkl eval -f yaml $fileName -o $fileNameWithoutExt.yaml"
   },
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │                🎯 GIT & VERSION CONTROL MASTERY                 │
+  // │           Commit, push, and collaborate like a legend           │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: 🌿 Git Core Configuration - Version control at light speed
   "git.path": "/usr/bin/git",
   "git.autofetch": true,
   "git.enableCommitSigning": true,
@@ -407,6 +417,8 @@
   "git.ignoredRepositories": ["~/Projects/legacy-repo"],
 
   // INFO: 💪 GitLens - Git superpowers activated!
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
   "gitlens.currentLine.enabled": true,
   "gitlens.codeLens.enabled": true,
   "gitlens.hovers.enabled": true,
@@ -524,6 +536,7 @@
   "errorLens.fontWeight": "800",
   "errorLens.gutterIconsEnabled": true,
   "errorLens.severityText": ["☠️", "☠️", "☠️", "☠️"],
+  "errorLens.enabledDiagnosticLevels": ["warning", "info", "error"],
 
   // ┌─────────────────────────────────────────────────────────────────┐
   // │                  🧘 ZEN MODE - FOCUS MAXIMIZER                  │
@@ -551,6 +564,50 @@
 
   // INFO: 🚫 Problem Panel - Clean workspace, clear mind
   "problems.decorations.enabled": false,
+
+  // ┌─────────────────────────────────────────────────────────────────┐
+  // │            🤖 AI & GITHUB COPILOT CONFIGURATION HQ              │
+  // │        Where Human Intelligence Meets Artificial Genius 🧠      │
+  // │              "Pair programming with the future!" 🚀             │
+  // └─────────────────────────────────────────────────────────────────┘
+
+  // INFO: 🎯 GitHub Copilot - Your AI pair programming partner
+  // WARNING: May cause addiction to AI-powered coding! Extremely powerful!
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": true,
+    "yaml": true,
+    "yml": true,
+    "json": true,
+    "jsonc": true
+  },
+
+  // INFO: 💡 Copilot Editor Settings - Fine-tuned for maximum intelligence
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.editor.enableCodeActions": true,
+
+  // INFO: 🎨 Copilot Inline Suggestions - Subtle yet powerful
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.showToolbar": "onHover",
+
+  // INFO: 🔮 AI-Powered Code Assistance - The smart suggestions engine
+  // NOTE: These settings work with various AI extensions including Copilot
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "on",
+    "strings": "on"
+  },
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.suggest.preview": true,
+  "editor.suggest.showInlineDetails": true,
+  "editor.wordBasedSuggestions": "matchingDocuments",
+  "editor.wordBasedSuggestionsMode": "matchingDocuments",
+
+  // INFO: 🧠 IntelliCode - Microsoft's AI brain for your code
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
   // ┌─────────────────────────────────────────────────────────────────┐
   // │                    🔮 MISCELLANEOUS MAGIC                       │
@@ -653,6 +710,7 @@
     "appname",
     "appsettings",
     "appt",
+    "Aquaman",
     "arctan",
     "argrelextrema",
     "argsort",
@@ -1335,6 +1393,7 @@
     "KOTAKBANK",
     "kotlin",
     "Koyeb",
+    "Krish",
     "Krug",
     "kruskal",
     "kubeconfig",
@@ -1582,6 +1641,7 @@
     "ntfs",
     "Nucleo",
     "numpy",
+    "Nums",
     "numstat",
     "nuxt",
     "nvim",
@@ -1880,6 +1940,7 @@
     "searchterm",
     "seccomp",
     "securedir",
+    "securityheaders",
     "Segoe",
     "selectattr",
     "selectbox",
@@ -1895,6 +1956,7 @@
     "sessionizer",
     "Sessionx",
     "setairportpower",
+    "SETAPP",
     "setex",
     "seti",
     "setuptools",
@@ -1903,6 +1965,7 @@
     "sfill",
     "SGID",
     "Shadcn",
+    "Shaktimaan",
     "Shamir's",
     "Sharma",
     "shellformat",
@@ -1916,6 +1979,7 @@
     "Shoutouts",
     "showlegend",
     "showmatch",
+    "Showzone",
     "Shubham",
     "Shubhi",
     "Shui",
@@ -2276,19 +2340,6 @@
     "ગુજરાતી",
     "தமிழ்",
     "తెలుగు"
-  ],
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  },
-  "errorLens.enabledDiagnosticLevels": ["warning", "info", "error"],
-  "tabnine.experimentalAutoImports": true,
-  "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
-  "apc.imports": [
-    "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
   ]
 
   // ╔══════════════════════════════════════════════════════════════════╗
@@ -2298,5 +2349,8 @@
   // ║                         ~ MrDib 🚀                               ║
   // ║                                                                  ║
   // ║  Remember: A well-configured editor is half the code written! 💪 ║
+  // ║                                                                  ║
+  // ║              ⚡ Now with AI superpowers! ⚡                       ║
+  // ║        GitHub Copilot + IntelliSense = Coding Nirvana 🧠         ║
   // ╚══════════════════════════════════════════════════════════════════╝
 }
