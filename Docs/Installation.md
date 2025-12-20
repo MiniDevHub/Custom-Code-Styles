@@ -30,10 +30,10 @@ code --install-extension esbenp.prettier-vscode
 
 ```bash
 # Using HTTPS
-git clone https://github.com/yourusername/Custom-Code-Styles.git
+git clone https://github.com/MiniDevHub/Custom-Code-Styles.git
 
 # Using SSH
-git clone git@github.com:yourusername/Custom-Code-Styles.git
+git clone git@github.com:MiniDevHub/Custom-Code-Styles.git
 
 # Or download as ZIP from GitHub
 ```
