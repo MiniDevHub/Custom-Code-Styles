@@ -18,12 +18,12 @@
     "command": "workbench.action.toggleMaximizedPanel"
   },
   {
-    "key": "shift+alt+cmd+n",
-    "command": "extension.advancedNewFile"
-  },
-  {
     "key": "alt+cmd+n",
     "command": "-extension.advancedNewFile"
+  },
+  {
+    "key": "shift+alt+cmd+n",
+    "command": "extension.advancedNewFile"
   },
   {
     "key": "shift+alt+c",
@@ -47,5 +47,13 @@
   {
     "key": "cmd+shift+h",
     "command": "-workbench.action.replaceInFiles"
+  },
+  {
+    "key": "cmd+shift+alt+;",
+    "command": "workbench.action.openSettingsJson"
+  },
+  {
+    "key": "shift+alt+cmd+'",
+    "command": "workbench.action.openGlobalKeybindingsFile"
   }
 ]
