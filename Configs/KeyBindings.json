@@ -25,10 +25,11 @@
     "key": "shift+alt+cmd+n",
     "command": "extension.advancedNewFile"
   },
-  {
-    "key": "shift+alt+c",
-    "command": "github.copilot.completions.toggle"
-  },
+  // Right now, Using AI in every folder
+  // {
+  //   "key": "shift+alt+c",
+  //   "command": "github.copilot.completions.toggle"
+  // },
   {
     "key": "alt+o",
     "command": "-C_Cpp.SwitchHeaderSource",

@@ -21,7 +21,7 @@
   // INFO: 💎 Transparency & Visual Effects - That sexy glass effect!
   // WARNING: May cause productivity boost due to sheer awesomeness 🥃
   "apc.electron": {
-    "opacity": 0.95,
+    "opacity": 1.0,
     "transparent": true,
     "backgroundColor": "#00000000",
     "vibrancy": "ultra-dark"
@@ -68,14 +68,6 @@
     "**/.git/subtree-cache/**": true,
     "**/node_modules/**": true
   },
-
-  // ┌─────────────────────────────────────────────────────────────────┐
-  // │                 ✏️ EDITOR CONFIGURATION PARADISE                │
-  // │           Where coding dreams become reality™                   │
-  // └─────────────────────────────────────────────────────────────────┘
-
-  // INFO: 🎯 Minimalist Display - Less clutter, more focus, maximum zen
-  "breadcrumbs.enabled": false,
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "none",
   "editor.overviewRulerBorder": false,
@@ -120,7 +112,7 @@
   // INFO: 🧠 IntelliSense & Suggestions - Your AI coding companion
   "editor.suggestLineHeight": 30,
   "editor.suggestFontSize": 20,
-  "editor.snippetSuggestions": "top",
+  "editor.snippetSuggestions": "none",
   "editor.copyWithSyntaxHighlighting": false,
 
   // INFO: 📝 Snippet settings - Because even snippets deserve formatting
@@ -432,100 +424,137 @@
   "scm.diffDecorations": "none",
 
   // ┌─────────────────────────────────────────────────────────────────┐
-  // │               💬 BETTER COMMENTS - CODE ANNOTATION 2.0          │
-  // │                Making your TODOs impossible to ignore!          │
+  // │               ⚓ COMMENT ANCHORS - PLAIN TEXT STYLING           │
+  // │           Better Comments vibes — but for .txt notes            │
   // └─────────────────────────────────────────────────────────────────┘
 
-  // INFO: 💥 Better Comments - Because plain comments are boring!
-  "better-comments.highlightPlainText": true,
-  "better-comments.multilineComments": true,
-  "better-comments.tags": [
-    {
-      "tag": "*",
-      "color": "#7CFC00",
-      "strikethrough": false,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": true,
-      "italic": false
+  "commentAnchors.tags.anchors": {
+    "*:": {
+      "scope": "file",
+      "highlightColor": "#39FF14",
+      "iconColor": "#39FF14",
+      "styleMode": "comment"
     },
-    {
-      "tag": "?",
-      "color": "#FF2D00",
-      "strikethrough": false,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": true,
-      "italic": true
+    "?:": {
+      "scope": "file",
+      "highlightColor": "AA00FF",
+      "iconColor": "#AA00FF",
+      "styleMode": "comment"
     },
-    {
-      "tag": "!",
-      "color": "#FF00FF",
-      "strikethrough": false,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": true,
-      "italic": false
+    "!:": {
+      "scope": "file",
+      "highlightColor": "#FF00FF",
+      "iconColor": "#FF00FF",
+      "styleMode": "comment"
     },
-    {
-      "tag": "TODO:",
-      "color": "#EA580C",
-      "strikethrough": false,
-      "backgroundColor": "transparent",
-      "bold": true
+    "@:": {
+      "scope": "file",
+      "highlightColor": "#FFB000",
+      "iconColor": "#FFB000",
+      "styleMode": "comment"
     },
-    {
-      "tag": "FIXME:",
-      "color": "#FF2D00",
-      "strikethrough": false,
-      "backgroundColor": "transparent",
-      "bold": true
+    "#:": {
+      "scope": "file",
+      "highlightColor": "#00FFFF",
+      "iconColor": "#00FFFF",
+      "styleMode": "comment"
     },
-    {
-      "tag": "BUG:",
-      "color": "#9333EA",
-      "strikethrough": false,
-      "backgroundColor": "transparent",
-      "bold": true
+    "$:": {
+      "scope": "file",
+      "highlightColor": "#FFFF00",
+      "iconColor": "#FFFF00",
+      "styleMode": "comment"
     },
-    {
-      "tag": "HACK:",
-      "color": "#C026D3",
-      "strikethrough": false,
-      "backgroundColor": "transparent",
-      "bold": false
+    "%:": {
+      "scope": "file",
+      "highlightColor": "#FF69B4",
+      "iconColor": "#FF69B4",
+      "styleMode": "comment"
     },
-    {
-      "tag": "NOTE:",
-      "color": "#2563EB",
-      "strikethrough": false,
-      "backgroundColor": "transparent",
-      "bold": true
+    "^:": {
+      "scope": "file",
+      "highlightColor": "#0080FF",
+      "iconColor": "#0080FF",
+      "styleMode": "comment"
     },
-    {
-      "tag": "INFO:",
-      "color": "cyan",
-      "strikethrough": false,
-      "backgroundColor": "transparent",
-      "bold": true
+    "&:": {
+      "scope": "file",
+      "highlightColor": "#FFAA44",
+      "iconColor": "#FFAA44",
+      "styleMode": "comment"
     },
-    {
-      "tag": "IDEA:",
-      "color": "#FFF",
-      "strikethrough": false,
-      "backgroundColor": "#EAB308",
-      "bold": true
+    "+:": {
+      "scope": "file",
+      "highlightColor": "#00AA66",
+      "iconColor": "#00AA66",
+      "styleMode": "comment"
     },
-    {
-      "tag": "WARNING:",
-      "color": "#FF6B35",
-      "strikethrough": false,
-      "underline": false,
-      "backgroundColor": "transparent",
-      "bold": true,
-      "italic": false
+    "=:": {
+      "scope": "file",
+      "highlightColor": "#FF7F50",
+      "iconColor": "#FF7F50",
+      "styleMode": "comment"
+    },
+    "~:": {
+      "scope": "file",
+      "highlightColor": "#00FF88",
+      "iconColor": "#00FF88",
+      "styleMode": "comment"
+    },
+    "TODO:": {
+      "scope": "file",
+      "highlightColor": "#FF8800",
+      "iconColor": "#FF8800",
+      "styleMode": "comment"
+    },
+    "FIXME:": {
+      "scope": "file",
+      "highlightColor": "#DC143C",
+      "iconColor": "#DC143C",
+      "styleMode": "comment"
+    },
+    "BUG:": {
+      "scope": "file",
+      "highlightColor": "#8B00FF",
+      "iconColor": "#8B00FF",
+      "styleMode": "comment"
+    },
+    "HACK:": {
+      "scope": "file",
+      "highlightColor": "#00CED1",
+      "iconColor": "#00CED1",
+      "styleMode": "comment"
+    },
+    "NOTE:": {
+      "scope": "file",
+      "highlightColor": "#1E90FF",
+      "iconColor": "#1E90FF",
+      "styleMode": "comment"
+    },
+    "INFO:": {
+      "scope": "file",
+      "highlightColor": "#00FFFF",
+      "iconColor": "#00FFFF",
+      "styleMode": "comment"
+    },
+    "IDEA:": {
+      "scope": "file",
+      "highlightColor": "#EAB308",
+      "iconColor": "#EAB308",
+      "styleMode": "comment"
+    },
+    "WARNING:": {
+      "scope": "file",
+      "highlightColor": "#FF0000",
+      "iconColor": "#FF0000",
+      "styleMode": "comment"
     }
-  ],
+  },
+  "commentAnchors.tags.displayInRuler": false,
+  "commentAnchors.tags.displayInGutter": false,
+  "commentAnchors.tags.separators": [" ", ": ", " - "],
+  "commentAnchors.workspace.excludeFiles": "**/.git/**,**/node_modules/**",
+  "commentAnchors.tagHighlights.enabled": true,
 
   // ┌─────────────────────────────────────────────────────────────────┐
   // │               ⚠️ ERROR LENS - BUG DESTROYER 9000                │
@@ -575,7 +604,7 @@
   // INFO: 🎯 GitHub Copilot - Your AI pair programming partner
   // WARNING: May cause addiction to AI-powered coding! Extremely powerful!
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "plaintext": true,
     "markdown": true,
     "scminput": true,
@@ -586,7 +615,6 @@
   },
 
   // INFO: 💡 Copilot Editor Settings - Fine-tuned for maximum intelligence
-  "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.editor.enableCodeActions": true,
 
   // INFO: 🎨 Copilot Inline Suggestions - Subtle yet powerful
@@ -605,10 +633,6 @@
   "editor.suggest.preview": true,
   "editor.suggest.showInlineDetails": true,
   "editor.wordBasedSuggestions": "matchingDocuments",
-  "editor.wordBasedSuggestionsMode": "matchingDocuments",
-
-  // INFO: 🧠 IntelliCode - Microsoft's AI brain for your code
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
   // ┌─────────────────────────────────────────────────────────────────┐
   // │                    🔮 MISCELLANEOUS MAGIC                       │
