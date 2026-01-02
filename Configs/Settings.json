@@ -112,7 +112,7 @@
   // INFO: 🧠 IntelliSense & Suggestions - Your AI coding companion
   "editor.suggestLineHeight": 30,
   "editor.suggestFontSize": 20,
-  "editor.snippetSuggestions": "none",
+  "editor.snippetSuggestions": "inline",
   "editor.copyWithSyntaxHighlighting": false,
 
   // INFO: 📝 Snippet settings - Because even snippets deserve formatting
