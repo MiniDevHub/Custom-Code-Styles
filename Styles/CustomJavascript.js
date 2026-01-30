@@ -1,25 +1,94 @@
-/* ╔══════════════════════════════════════════════════════════════════╗ */
-/* ║                  🚀 MrDib's CUSTOM JAVASCRIPT                    ║ */
-/* ║                      Professional Edition v2.0                   ║ */
-/* ╚══════════════════════════════════════════════════════════════════╝ */
-
 /* ┌─────────────────────────────────────────────────────────────────┐ */
-/* │                    🎭 COMMAND PALETTE EFFECTS                   │ */
+/* │                 🎭 FIXED COMMAND PALETTE BLUR                   │ */
 /* └─────────────────────────────────────────────────────────────────┘ */
 
-// INFO: Command Palette Blur Effect - Making the background dreamy! 🌫️
 document.addEventListener("DOMContentLoaded", function () {
-  // INFO: Check for command palette element
+  // Create styles once
+  const blurStyles = document.createElement("style");
+  blurStyles.id = "command-blur-styles";
+  blurStyles.textContent = `
+    /* Blur ONLY the editor and panels, NOT the command palette */
+    body.command-palette-open .monaco-workbench .part.editor,
+    body.command-palette-open .monaco-workbench .part.sidebar,
+    body.command-palette-open .monaco-workbench .part.panel,
+    body.command-palette-open .monaco-workbench .part.activitybar,
+    body.command-palette-open .monaco-workbench .part.titlebar,
+    body.command-palette-open .monaco-workbench .part.statusbar {
+      filter: blur(5px) brightness(0.7);
+      transition: filter 0.3s ease-in-out;
+    }
+
+    /* Dark overlay behind palette */
+    .command-dark-overlay {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999; /* Below command palette */
+      pointer-events: none;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    /* Make sure command palette is NOT blurred and on top */
+    body.command-palette-open .quick-input-widget {
+      filter: none !important;
+      position: relative;
+      z-index: 10000 !important;
+      box-shadow:
+        0 0 50px rgba(0, 255, 136, 0.4),
+        0 0 100px rgba(0, 255, 136, 0.2) !important;
+    }
+
+    /* Green theme styling */
+    body.command-palette-open .quick-input-widget {
+      background: rgba(10, 30, 10, 0.98) !important;
+      border: 2px solid rgba(0, 255, 136, 0.5) !important;
+    }
+
+    body.command-palette-open .quick-input-widget input {
+      background: rgba(0, 40, 0, 0.9) !important;
+      color: #00ff88 !important;
+      caret-color: #00ff88 !important;
+      border: 1px solid rgba(0, 255, 136, 0.3) !important;
+    }
+
+    body.command-palette-open .quick-input-list {
+      background: transparent !important;
+    }
+
+    body.command-palette-open .monaco-list-row {
+      color: #00ff88 !important;
+    }
+
+    body.command-palette-open .monaco-list-row.focused {
+      background: rgba(0, 255, 136, 0.15) !important;
+      border: 1px solid rgba(0, 255, 136, 0.3) !important;
+    }
+
+    body.command-palette-open .label-name {
+      color: #00ff88 !important;
+    }
+
+    body.command-palette-open .label-description {
+      color: rgba(0, 255, 136, 0.7) !important;
+    }
+
+    body.command-palette-open .codicon {
+      color: #00ff88 !important;
+    }
+  `;
+  document.head.appendChild(blurStyles);
+
   const checkElement = setInterval(() => {
     const commandDialog = document.querySelector(".quick-input-widget");
 
     if (commandDialog) {
-      // INFO: Apply blur if palette is visible
       if (commandDialog.style.display !== "none") {
-        runMyScript();
+        activatePaletteMode();
       }
 
-      // INFO: Mutation observer for palette visibility changes
       const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
           if (
@@ -27,9 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
             mutation.attributeName === "style"
           ) {
             if (commandDialog.style.display === "none") {
-              handleEscape();
+              deactivatePaletteMode();
             } else {
-              runMyScript();
+              activatePaletteMode();
             }
           }
         });
@@ -37,432 +106,1182 @@ document.addEventListener("DOMContentLoaded", function () {
 
       observer.observe(commandDialog, { attributes: true });
       clearInterval(checkElement);
-    } else {
-      console.log("⏳ Command dialog not found yet. Retrying...");
     }
   }, 500);
 
-  // INFO: Keyboard shortcut handlers - Cmd/Ctrl+P and Escape! ⌨️
+  // Keyboard shortcuts
   document.addEventListener("keydown", function (event) {
     if ((event.metaKey || event.ctrlKey) && event.key === "p") {
-      event.preventDefault();
-      runMyScript();
-    } else if (event.key === "Escape" || event.key === "Esc") {
-      event.preventDefault();
-      handleEscape();
+      setTimeout(activatePaletteMode, 50);
+    } else if (event.key === "Escape") {
+      deactivatePaletteMode();
     }
   });
 
-  // INFO: Capture phase escape handler
-  document.addEventListener(
-    "keydown",
-    function (event) {
-      if (event.key === "Escape" || event.key === "Esc") {
-        handleEscape();
-      }
-    },
-    true
-  );
+  let darkOverlay = null;
 
-  // INFO: Apply blur overlay - Creating that glass effect! 🥃
-  function runMyScript() {
-    const targetDiv = document.querySelector(".monaco-workbench");
-    const existingElement = document.getElementById("command-blur");
+  function activatePaletteMode() {
+    // Add class to body
+    document.body.classList.add("command-palette-open");
 
-    // Remove existing blur if present
-    if (existingElement) {
-      existingElement.remove();
+    // Disable cursor animation
+    if (typeof CURSOR_CONFIG !== "undefined") {
+      CURSOR_CONFIG.enabled = false;
     }
 
-    // Create new blur overlay
-    const newElement = document.createElement("div");
-    newElement.setAttribute("id", "command-blur");
-    Object.assign(newElement.style, {
-      position: "fixed",
-      top: "0",
-      left: "0",
-      width: "100vw",
-      height: "100vh",
-      zIndex: "999",
-      backdropFilter: "blur(2.5px)",
-      WebkitBackdropFilter: "blur(2.5px)",
-      backgroundColor: "rgba(0, 0, 0, 0.25)",
-      pointerEvents: "none",
-      transition: "all 0.3s ease-in-out",
-    });
-
-    targetDiv.appendChild(newElement);
+    // Create dark overlay (not blur)
+    if (!darkOverlay) {
+      darkOverlay = document.createElement("div");
+      darkOverlay.className = "command-dark-overlay";
+      document.body.appendChild(darkOverlay);
+    }
   }
 
-  // INFO: Remove blur overlay - Back to clarity! ✨
-  function handleEscape() {
-    const element = document.getElementById("command-blur");
-    if (element) {
-      element.style.opacity = "0";
-      setTimeout(() => element.remove(), 300);
+  function deactivatePaletteMode() {
+    // Remove class
+    document.body.classList.remove("command-palette-open");
+
+    // Re-enable cursor animation
+    if (typeof CURSOR_CONFIG !== "undefined") {
+      CURSOR_CONFIG.enabled = true;
+    }
+
+    // Remove overlay
+    if (darkOverlay) {
+      darkOverlay.style.opacity = "0";
+      setTimeout(() => {
+        if (darkOverlay && darkOverlay.parentNode) {
+          darkOverlay.remove();
+          darkOverlay = null;
+        }
+      }, 300);
     }
   }
 });
 
 /* ┌─────────────────────────────────────────────────────────────────┐ */
-/* │                    🎨 ANIMATION STYLES                          │ */
+/* │          🔧 JARVIS BOOT SEQUENCE (Arc Reactor Edition)          │ */
 /* └─────────────────────────────────────────────────────────────────┘ */
 
-// INFO: Inject animation styles - The magic CSS! 🎩
-const style = document.createElement("style");
-style.textContent = `
-  /* ═══════════════════ GLOW ANIMATIONS ═══════════════════ */
-
-  /* INFO: Persistent glow effect */
-  @keyframes holdGlow {
-    0% {
-      transform: translate(-50%, -50%) scale(1);
-      filter: drop-shadow(0 0 8px #00ff99);
-      opacity: 1;
-    }
-    100% {
-      transform: translate(-50%, -50%) scale(1.01);
-      filter: drop-shadow(0 0 10px #00ffcc);
-      opacity: 1;
-    }
+const jarvisStyle = document.createElement("style");
+jarvisStyle.textContent = `
+  /* Arc Reactor Core Aesthetics */
+  :root {
+    --stark-blue: #00d4ff;
+    --arc-white: #ffffff;
+    --reactor-orange: #ff6600;
+    --holo-glass: rgba(0, 212, 255, 0.1);
+    --text-glow: #00ff88;
+    --text-accent: #ffffff;
   }
 
-  /* INFO: Smooth fade out animation */
-  @keyframes fadeOutSmooth {
+  @keyframes arcReactorBoot {
     0% {
-      transform: translate(-50%, -50%) scale(1.01);
-      filter: drop-shadow(0 0 10px #00ffcc);
-      opacity: 1;
-    }
-    100% {
-      transform: translate(-50%, -50%) scale(1.02);
-      filter: drop-shadow(0 0 0px transparent);
+      transform: translate(-50%, -50%) scale(0) rotate(0deg);
       opacity: 0;
-    }
-  }
-
-  /* INFO: Background fade in */
-  @keyframes fadeInSubtle {
-    from { opacity: 1; }
-    to { opacity: 0; }
-  }
-
-  /* ═══════════════════ MATRIX EFFECTS ═══════════════════ */
-
-  /* INFO: Matrix rain animation - Neo would be proud! 🕶️ */
-  @keyframes matrixFall {
-    0% {
-      transform: translateY(-100%);
-      opacity: 1;
-    }
-    70% {
-      opacity: 0.8;
-    }
-    100% {
-      transform: translateY(100vh);
-      opacity: 0;
-    }
-  }
-
-  /* INFO: Glitch text effect - Cyberpunk vibes! 🤖 */
-  @keyframes glitch {
-    0% {
-      opacity: 0.3;
-      transform: scale(1.05) skew(1deg);
-      color: #0f0;
-      text-shadow: 1px 1px 0 #ff00ff, -1px -1px 0 #00ffff;
+      filter: brightness(2) blur(10px);
     }
     50% {
-      opacity: 0.6;
-      transform: scale(0.98) skew(-0.5deg);
-      color: #0ff;
-      text-shadow: 0.5px 0.5px 0 #ff00ff, -0.5px -0.5px 0 #00ffff;
+      transform: translate(-50%, -50%) scale(1) rotate(180deg);
+      opacity: 1;
+      filter: brightness(1.5) blur(0px);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1) rotate(360deg);
+      filter: brightness(1) blur(0px);
+    }
+  }
+
+  @keyframes hologramBoot {
+    0% {
+      transform: translate(-50%, -50%) rotateX(90deg) scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateX(0deg) scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes dataStream {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes hudFrame {
+    0% {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+      opacity: 0;
+    }
+    25% {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      opacity: 1;
+    }
+    50% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+    }
+    75% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    100% {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes powerUp {
+    0% {
+      box-shadow: 0 0 0 0 var(--stark-blue);
+    }
+    50% {
+      box-shadow: 0 0 20px 10px transparent;
+    }
+    100% {
+      box-shadow: 0 0 0 0 transparent;
+    }
+  }
+
+  @keyframes textHologram {
+    0% {
+      opacity: 0;
+      transform: translateZ(-100px) rotateY(90deg);
+      filter: blur(5px);
     }
     100% {
       opacity: 1;
-      transform: scale(1) skew(0deg);
-      color: #00ff99;
-      text-shadow: 0 0 10px #00ff99;
+      transform: translateZ(0) rotateY(0deg);
+      filter: blur(0px);
     }
   }
 
-  /* Enhancement: Pulse animation for characters */
-  @keyframes charPulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
+  @keyframes textGlow {
+    0%, 100% {
+      text-shadow:
+        0 0 10px var(--text-glow),
+        0 0 20px var(--text-glow),
+        0 0 30px var(--text-glow),
+        0 0 40px var(--text-accent);
+    }
+    50% {
+      text-shadow:
+        0 0 20px var(--text-glow),
+        0 0 30px var(--text-glow),
+        0 0 40px var(--text-glow),
+        0 0 50px var(--text-accent),
+        0 0 60px var(--text-accent);
+    }
   }
 
-  /* ═══════════════════ ELEMENT STYLES ═══════════════════ */
+  @keyframes textPanel {
+    0% {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
 
-  /* INFO: Matrix rain container */
-  .matrix-rain {
+  /* Main container */
+  .jarvis-boot {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 9997;
+    z-index: 100000;
+    background: radial-gradient(ellipse at center,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 1) 100%);
     pointer-events: none;
+    perspective: 1000px;
     overflow: hidden;
   }
 
-  /* INFO: Individual matrix characters - Fancy styled! 💎 */
-  .matrix-char {
+  /* Arc Reactor Core */
+  .arc-reactor {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    animation: arcReactorBoot 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+
+  .reactor-ring {
     position: absolute;
-    top: -100px;
-    font-family: 'Cascadia Code', monospace;
-    font-size: 16px;
-    color: #00ff00;
-    opacity: 0;
-    animation: matrixFall linear forwards;
-    padding: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid var(--stark-blue);
     border-radius: 50%;
-    background: rgba(0, 255, 0, 0.05);
-    border: 1px solid rgba(0, 255, 0, 0.1);
     box-shadow:
-      0 0 4px rgba(0, 255, 100, 0.4),
-      0 0 10px rgba(0, 255, 100, 0.1),
-      inset 0 0 4px rgba(0, 255, 100, 0.2);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    transition: transform 0.2s ease;
+      0 0 20px var(--stark-blue),
+      inset 0 0 20px var(--stark-blue);
   }
 
-  /* Enhancement: Hover effect for matrix chars */
-  .matrix-char:hover {
-    transform: scale(1.5) rotate(180deg);
-    color: #ff00ff;
+  .reactor-ring:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    animation: powerUp 1.8s ease-out infinite;
   }
 
-  /* INFO: Glitch text container */
-  #glitch-text {
-    display: inline-block;
-    font-size: inherit;
+  .reactor-ring:nth-child(2) {
+    width: 70%;
+    height: 70%;
+    animation: powerUp 1.8s ease-out 0.2s infinite;
+  }
+
+  .reactor-ring:nth-child(3) {
+    width: 40%;
+    height: 40%;
+    background: var(--stark-blue);
+    box-shadow:
+      0 0 30px var(--stark-blue),
+      0 0 60px var(--arc-white);
+    animation: powerUp 1.8s ease-out 0.4s infinite;
+  }
+
+  /* HUD Frame */
+  .hud-frame {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 60vh;
+    border: 1px solid var(--stark-blue);
+    animation: hudFrame 1.2s ease-out 0.8s both;
+    box-shadow:
+      0 0 20px var(--holo-glass),
+      inset 0 0 20px var(--holo-glass);
+  }
+
+  /* Corner markers */
+  .hud-corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--stark-blue);
+  }
+
+  .hud-corner::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--arc-white);
+    box-shadow: 0 0 10px var(--arc-white);
+  }
+
+  .hud-corner.tl {
+    top: -1px;
+    left: -1px;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .hud-corner.tl::after {
+    bottom: -2px;
+    right: -2px;
+  }
+
+  .hud-corner.tr {
+    top: -1px;
+    right: -1px;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .hud-corner.tr::after {
+    bottom: -2px;
+    left: -2px;
+  }
+
+  .hud-corner.bl {
+    bottom: -1px;
+    left: -1px;
+    border-right: none;
+    border-top: none;
+  }
+
+  .hud-corner.bl::after {
+    top: -2px;
+    right: -2px;
+  }
+
+  .hud-corner.br {
+    bottom: -1px;
+    right: -1px;
+    border-left: none;
+    border-top: none;
+  }
+
+  .hud-corner.br::after {
+    top: -2px;
+    left: -2px;
+  }
+
+  /* Holographic display - CENTERED */
+  .holo-display {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    animation: hologramBoot 1.2s ease-out 1.5s both;
+    text-align: center;
+    z-index: 100001;
+    padding: 2rem 3rem;
+  }
+
+  /* Text backdrop panel - FIXED POSITIONING */
+  .text-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    border-radius: 10px;
+    box-shadow:
+      0 0 30px rgba(0, 255, 136, 0.2),
+      inset 0 0 30px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    animation: textPanel 0.5s ease-out 1.8s both;
+  }
+
+  /* Welcome text - ENHANCED VISIBILITY */
+  .jarvis-text {
+    font-family: 'Arial', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    animation: textHologram 1s ease-out both;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-    letter-spacing: 0.1em;
-  }
-
-  /* INFO: Individual glitch characters */
-  .glitch-char {
-    display: inline-block;
-    animation: glitch 0.3s ease-in-out forwards;
-    font-size: inherit !important;
     position: relative;
+    z-index: 1;
   }
 
-  /* Enhancement: Staggered animation */
-  .glitch-char:nth-child(odd) {
-    animation-delay: 0.05s;
+  .jarvis-text.primary {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    animation-delay: 2s;
+    color: var(--text-accent);
+    font-weight: bold;
+    text-shadow:
+      0 0 10px var(--text-glow),
+      0 0 20px var(--text-glow),
+      0 0 30px var(--text-glow),
+      0 0 40px var(--text-accent),
+      0 2px 4px rgba(0, 0, 0, 0.8);
+    animation: textHologram 1s ease-out 2s both, textGlow 2s ease-in-out 3s infinite;
   }
 
-  .glitch-char:nth-child(even) {
-    animation-delay: 0.02s;
+  .jarvis-text.secondary {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    color: var(--reactor-orange);
+    animation-delay: 2.5s;
+    letter-spacing: 0.4em;
+    font-weight: 400;
+    text-shadow:
+      0 0 10px var(--reactor-orange),
+      0 0 20px var(--reactor-orange),
+      0 0 30px #ff3300,
+      0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Data visualization bars */
+  .data-viz {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 2.8s both;
+  }
+
+  .data-viz.left {
+    left: 10%;
+  }
+
+  .data-viz.right {
+    right: 10%;
+  }
+
+  .data-bar {
+    width: 15px;
+    background: linear-gradient(to top,
+      var(--stark-blue) 0%,
+      var(--arc-white) 100%);
+    animation: dataStream 2.5s ease-in-out infinite;
+    opacity: 0.7;
+  }
+
+  .data-bar:nth-child(1) { height: 60%; animation-delay: 0s; }
+  .data-bar:nth-child(2) { height: 80%; animation-delay: 0.2s; }
+  .data-bar:nth-child(3) { height: 40%; animation-delay: 0.4s; }
+  .data-bar:nth-child(4) { height: 90%; animation-delay: 0.6s; }
+  .data-bar:nth-child(5) { height: 70%; animation-delay: 0.8s; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  /* Status text */
+  .status-text {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: var(--reactor-orange);
+    letter-spacing: 0.1em;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 3.2s both;
+  }
+
+  /* Cleanup animation */
+  .jarvis-boot.shutting-down {
+    animation: fadeOut 1s ease-out forwards;
   }
 `;
-document.head.appendChild(style);
+document.head.appendChild(jarvisStyle);
+
+// Create JARVIS boot sequence
+function initJarvisWelcome() {
+  // Main container
+  const jarvis = document.createElement("div");
+  jarvis.className = "jarvis-boot";
+
+  // Arc Reactor
+  const reactor = document.createElement("div");
+  reactor.className = "arc-reactor";
+  reactor.innerHTML = `
+    <div class="reactor-ring"></div>
+    <div class="reactor-ring"></div>
+    <div class="reactor-ring"></div>
+  `;
+  jarvis.appendChild(reactor);
+
+  // HUD Frame
+  const hudFrame = document.createElement("div");
+  hudFrame.className = "hud-frame";
+  ["tl", "tr", "bl", "br"].forEach((pos) => {
+    const corner = document.createElement("div");
+    corner.className = `hud-corner ${pos}`;
+    hudFrame.appendChild(corner);
+  });
+  jarvis.appendChild(hudFrame);
+
+  // Holographic Display with backdrop
+  const holoDisplay = document.createElement("div");
+  holoDisplay.className = "holo-display";
+
+  // Add backdrop panel
+  const backdrop = document.createElement("div");
+  backdrop.className = "text-backdrop";
+  holoDisplay.appendChild(backdrop);
+
+  // Create text elements
+  const primaryText = document.createElement("div");
+  primaryText.className = "jarvis-text primary";
+  primaryText.textContent = "WELCOME BACK";
+
+  const secondaryText = document.createElement("div");
+  secondaryText.className = "jarvis-text secondary";
+  secondaryText.textContent = "DIBAKAR";
+
+  holoDisplay.appendChild(primaryText);
+  holoDisplay.appendChild(secondaryText);
+  jarvis.appendChild(holoDisplay);
+
+  // Data visualization
+  ["left", "right"].forEach((side) => {
+    const dataViz = document.createElement("div");
+    dataViz.className = `data-viz ${side}`;
+    for (let i = 0; i < 5; i++) {
+      const bar = document.createElement("div");
+      bar.className = "data-bar";
+      dataViz.appendChild(bar);
+    }
+    jarvis.appendChild(dataViz);
+  });
+
+  // Status text
+  const status = document.createElement("div");
+  status.className = "status-text";
+  status.textContent = "SYSTEM: ONLINE";
+  jarvis.appendChild(status);
+
+  // Append to body
+  document.body.appendChild(jarvis);
+
+  // Shutdown sequence
+  setTimeout(() => {
+    jarvis.classList.add("shutting-down");
+    setTimeout(() => {
+      jarvis.remove();
+      console.log("⎊ JARVIS: Welcome back, sir.");
+    }, 1000);
+  }, 4500);
+}
+
+// Initialize
+if (!document.querySelector(".jarvis-boot")) {
+  initJarvisWelcome();
+}
 
 /* ┌─────────────────────────────────────────────────────────────────┐ */
-/* │                    🌌 WELCOME SCREEN EFFECTS                    │ */
+/* │         🧿 NEURAL GLYPH CURSOR (Dimensional Rift Edition)       │ */
 /* └─────────────────────────────────────────────────────────────────┘ */
 
-// INFO: Background fade overlay - Setting the mood! 🌃
-const bgFade = document.createElement("div");
-Object.assign(bgFade.style, {
-  position: "absolute",
-  top: 0,
-  left: "-25vw",
-  width: "150vw",
-  height: "100vh",
-  fontSize: "clamp(12px, 1.2vw, 20px)",
-  background: "linear-gradient(135deg, #121212, #1f1f1f)",
-  opacity: "0",
-  zIndex: "9996",
-  pointerEvents: "none",
-  animation: "fadeInSubtle 5s ease-in-out forwards",
-});
-document.body.appendChild(bgFade);
-
-/* ┌─────────────────────────────────────────────────────────────────┐ */
-/* │                    🌧️ MATRIX RAIN EFFECT                        │ */
-/* └─────────────────────────────────────────────────────────────────┘ */
-
-// INFO: Create matrix rain container
-const matrixRain = document.createElement("div");
-matrixRain.classList.add("matrix-rain");
-document.body.appendChild(matrixRain);
-
-// INFO: Configuration for matrix rain
-const MATRIX_CONFIG = {
-  charCount: 200,
-  minDelay: 0,
-  maxDelay: 4,
-  minDuration: 3,
-  maxDuration: 5,
-  charRange: 96,
-  baseChar: 0x30a0,
+const CURSOR_CONFIG = {
+  enabled: true,
+  maxGlyphs: 80,
+  glyphLife: 1200,
+  colors: {
+    primary: "#00ff41", // Radioactive green
+    accent: "#00ffff", // Cyan
+    flash: "#ff00ff", // Violet
+    core: "#ffffff", // White flash
+    rift: "#ff00ff", // Dimensional rift
+  },
+  idleTimeout: 5000, // Start idle animation after 500ms
 };
 
-// INFO: Generate matrix rain characters - Let it rain! ☔
-for (let i = 0; i < MATRIX_CONFIG.charCount; i++) {
-  const char = document.createElement("div");
-  char.classList.add("matrix-char");
+let cursorGlyphs = [];
+let cursorColorIndex = 0;
+let cursorLastPos = null;
+let cursorLastMoveTime = Date.now();
+let cursorIsIdle = false;
+let cursorIdleAnimation = null;
+let cursorVelocity = { x: 0, y: 0 };
 
-  const isSpecial = Math.random() > 0.9;
-  char.textContent = isSpecial
-    ? ["⚡", "🔥", "💀", "👾", "🎯"][Math.floor(Math.random() * 5)]
-    : String.fromCharCode(
-        MATRIX_CONFIG.baseChar + Math.random() * MATRIX_CONFIG.charRange
-      );
+// Glyph symbols (Unicode fragments for alien feel)
+const CURSOR_GLYPH_SYMBOLS = [
+  "◢",
+  "◣",
+  "◤",
+  "◥",
+  "▵",
+  "▿",
+  "◊",
+  "◇",
+  "⬡",
+  "⬢",
+  "⎯",
+  "⎪",
+  "╱",
+  "╲",
+  "⟨",
+  "⟩",
+  "△",
+  "▽",
+  "⧈",
+  "⧉",
+];
 
-  const left = Math.random() * window.innerWidth * 1.5;
-  const delay = MATRIX_CONFIG.minDelay + Math.random() * MATRIX_CONFIG.maxDelay;
-  const duration =
-    MATRIX_CONFIG.minDuration +
-    Math.random() * (MATRIX_CONFIG.maxDuration - MATRIX_CONFIG.minDuration);
-  const opacity = 0.3 + Math.random() * 0.7;
+// Context detection
+function getCursorContextColor(x, y) {
+  const element = document.elementFromPoint(x, y);
+  if (!element) return CURSOR_CONFIG.colors.primary;
 
-  Object.assign(char.style, {
-    left: `${left}px`,
-    animationDelay: `${delay}s`,
-    animationDuration: `${duration}s`,
-    opacity: opacity,
-    fontSize: isSpecial ? "20px" : "16px",
-  });
+  const classes = element.className;
+  if (typeof classes === "string") {
+    if (classes.includes("mtk3") || classes.includes("keyword"))
+      return CURSOR_CONFIG.colors.accent;
+    if (classes.includes("mtk10") || classes.includes("string"))
+      return CURSOR_CONFIG.colors.primary;
+    if (classes.includes("squiggly-error")) return CURSOR_CONFIG.colors.flash;
+  }
 
-  matrixRain.appendChild(char);
+  return CURSOR_CONFIG.colors.primary;
 }
 
-// INFO: Responsive matrix rain - Adapt to window resize! 📐
-window.addEventListener("resize", () => {
-  const chars = document.querySelectorAll(".matrix-char");
-  chars.forEach((char) => {
-    char.style.left = `${Math.random() * window.innerWidth * 1.5}px`;
-  });
-});
-
-/* ┌─────────────────────────────────────────────────────────────────┐ */
-/* │                     💬 WELCOME MESSAGE (FIXED)                  │ */
-/* └─────────────────────────────────────────────────────────────────┘ */
-
-// FIX: Check if splash already exists to prevent double-typing bug!
-if (!document.getElementById("dib-splash-container")) {
-  const splash = document.createElement("div");
-  splash.id = "dib-splash-container";
-  splash.innerHTML = `<span id="glitch-text"></span>`;
-
-  Object.assign(splash.style, {
-    position: "fixed",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    fontSize: `${Math.min(window.innerWidth * 0.05, 42)}px`,
-    fontFamily: "'Cascadia Code', 'Fira Code', monospace",
-    color: "#00ff00",
-    padding: "0.5em 1em",
-    maxWidth: "90vw",
-    overflow: "hidden",
-    whiteSpace: "nowrap",
-    background:
-      "linear-gradient(135deg, rgba(0,255,0,0.05), rgba(0,255,255,0.05))",
-    borderRadius: "16px",
-    border: "2px solid rgba(0, 255, 0, 0.2)",
-    boxShadow: `0 0 20px rgba(0, 255, 100, 0.25), 0 0 40px rgba(0, 255, 100, 0.15)`,
-    backdropFilter: "blur(6px)",
-    WebkitBackdropFilter: "blur(6px)",
-    zIndex: "9999",
-    textAlign: "center",
-    animation: `holdGlow 3s ease-out both, fadeOutSmooth 2s ease-in-out 3s forwards`,
-    cursor: "default",
-  });
-  document.body.appendChild(splash);
-
-  /* ┌─────────────────────────────────────────────────────────────────┐ */
-  /* │                    ⚡ GLITCH TEXT ANIMATION (FIXED)             │ */
-  /* └─────────────────────────────────────────────────────────────────┘ */
-
-  const GLITCH_CONFIG = {
-    message: "⚡ Welcome back, Dibakar ⚡",
-    typeDelay: 80, // Increased for better visibility
-    glitchDuration: 200, // FIXED: Increased so the real char shows properly
-    randomDelay: 50,
-    glitchChars: "アカサタナハマヤラワ0123456789@#$%^&*!?",
-  };
-
-  const target = document.getElementById("glitch-text");
-  let charIndex = 0;
-
-  const typeGlitchChar = () => {
-    // Double check: if the target was removed by a cleanup timer, stop typing
-    if (!document.getElementById("glitch-text")) return;
-
-    if (charIndex >= GLITCH_CONFIG.message.length) {
-      setTimeout(() => {
-        if (target)
-          target.style.animation = "charPulse 1s ease-in-out infinite";
-      }, 500);
-      return;
-    }
-
-    const realChar = GLITCH_CONFIG.message[charIndex];
-    const glitchChar = document.createElement("span");
-    glitchChar.classList.add("glitch-char");
-
-    // FIXED: Start with random glitch character
-    glitchChar.textContent =
-      GLITCH_CONFIG.glitchChars[
-        Math.floor(Math.random() * GLITCH_CONFIG.glitchChars.length)
+// Glyph particle
+class CursorGlyph {
+  constructor(x, y, type = "normal", velocity = null) {
+    this.x = x;
+    this.y = y;
+    this.born = Date.now();
+    this.type = type;
+    this.rotation = Math.random() * 360;
+    this.rotationSpeed = (Math.random() - 0.5) * 3;
+    this.scale = 0.8 + Math.random() * 0.4;
+    this.glitchOffset = { x: 0, y: 0 };
+    this.symbol =
+      CURSOR_GLYPH_SYMBOLS[
+        Math.floor(Math.random() * CURSOR_GLYPH_SYMBOLS.length)
       ];
 
-    target.appendChild(glitchChar);
+    // Velocity for shooting effects
+    this.vx = velocity ? velocity.x : (Math.random() - 0.5) * 0.5;
+    this.vy = velocity ? velocity.y : (Math.random() - 0.5) * 0.5;
 
-    // FIXED: Change to real character after glitch duration
-    setTimeout(() => {
-      if (glitchChar && glitchChar.parentNode) {
-        glitchChar.textContent = realChar === " " ? "\u00A0" : realChar;
+    const contextColor = getCursorContextColor(x, y);
+    this.color =
+      type === "pulse"
+        ? CURSOR_CONFIG.colors.accent
+        : type === "rift"
+          ? CURSOR_CONFIG.colors.rift
+          : contextColor;
 
-        // Special styling for lightning bolts
-        if (realChar === "⚡") {
-          glitchChar.style.color = "#ffff00";
-          glitchChar.style.textShadow = "0 0 15px #ffff00";
-          glitchChar.style.filter = "brightness(1.5)";
+    this.el = document.createElement("div");
+    this.el.className = "neural-glyph";
+    this.el.textContent = this.symbol;
+
+    Object.assign(this.el.style, {
+      position: "absolute",
+      left: x + "px",
+      top: y + "px",
+      color: this.color,
+      fontSize: type === "rift" ? "16px" : "12px",
+      fontFamily: "monospace",
+      fontWeight: "bold",
+      pointerEvents: "none",
+      zIndex: "9999",
+      transform: `translate(-50%, -50%) rotate(${this.rotation}deg) scale(${this.scale})`,
+      textShadow: `0 0 8px ${this.color}, 0 0 12px ${this.color}`,
+      willChange: "transform, opacity",
+      mixBlendMode: "screen",
+    });
+
+    const editor = document.querySelector(".monaco-editor") || document.body;
+    editor.appendChild(this.el);
+  }
+
+  update() {
+    const age = Date.now() - this.born;
+    const maxLife =
+      this.type === "pulse"
+        ? 600
+        : this.type === "rift"
+          ? 4000
+          : CURSOR_CONFIG.glyphLife;
+
+    if (age > maxLife) {
+      this.el.remove();
+      return false;
+    }
+
+    const progress = age / maxLife;
+
+    // Position drift
+    this.x += this.vx;
+    this.y += this.vy;
+    this.vx *= 0.95; // Damping
+    this.vy *= 0.95;
+
+    // Rotation
+    this.rotation += this.rotationSpeed;
+
+    // Glitch jitter
+    if (Math.random() < 0.1) {
+      this.glitchOffset.x = (Math.random() - 0.5) * 2;
+      this.glitchOffset.y = (Math.random() - 0.5) * 2;
+    } else {
+      this.glitchOffset.x *= 0.8;
+      this.glitchOffset.y *= 0.8;
+    }
+
+    // Opacity and scale
+    const opacity =
+      this.type === "pulse"
+        ? (1 - progress) * 0.6
+        : this.type === "rift"
+          ? Math.sin(progress * Math.PI)
+          : 1 - progress;
+    const scale =
+      this.type === "pulse"
+        ? this.scale * (1 + progress * 2)
+        : this.type === "rift"
+          ? this.scale * (1 + Math.sin(progress * Math.PI * 2) * 0.3)
+          : this.scale * (1 - progress * 0.3);
+
+    this.el.style.left = this.x + this.glitchOffset.x + "px";
+    this.el.style.top = this.y + this.glitchOffset.y + "px";
+    this.el.style.opacity = opacity;
+    this.el.style.transform = `translate(-50%, -50%) rotate(${this.rotation}deg) scale(${scale})`;
+
+    return true;
+  }
+}
+
+// Pulse ring for big jumps
+class CursorPulseRing {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.born = Date.now();
+    this.maxLife = 500;
+
+    this.el = document.createElement("div");
+    this.el.className = "neural-pulse";
+
+    Object.assign(this.el.style, {
+      position: "absolute",
+      left: x + "px",
+      top: y + "px",
+      width: "10px",
+      height: "10px",
+      border: `2px solid ${CURSOR_CONFIG.colors.accent}`,
+      borderRadius: "50%",
+      pointerEvents: "none",
+      zIndex: "9998",
+      transform: "translate(-50%, -50%)",
+      boxShadow: `0 0 15px ${CURSOR_CONFIG.colors.accent}`,
+      willChange: "transform, opacity",
+    });
+
+    const editor = document.querySelector(".monaco-editor") || document.body;
+    editor.appendChild(this.el);
+  }
+
+  update() {
+    const age = Date.now() - this.born;
+    if (age > this.maxLife) {
+      this.el.remove();
+      return false;
+    }
+
+    const progress = age / this.maxLife;
+    const scale = 1 + progress * 15;
+    const opacity = 1 - progress;
+
+    this.el.style.transform = `translate(-50%, -50%) scale(${scale})`;
+    this.el.style.opacity = opacity;
+
+    return true;
+  }
+}
+
+// Continuous idle animation system
+class CursorIdleAnimation {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.startTime = Date.now();
+    this.phase = 0;
+    this.orbitGlyphs = [];
+    this.fieldGlyphs = [];
+    this.coreGlyph = null;
+    this.riftActive = false;
+    this.lastSpawn = 0;
+
+    // Create core energy
+    this.createCore();
+  }
+
+  createCore() {
+    this.coreGlyph = document.createElement("div");
+    this.coreGlyph.className = "neural-core";
+    this.coreGlyph.textContent = "◉";
+
+    Object.assign(this.coreGlyph.style, {
+      position: "absolute",
+      left: this.x + "px",
+      top: this.y + "px",
+      color: CURSOR_CONFIG.colors.core,
+      fontSize: "20px",
+      fontFamily: "monospace",
+      fontWeight: "bold",
+      pointerEvents: "none",
+      zIndex: "9998",
+      transform: "translate(-50%, -50%) scale(0)",
+      textShadow: `0 0 20px ${CURSOR_CONFIG.colors.accent}, 0 0 30px ${CURSOR_CONFIG.colors.primary}`,
+      willChange: "transform, opacity",
+      mixBlendMode: "screen",
+      animation: "neural-core-pulse 2s ease-in-out infinite",
+    });
+
+    const editor = document.querySelector(".monaco-editor") || document.body;
+    editor.appendChild(this.coreGlyph);
+  }
+
+  update() {
+    const elapsed = Date.now() - this.startTime;
+    const now = Date.now();
+
+    // Phase progression
+    if (elapsed > 8000)
+      this.phase = 3; // Dimensional rift
+    else if (elapsed > 4000)
+      this.phase = 2; // Energy field
+    else if (elapsed > 1500)
+      this.phase = 1; // Orbiting glyphs
+    else this.phase = 0; // Building up
+
+    // Core scaling
+    const coreScale =
+      Math.min(elapsed / 1000, 1) * (1 + Math.sin(elapsed * 0.002) * 0.1);
+    this.coreGlyph.style.transform = `translate(-50%, -50%) scale(${coreScale})`;
+
+    // Phase 0: Build up
+    if (this.phase >= 0) {
+      if (now - this.lastSpawn > 300) {
+        this.lastSpawn = now;
+        const angle = (elapsed * 0.002) % (Math.PI * 2);
+        const radius = 30;
+        const gx = this.x + Math.cos(angle) * radius;
+        const gy = this.y + Math.sin(angle) * radius;
+
+        const g = new CursorGlyph(gx, gy, "rift");
+        g.vx = -Math.cos(angle) * 0.5;
+        g.vy = -Math.sin(angle) * 0.5;
+        this.fieldGlyphs.push(g);
+        cursorGlyphs.push(g);
+      }
+    }
+
+    // Phase 1: Orbiting glyphs
+    if (this.phase >= 1) {
+      // Create orbiting rings
+      const orbitCount = 3;
+      for (let i = 0; i < orbitCount; i++) {
+        const angle =
+          elapsed * 0.001 * (i + 1) + (i * Math.PI * 2) / orbitCount;
+        const radius = 25 + i * 15;
+        const ox = this.x + Math.cos(angle) * radius;
+        const oy = this.y + Math.sin(angle) * radius;
+
+        if (now - this.lastSpawn > 200 && this.orbitGlyphs.length < 12) {
+          const g = new CursorGlyph(ox, oy, "rift");
+          g.rotationSpeed = 5;
+          this.orbitGlyphs.push(g);
+          cursorGlyphs.push(g);
         }
       }
-    }, GLITCH_CONFIG.glitchDuration);
-
-    charIndex++;
-    setTimeout(typeGlitchChar, GLITCH_CONFIG.typeDelay);
-  };
-
-  // Start typing after a small delay
-  setTimeout(typeGlitchChar, 100);
-
-  // INFO: Responsive font sizing - Looks good on any screen! 📺
-  window.addEventListener("resize", () => {
-    if (splash && splash.parentNode) {
-      splash.style.fontSize = `${Math.min(window.innerWidth * 0.05, 42)}px`;
     }
-  });
 
-  // Final cleanup
-  setTimeout(() => {
-    if (matrixRain && matrixRain.parentNode) {
-      matrixRain.style.transition = "opacity 0.5s ease-out";
-      matrixRain.style.opacity = "0";
+    // Phase 2: Energy field pulsation
+    if (this.phase >= 2) {
+      if (now - this.lastSpawn > 150) {
+        this.lastSpawn = now;
+
+        // Radial burst
+        for (let i = 0; i < 6; i++) {
+          const angle = (i / 6) * Math.PI * 2 + elapsed * 0.001;
+          const v = {
+            x: Math.cos(angle) * 1.5,
+            y: Math.sin(angle) * 1.5,
+          };
+
+          const g = new CursorGlyph(this.x, this.y, "rift", v);
+          g.symbol = "⧈";
+          g.color =
+            i % 2 === 0
+              ? CURSOR_CONFIG.colors.accent
+              : CURSOR_CONFIG.colors.rift;
+          this.fieldGlyphs.push(g);
+          cursorGlyphs.push(g);
+        }
+      }
     }
-    setTimeout(() => {
-      if (splash && splash.parentNode) splash.remove();
-      if (bgFade && bgFade.parentNode) bgFade.remove();
-      if (matrixRain && matrixRain.parentNode) matrixRain.remove();
-      console.log("✨ Welcome sequence complete! Happy coding, Dibakar! 🚀");
-    }, 500);
-  }, 5500);
+
+    // Phase 3: Dimensional rift
+    if (this.phase >= 3) {
+      if (!this.riftActive) {
+        this.riftActive = true;
+        this.createRift();
+      }
+
+      // Continuous rift emissions
+      if (now - this.lastSpawn > 100) {
+        this.lastSpawn = now;
+
+        const spiralAngle = elapsed * 0.003;
+        const spiralRadius = 20 + Math.sin(elapsed * 0.002) * 10;
+        const sx = this.x + Math.cos(spiralAngle) * spiralRadius;
+        const sy = this.y + Math.sin(spiralAngle) * spiralRadius;
+
+        const g = new CursorGlyph(sx, sy, "rift");
+        g.symbol = Math.random() > 0.5 ? "◊" : "⬡";
+        g.vx = (Math.random() - 0.5) * 2;
+        g.vy = (Math.random() - 0.5) * 2;
+        g.rotationSpeed = (Math.random() - 0.5) * 10;
+        g.scale = 0.5 + Math.random() * 1;
+        this.fieldGlyphs.push(g);
+        cursorGlyphs.push(g);
+      }
+
+      // Glitch effect on core
+      if (Math.random() < 0.1) {
+        this.coreGlyph.style.filter = `hue-rotate(${Math.random() * 360}deg) saturate(2)`;
+      } else {
+        this.coreGlyph.style.filter = "none";
+      }
+    }
+
+    // Cleanup old field glyphs
+    this.fieldGlyphs = this.fieldGlyphs.filter((g) => g.update());
+
+    return true;
+  }
+
+  createRift() {
+    // Create rift distortion
+    const rift = document.createElement("div");
+    rift.className = "neural-rift";
+
+    Object.assign(rift.style, {
+      position: "absolute",
+      left: this.x + "px",
+      top: this.y + "px",
+      width: "100px",
+      height: "100px",
+      borderRadius: "50%",
+      pointerEvents: "none",
+      zIndex: "9997",
+      transform: "translate(-50%, -50%)",
+      background: `radial-gradient(circle,
+        transparent 30%,
+        ${CURSOR_CONFIG.colors.rift}22 50%,
+        transparent 70%)`,
+      filter: "blur(2px)",
+      animation: "neural-rift-pulse 3s ease-in-out infinite",
+    });
+
+    const editor = document.querySelector(".monaco-editor") || document.body;
+    editor.appendChild(rift);
+
+    // Remove after some time
+    setTimeout(() => rift.remove(), 10000);
+  }
+
+  destroy() {
+    if (this.coreGlyph) this.coreGlyph.remove();
+    this.orbitGlyphs.forEach((g) => g.el && g.el.remove());
+    this.fieldGlyphs.forEach((g) => g.el && g.el.remove());
+  }
 }
+
+// Get cursor position
+function getEditorCursorPos() {
+  const cursor = document.querySelector(".monaco-editor .cursor");
+  if (!cursor) return null;
+
+  const editor = document.querySelector(".monaco-editor");
+  if (!editor) return null;
+
+  const editorRect = editor.getBoundingClientRect();
+  const cursorRect = cursor.getBoundingClientRect();
+
+  return {
+    x: cursorRect.left - editorRect.left + cursorRect.width / 2,
+    y: cursorRect.top - editorRect.top + cursorRect.height / 2,
+  };
+}
+
+// Main animation loop
+function animateCursor() {
+  if (CURSOR_CONFIG.enabled) {
+    const pos = getEditorCursorPos();
+    const now = Date.now();
+
+    if (
+      pos &&
+      cursorLastPos &&
+      (Math.abs(pos.x - cursorLastPos.x) > 0.1 ||
+        Math.abs(pos.y - cursorLastPos.y) > 0.1)
+    ) {
+      // Movement detected
+      cursorLastMoveTime = now;
+
+      // Destroy idle animation if active
+      if (cursorIsIdle && cursorIdleAnimation) {
+        cursorIsIdle = false;
+        cursorIdleAnimation.destroy();
+        cursorIdleAnimation = null;
+      }
+
+      const dx = pos.x - cursorLastPos.x;
+      const dy = pos.y - cursorLastPos.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const speed = distance;
+
+      // Update velocity
+      cursorVelocity.x = dx * 0.2;
+      cursorVelocity.y = dy * 0.2;
+
+      // Big jump = Neural pulse
+      if (distance > 100) {
+        cursorGlyphs.push(
+          new CursorPulseRing(cursorLastPos.x, cursorLastPos.y),
+        );
+
+        // Burst of glyphs at destination
+        for (let i = 0; i < 12; i++) {
+          const angle = (i / 12) * Math.PI * 2;
+          const v = { x: Math.cos(angle) * 2, y: Math.sin(angle) * 2 };
+          cursorGlyphs.push(new CursorGlyph(pos.x, pos.y, "pulse", v));
+        }
+      }
+      // Fast movement = Sharp shards
+      else if (speed > 15) {
+        const numGlyphs = Math.floor(speed / 8);
+        for (let i = 0; i < numGlyphs; i++) {
+          const t = i / numGlyphs;
+          const interpX = cursorLastPos.x + dx * t;
+          const interpY = cursorLastPos.y + dy * t;
+
+          const g = new CursorGlyph(interpX, interpY, "fast", {
+            x: cursorVelocity.x * 0.5,
+            y: cursorVelocity.y * 0.5,
+          });
+          g.rotationSpeed = (Math.random() - 0.5) * 8;
+          cursorGlyphs.push(g);
+        }
+      }
+      // Slow movement = Smooth flow
+      else {
+        for (let i = 0; i < 2; i++) {
+          cursorGlyphs.push(
+            new CursorGlyph(
+              pos.x + (Math.random() - 0.5) * 6,
+              pos.y + (Math.random() - 0.5) * 6,
+              "normal",
+            ),
+          );
+        }
+      }
+
+      // Limit glyphs
+      while (cursorGlyphs.length > CURSOR_CONFIG.maxGlyphs) {
+        const old = cursorGlyphs.shift();
+        if (old && old.el) old.el.remove();
+      }
+
+      cursorLastPos = pos;
+    }
+    // Idle detection
+    else if (
+      pos &&
+      now - cursorLastMoveTime > CURSOR_CONFIG.idleTimeout &&
+      !cursorIsIdle
+    ) {
+      cursorIsIdle = true;
+      cursorIdleAnimation = new CursorIdleAnimation(pos.x, pos.y);
+    }
+
+    // Update idle animation
+    if (cursorIsIdle && cursorIdleAnimation) {
+      cursorIdleAnimation.update();
+    }
+
+    if (pos) cursorLastPos = pos;
+  }
+
+  // Update all glyphs
+  cursorGlyphs = cursorGlyphs.filter((g) => g.update());
+
+  requestAnimationFrame(animateCursor);
+}
+
+// Enhanced cursor core glow
+function addCursorCoreStyle() {
+  const cursorStyle = document.createElement("style");
+  cursorStyle.textContent = `
+    .monaco-editor .cursor {
+      animation: neural-pulse 2s ease-in-out infinite !important;
+      filter: drop-shadow(0 0 8px ${CURSOR_CONFIG.colors.primary})
+              drop-shadow(0 0 12px ${CURSOR_CONFIG.colors.accent}) !important;
+    }
+
+    @keyframes neural-pulse {
+      0%, 100% {
+        filter: drop-shadow(0 0 6px ${CURSOR_CONFIG.colors.primary})
+                drop-shadow(0 0 10px ${CURSOR_CONFIG.colors.accent});
+      }
+      50% {
+        filter: drop-shadow(0 0 12px ${CURSOR_CONFIG.colors.primary})
+                drop-shadow(0 0 18px ${CURSOR_CONFIG.colors.accent})
+                drop-shadow(0 0 24px ${CURSOR_CONFIG.colors.core});
+      }
+    }
+
+    @keyframes neural-core-pulse {
+      0%, 100% {
+        opacity: 0.8;
+        filter: brightness(1);
+      }
+      50% {
+        opacity: 1;
+        filter: brightness(1.5) saturate(1.5);
+      }
+    }
+
+    @keyframes neural-rift-pulse {
+      0%, 100% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        opacity: 0.4;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.2) rotate(180deg);
+        opacity: 0.7;
+      }
+    }
+  `;
+  document.head.appendChild(cursorStyle);
+}
+
+// Initialize
+animateCursor();
+addCursorCoreStyle();
+
+// Toggle: Ctrl+Alt+N
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && e.altKey && e.key === "n") {
+    CURSOR_CONFIG.enabled = !CURSOR_CONFIG.enabled;
+    console.log(
+      "🧿 Neural Glyph:",
+      CURSOR_CONFIG.enabled ? "ACTIVATED" : "DORMANT",
+    );
+    if (!CURSOR_CONFIG.enabled) {
+      cursorGlyphs.forEach((g) => g.el && g.el.remove());
+      cursorGlyphs = [];
+      if (cursorIdleAnimation) {
+        cursorIdleAnimation.destroy();
+        cursorIdleAnimation = null;
+      }
+      cursorIsIdle = false;
+      const rifts = document.querySelectorAll(".neural-rift");
+      rifts.forEach((r) => r.remove());
+    }
+  }
+});
 
 /* ╔══════════════════════════════════════════════════════════════════╗ */
 /* ║                     END OF CUSTOM JAVASCRIPT                     ║ */
 /* ║                                                                  ║ */
-/* ║  "Code is poetry, bugs are just typos in the verse!" ~ MrDib 🎨 ║ */
+/* ║  "Code is poetry, bugs are just typos in the verse!" ~ MrDib 🎨  ║ */
 /* ╚══════════════════════════════════════════════════════════════════╝ */
