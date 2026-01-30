@@ -50,14 +50,6 @@
     "command": "-workbench.action.replaceInFiles"
   },
   {
-    "key": "cmd+shift+alt+;",
-    "command": "workbench.action.openSettingsJson"
-  },
-  {
-    "key": "shift+alt+cmd+'",
-    "command": "workbench.action.openGlobalKeybindingsFile"
-  },
-  {
     "key": "ctrl+shift+cmd+r",
     "command": "workbench.action.reloadWindow"
   },
